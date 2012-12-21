@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="829e52b1-f698-4e6f-9b74-ab6eef985687" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.197:6544/Dvr/wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="8cc3d3c4-39ac-4bf2-b8e7-25f4ec66e009" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=Encoder" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="dfb739dd-c0e2-4f07-97c2-ac272ed26ded" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfRecRule&amp;name=RecRule" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="723297c3-4151-401c-97fd-866fcdcbafb4" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="90a4ff06-4814-4a23-8438-cf6f17bb97c7" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecRule" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="e3bc4ada-0bcf-4d8d-80a3-efc35cddc865" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArtworkInfoList" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="b2516513-c426-419a-828e-fc467f4c175f" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ProgramList" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="8c21e5b9-39c4-4399-ac76-0786094cd950" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+    <MetadataFile FileName="xsd7.xsd" MetadataType="Schema" ID="dac8bbb5-cd44-41f7-9f71-396ccc3ba21e" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=EncoderList" />
+    <MetadataFile FileName="xsd8.xsd" MetadataType="Schema" ID="31a62d70-ed2e-45f8-8eec-3567d2d75b85" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleList" />
+    <MetadataFile FileName="xsd9.xsd" MetadataType="Schema" ID="f68b362b-c4b4-4ed1-aaef-6db22c917994" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfProgram&amp;name=Program" />
+    <MetadataFile FileName="xsd10.xsd" MetadataType="Schema" ID="707473ce-4d3e-4704-9444-813500780d88" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=Program" />
+    <MetadataFile FileName="xsd11.xsd" MetadataType="Schema" ID="599de373-3925-4f23-be9e-9ca100207577" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfEncoder&amp;name=Encoder" />
+    <MetadataFile FileName="DvrServices.wsdl" MetadataType="Wsdl" ID="78858e4a-dc47-41b3-a3dc-5b91cbd11d22" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/wsdl" />
+    <MetadataFile FileName="xsd12.xsd" MetadataType="Schema" ID="8a6a4df9-32c3-4c55-aa1d-6e8d196f91e0" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ChannelInfo" />
+    <MetadataFile FileName="xsd13.xsd" MetadataType="Schema" ID="7d29efb9-5627-437f-9c20-2973906ff50c" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecordingInfo" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

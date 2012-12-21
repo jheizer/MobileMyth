@@ -1,0 +1,10 @@
+﻿<Resolutions>
+  <Resolution Name="224p" Width="224" VRate="225" ARate="96000"></Resolution>
+  <Resolution Name="270p" Width="270" VRate="300" ARate="96000"></Resolution>
+  <Resolution Name="360p" Width="360" VRate="550" ARate="96000"></Resolution>
+  <Resolution Name="480p" Width="480" VRate="800" ARate="128000"></Resolution>
+  <Resolution Name="640p" Width="640" VRate="1500" ARate="128000"></Resolution>
+  <Resolution Name="720p" Width="720" VRate="1900" ARate="192000"></Resolution>
+  <Resolution Name="768p" Width="768" VRate="2000" ARate="192000"></Resolution>
+  <Resolution Name="1080p" Width="1080" VRate="3000" ARate="192000"></Resolution>
+</Resolutions>

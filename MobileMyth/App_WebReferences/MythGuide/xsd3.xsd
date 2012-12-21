@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Guide/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+  <xs:complexType name="ArtworkInfoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArtworkInfos" type="tns:ArrayOfArtworkInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArtworkInfoList" nillable="true" type="tns:ArtworkInfoList" />
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Myth/xsd?type=DatabaseInfo" />
+  <xs:include schemaLocation="http://10.0.0.197:6544/Myth/xsd?type=VersionInfo" />
+  <xs:include schemaLocation="http://10.0.0.197:6544/Myth/xsd?type=WOLInfo" />
+  <xs:complexType name="ConnectionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Version" nillable="true" type="tns:VersionInfo" />
+      <xs:element minOccurs="0" name="Database" nillable="true" type="tns:DatabaseInfo" />
+      <xs:element minOccurs="0" name="WOL" nillable="true" type="tns:WOLInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectionInfo" nillable="true" type="tns:ConnectionInfo" />
+</xs:schema>

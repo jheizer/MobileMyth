@@ -1,0 +1,59 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.2.0.min.css" />
+    <script src="../scripts/jquery.js" type="text/javascript"></script>
+     <script type="text/javascript">
+         $(document).bind("mobileinit", function () { $.mobile.ajaxEnabled = false; });
+    </script>
+    <script src="../scripts/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/logo-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/logo-72.png" />
+    <link rel="apple-touch-icon" href="/images/logo-57.png" />
+    <link rel="apple-touch-startup-image" href="/images/logo-128.png">
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div data-role="page">
+
+        <div data-role="header">
+            <a href="default.aspx" data-icon="home" data-ajax="false">Home</a>  
+            <h3><asp:Label runat="server" ID="HeaderPageTitle">Mobile MythTV</asp:Label></h3>
+            <a href="../admin/default.aspx" data-icon="gear">Settings</a>  
+        </div> 
+
+        <asp:Panel runat="server" ID="ContentPanel" data-role="content">
+            <asp:ContentPlaceHolder id="ContentHolder" runat="server"></asp:ContentPlaceHolder>
+        </asp:Panel> 
+
+            <asp:Panel runat="server" id="footerpan" data-role="footer" data-position="fixed">
+		    <div data-role="navbar">
+			    <ul>
+				    <li><a href="recordings.aspx" data-icon="star">Recordings</a></li>
+				    <li><a href="videos.aspx" data-icon="grid">Videos</a></li>
+				    <li><a href="guide.aspx" data-icon="grid">Guide</a></li>
+				    <li><a href="upcoming.aspx" data-icon="forward">Upcoming</a></li>
+				    <li><a href="status.aspx" data-icon="info">Status</a></li>
+			    </ul>
+		    </div>
+        </asp:Panel>
+
+    </div>
+
+    <asp:ContentPlaceHolder id="AfterFirstPage" runat="server"></asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

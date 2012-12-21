@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Guide/xsd?type=ArrayOfChannelInfo&amp;name=ChannelInfo" />
+  <xs:complexType name="ProgramGuide">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartChanId" type="xs:int" />
+      <xs:element minOccurs="0" name="EndChanId" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOfChannels" type="xs:int" />
+      <xs:element minOccurs="0" name="Details" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="AsOf" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Version" type="xs:string" />
+      <xs:element minOccurs="0" name="ProtoVer" type="xs:string" />
+      <xs:element minOccurs="0" name="Channels" type="tns:ArrayOfChannelInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProgramGuide" nillable="true" type="tns:ProgramGuide" />
+</xs:schema>

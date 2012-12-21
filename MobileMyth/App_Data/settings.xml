@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <MythServiceAPIAddress>10.0.0.197</MythServiceAPIAddress>
+  <MythServiceAPIPort>6544</MythServiceAPIPort>
+  <MythWebUrl>http://10.0.0.197/mythweb/</MythWebUrl>
+  <Frontends>
+    <Frontend name="127.0.0.1">
+      <UIType>tablet</UIType>
+      <Resolution>720p</Resolution>
+      <ShowRecentRecordings>True</ShowRecentRecordings>
+      <ShowRecentVideos>False</ShowRecentVideos>
+      <ShowConflicts>True</ShowConflicts>
+      <ShowDiskSpace>True</ShowDiskSpace>
+      <ShowEncoders>True</ShowEncoders>
+      <ShowUpcoming>False</ShowUpcoming>
+    </Frontend>
+  </Frontends>
+</settings>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1022fda2-d30a-4cfb-8b12-ad8e098ab462" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.197:6544/Myth/wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="a19fd4de-7ad0-4b2e-add0-f8b193dc7a5a" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=ArrayOfStorageGroupDir&amp;name=StorageGroupDir" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="9298fd89-1da0-452e-ad30-46f1b43b7d27" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=TimeZoneInfo" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="264057e7-3c4c-4914-a8f8-8c0e88bb1dc0" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=MapOfStringString&amp;name=String" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="4d84c786-08f5-4968-a5da-eca657e022e9" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=StorageGroupDir" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="f8734718-46ab-4cb3-9b52-7128d3a03d03" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=VersionInfo" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="c97df0da-7e3c-4da1-a50a-92aa74fa6eae" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=ArrayOfLogMessage&amp;name=LogMessage" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="9a765c10-280f-4c47-9976-27403a633ca2" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=SettingList" />
+    <MetadataFile FileName="xsd7.xsd" MetadataType="Schema" ID="6c0eefe6-a1f8-4af9-8c89-b87f00ef8dd8" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=WOLInfo" />
+    <MetadataFile FileName="xsd8.xsd" MetadataType="Schema" ID="15b3e93c-2828-47fc-a5ec-057fdc8cc72b" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=LogMessageList" />
+    <MetadataFile FileName="xsd9.xsd" MetadataType="Schema" ID="625700c8-b908-4a0d-a081-02be22c93e6d" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=StorageGroupDirList" />
+    <MetadataFile FileName="MythServices.wsdl" MetadataType="Wsdl" ID="550fee83-6644-4ad6-8119-c46e023a5d1c" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/wsdl" />
+    <MetadataFile FileName="xsd10.xsd" MetadataType="Schema" ID="9ced56ff-1761-482d-8913-d65005b96676" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=DatabaseInfo" />
+    <MetadataFile FileName="xsd11.xsd" MetadataType="Schema" ID="391a093e-823e-4e38-bf9c-98a95eaea130" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=ConnectionInfo" />
+    <MetadataFile FileName="xsd12.xsd" MetadataType="Schema" ID="023663f6-c893-40c5-9905-7169ff4263fa" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=LabelValue" />
+    <MetadataFile FileName="xsd13.xsd" MetadataType="Schema" ID="3d008bd2-9285-4bf8-aa64-6691f98da58d" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=ArrayOfLabelValue&amp;name=LabelValue" />
+    <MetadataFile FileName="xsd14.xsd" MetadataType="Schema" ID="7d7747b3-cf28-43de-ac9f-60289d923bb1" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=ArrayOfString" />
+    <MetadataFile FileName="xsd15.xsd" MetadataType="Schema" ID="b19f96f2-166b-42bb-9413-09f10ee2ddef" SourceId="1" SourceUrl="http://10.0.0.197:6544/Myth/xsd?type=LogMessage" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

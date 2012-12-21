@@ -1,0 +1,19 @@
+Alias /mobilemyth "/home/jon/mobilemyth"
+
+MonoServerPath mobilemyth "/usr/bin/mod-mono-server4"
+MonoDebug mobilemyth true
+MonoApplications mobilemyth "/mobilemyth:/home/jon/mobilemyth"
+
+<Location "/mobilemyth">
+    Allow from all
+    Order allow,deny
+    MonoSetServerAlias mobilemyth
+    SetHandler mono
+    SetOutputFilter DEFLATE
+    SetEnvIfNoCase Request_URI "\.(?:gif|jpe?g|png)$" no-gzip dont-vary
+</Location>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript
+</IfModule>
+

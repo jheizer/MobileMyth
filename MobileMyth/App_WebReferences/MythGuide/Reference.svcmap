@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="45e21c6d-2d74-4f0c-a213-ff51a8a5ae8f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.197:6544/Guide/wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="3b6844e1-660c-4db5-a098-88c7b14c7983" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ArrayOfChannelInfo&amp;name=ChannelInfo" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="3b5a74b4-ef9e-4d5f-bc88-05b3928a582e" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ProgramGuide" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="becc9546-e6af-485a-8a79-e86f4186f231" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=RecordingInfo" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="5c8fa257-f59d-41e0-b762-74ccbf4fedd5" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ArtworkInfoList" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="d870bc39-ffde-4bb6-bc5d-7507420141d6" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ArrayOfProgram&amp;name=Program" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="8d7c44dd-36a6-4a77-99e2-cf9ae6fa556d" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="8dc4fc61-d136-42aa-9aa7-18b746c58b21" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ChannelInfo" />
+    <MetadataFile FileName="xsd7.xsd" MetadataType="Schema" ID="b41020f2-65b1-48de-8947-93b10a4fa1f3" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+    <MetadataFile FileName="GuideServices.wsdl" MetadataType="Wsdl" ID="ecfa5c24-169c-4e43-b988-bc4a7f577ac9" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/wsdl" />
+    <MetadataFile FileName="xsd8.xsd" MetadataType="Schema" ID="af52a9a2-4bd6-478a-8f52-2bdd75022eaf" SourceId="1" SourceUrl="http://10.0.0.197:6544/Guide/xsd?type=Program" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

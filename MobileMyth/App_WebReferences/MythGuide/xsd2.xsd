@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RecordingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTs" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTs" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordId" type="xs:int" />
+      <xs:element minOccurs="0" name="RecGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="PlayGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="RecType" type="xs:int" />
+      <xs:element minOccurs="0" name="DupInType" type="xs:int" />
+      <xs:element minOccurs="0" name="DupMethod" type="xs:int" />
+      <xs:element minOccurs="0" name="EncoderId" type="xs:int" />
+      <xs:element minOccurs="0" name="Profile" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecordingInfo" nillable="true" type="tns:RecordingInfo" />
+</xs:schema>

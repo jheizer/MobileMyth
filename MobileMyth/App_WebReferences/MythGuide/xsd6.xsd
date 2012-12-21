@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Guide/xsd?type=ArrayOfProgram&amp;name=Program" />
+  <xs:complexType name="ChannelInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChanId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ChanNum" type="xs:string" />
+      <xs:element minOccurs="0" name="CallSign" type="xs:string" />
+      <xs:element minOccurs="0" name="IconURL" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelName" type="xs:string" />
+      <xs:element minOccurs="0" name="MplexId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="TransportId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ServiceId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="NetworkId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ATSCMajorChan" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ATSCMinorChan" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="Format" type="xs:string" />
+      <xs:element minOccurs="0" name="Modulation" type="xs:string" />
+      <xs:element minOccurs="0" name="Frequency" type="xs:long" />
+      <xs:element minOccurs="0" name="FrequencyId" type="xs:string" />
+      <xs:element minOccurs="0" name="FrequencyTable" type="xs:string" />
+      <xs:element minOccurs="0" name="FineTune" type="xs:int" />
+      <xs:element minOccurs="0" name="SIStandard" type="xs:string" />
+      <xs:element minOccurs="0" name="ChanFilters" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceId" type="xs:int" />
+      <xs:element minOccurs="0" name="InputId" type="xs:int" />
+      <xs:element minOccurs="0" name="CommFree" type="xs:int" />
+      <xs:element minOccurs="0" name="UseEIT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Visible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="XMLTVID" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultAuth" type="xs:string" />
+      <xs:element minOccurs="0" name="Programs" type="tns:ArrayOfProgram" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChannelInfo" nillable="true" type="tns:ChannelInfo" />
+</xs:schema>

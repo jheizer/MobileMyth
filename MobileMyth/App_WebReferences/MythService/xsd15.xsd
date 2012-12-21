@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LogMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HostName" type="xs:string" />
+      <xs:element minOccurs="0" name="Application" type="xs:string" />
+      <xs:element minOccurs="0" name="PID" type="xs:int" />
+      <xs:element minOccurs="0" name="TID" type="xs:int" />
+      <xs:element minOccurs="0" name="Thread" type="xs:string" />
+      <xs:element minOccurs="0" name="Filename" type="xs:string" />
+      <xs:element minOccurs="0" name="Line" type="xs:int" />
+      <xs:element minOccurs="0" name="Function" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Level" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogMessage" nillable="true" type="tns:LogMessage" />
+</xs:schema>

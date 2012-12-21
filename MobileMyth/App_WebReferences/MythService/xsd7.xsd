@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="WOLInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Reconnect" type="xs:int" />
+      <xs:element minOccurs="0" name="Retry" type="xs:int" />
+      <xs:element minOccurs="0" name="Command" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WOLInfo" nillable="true" type="tns:WOLInfo" />
+</xs:schema>

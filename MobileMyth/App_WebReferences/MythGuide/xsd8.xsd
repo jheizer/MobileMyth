@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Guide/xsd?type=ArtworkInfoList" />
+  <xs:include schemaLocation="http://10.0.0.197:6544/Guide/xsd?type=ChannelInfo" />
+  <xs:include schemaLocation="http://10.0.0.197:6544/Guide/xsd?type=RecordingInfo" />
+  <xs:complexType name="Program">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" name="SubTitle" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" type="xs:string" />
+      <xs:element minOccurs="0" name="CatType" type="xs:string" />
+      <xs:element minOccurs="0" name="Repeat" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VideoProps" type="xs:int" />
+      <xs:element minOccurs="0" name="AudioProps" type="xs:int" />
+      <xs:element minOccurs="0" name="SubProps" type="xs:int" />
+      <xs:element minOccurs="0" name="SeriesId" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramId" type="xs:string" />
+      <xs:element minOccurs="0" name="Stars" type="xs:double" />
+      <xs:element minOccurs="0" name="FileSize" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModified" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProgramFlags" type="xs:int" />
+      <xs:element minOccurs="0" name="FileName" type="xs:string" />
+      <xs:element minOccurs="0" name="HostName" type="xs:string" />
+      <xs:element minOccurs="0" name="Airdate" nillable="true" type="xs:date" />
+      <xs:element minOccurs="0" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" name="Inetref" type="xs:string" />
+      <xs:element minOccurs="0" name="Season" type="xs:int" />
+      <xs:element minOccurs="0" name="Episode" type="xs:int" />
+      <xs:element minOccurs="0" name="Channel" nillable="true" type="tns:ChannelInfo" />
+      <xs:element minOccurs="0" name="Recording" nillable="true" type="tns:RecordingInfo" />
+      <xs:element minOccurs="0" name="Artwork" nillable="true" type="tns:ArtworkInfoList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Program" nillable="true" type="tns:Program" />
+</xs:schema>

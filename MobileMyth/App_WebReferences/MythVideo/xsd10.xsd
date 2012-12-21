@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Video/xsd?type=ArtworkInfoList" />
+  <xs:complexType name="VideoMetadataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" name="SubTitle" type="xs:string" />
+      <xs:element minOccurs="0" name="Tagline" type="xs:string" />
+      <xs:element minOccurs="0" name="Director" type="xs:string" />
+      <xs:element minOccurs="0" name="Studio" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" name="Certification" type="xs:string" />
+      <xs:element minOccurs="0" name="Inetref" type="xs:string" />
+      <xs:element minOccurs="0" name="Collectionref" type="xs:int" />
+      <xs:element minOccurs="0" name="HomePage" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRating" type="xs:float" />
+      <xs:element minOccurs="0" name="Length" type="xs:int" />
+      <xs:element minOccurs="0" name="PlayCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Season" type="xs:int" />
+      <xs:element minOccurs="0" name="Episode" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentalLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="Visible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Watched" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Processed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContentType" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" type="xs:string" />
+      <xs:element minOccurs="0" name="Hash" type="xs:string" />
+      <xs:element minOccurs="0" name="HostName" type="xs:string" />
+      <xs:element minOccurs="0" name="Coverart" type="xs:string" />
+      <xs:element minOccurs="0" name="Fanart" type="xs:string" />
+      <xs:element minOccurs="0" name="Banner" type="xs:string" />
+      <xs:element minOccurs="0" name="Screenshot" type="xs:string" />
+      <xs:element minOccurs="0" name="Trailer" type="xs:string" />
+      <xs:element minOccurs="0" name="Artwork" nillable="true" type="tns:ArtworkInfoList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VideoMetadataInfo" nillable="true" type="tns:VideoMetadataInfo" />
+</xs:schema>

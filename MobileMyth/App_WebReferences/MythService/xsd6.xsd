@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Myth/xsd?type=MapOfStringString&amp;name=String" />
+  <xs:complexType name="SettingList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HostName" type="xs:string" />
+      <xs:element minOccurs="0" name="Settings" type="tns:MapOfStringString" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingList" nillable="true" type="tns:SettingList" />
+</xs:schema>

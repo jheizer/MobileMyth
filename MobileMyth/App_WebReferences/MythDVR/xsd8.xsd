@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfRecRule&amp;name=RecRule" />
+  <xs:complexType name="RecRuleList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StartIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalAvailable" type="xs:int" />
+      <xs:element minOccurs="0" name="AsOf" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Version" type="xs:string" />
+      <xs:element minOccurs="0" name="ProtoVer" type="xs:string" />
+      <xs:element minOccurs="0" name="RecRules" type="tns:ArrayOfRecRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecRuleList" nillable="true" type="tns:RecRuleList" />
+</xs:schema>

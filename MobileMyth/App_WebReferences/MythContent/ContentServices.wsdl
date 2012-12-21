@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ContentServices" targetNamespace="http://mythtv.org" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://MythTV.org/Imports">
+      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=ArrayOfString" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfoList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfo" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfoList" namespace="http://mythtv.org" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://mythtv.org">
+      <xs:element name="AddLiveStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="MaxSegments" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Bitrate" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="AudioBitrate" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="SampleRate" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddLiveStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AddLiveStreamResult" nillable="true" type="tns:LiveStreamInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRecordingLiveStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="MaxSegments" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Bitrate" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="AudioBitrate" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="SampleRate" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRecordingLiveStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AddRecordingLiveStreamResult" nillable="true" type="tns:LiveStreamInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVideoLiveStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="MaxSegments" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Bitrate" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="AudioBitrate" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="SampleRate" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVideoLiveStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AddVideoLiveStreamResult" nillable="true" type="tns:LiveStreamInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DownloadFileResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAlbumArt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAlbumArtResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetAlbumArtResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetFileResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFileList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFileListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetFileListResult" nillable="true" type="tns:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFilteredLiveStreamList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFilteredLiveStreamListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetFilteredLiveStreamListResult" nillable="true" type="tns:LiveStreamInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHash">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHashResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetHashResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetImageFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetImageFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetImageFileResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLiveStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLiveStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetLiveStreamResult" nillable="true" type="tns:LiveStreamInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLiveStreamList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLiveStreamListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetLiveStreamListResult" nillable="true" type="tns:LiveStreamInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMusic">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMusicResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetMusicResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPreviewImage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="SecsIn" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPreviewImageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetPreviewImageResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetProgramArtworkList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Inetref" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Season" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetProgramArtworkListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetProgramArtworkListResult" nillable="true" type="tns:ArtworkInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecording">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordingResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordingArtwork">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Inetref" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Season" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordingArtworkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordingArtworkResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordingArtworkList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordingArtworkListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordingArtworkListResult" nillable="true" type="tns:ArtworkInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetVideoResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoArtwork">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoArtworkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetVideoArtworkResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveLiveStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveLiveStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RemoveLiveStreamResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopLiveStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopLiveStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StopLiveStreamResult" nillable="true" type="tns:LiveStreamInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="Content_AddLiveStream_InputMessage">
+    <part name="parameters" element="tns:AddLiveStream" />
+  </message>
+  <message name="Content_AddLiveStream_OutputMessage">
+    <part name="parameters" element="tns:AddLiveStreamResponse" />
+  </message>
+  <message name="Content_AddRecordingLiveStream_InputMessage">
+    <part name="parameters" element="tns:AddRecordingLiveStream" />
+  </message>
+  <message name="Content_AddRecordingLiveStream_OutputMessage">
+    <part name="parameters" element="tns:AddRecordingLiveStreamResponse" />
+  </message>
+  <message name="Content_AddVideoLiveStream_InputMessage">
+    <part name="parameters" element="tns:AddVideoLiveStream" />
+  </message>
+  <message name="Content_AddVideoLiveStream_OutputMessage">
+    <part name="parameters" element="tns:AddVideoLiveStreamResponse" />
+  </message>
+  <message name="Content_DownloadFile_InputMessage">
+    <part name="parameters" element="tns:DownloadFile" />
+  </message>
+  <message name="Content_DownloadFile_OutputMessage">
+    <part name="parameters" element="tns:DownloadFileResponse" />
+  </message>
+  <message name="Content_GetAlbumArt_InputMessage">
+    <part name="parameters" element="tns:GetAlbumArt" />
+  </message>
+  <message name="Content_GetAlbumArt_OutputMessage">
+    <part name="parameters" element="tns:GetAlbumArtResponse" />
+  </message>
+  <message name="Content_GetFile_InputMessage">
+    <part name="parameters" element="tns:GetFile" />
+  </message>
+  <message name="Content_GetFile_OutputMessage">
+    <part name="parameters" element="tns:GetFileResponse" />
+  </message>
+  <message name="Content_GetFileList_InputMessage">
+    <part name="parameters" element="tns:GetFileList" />
+  </message>
+  <message name="Content_GetFileList_OutputMessage">
+    <part name="parameters" element="tns:GetFileListResponse" />
+  </message>
+  <message name="Content_GetFilteredLiveStreamList_InputMessage">
+    <part name="parameters" element="tns:GetFilteredLiveStreamList" />
+  </message>
+  <message name="Content_GetFilteredLiveStreamList_OutputMessage">
+    <part name="parameters" element="tns:GetFilteredLiveStreamListResponse" />
+  </message>
+  <message name="Content_GetHash_InputMessage">
+    <part name="parameters" element="tns:GetHash" />
+  </message>
+  <message name="Content_GetHash_OutputMessage">
+    <part name="parameters" element="tns:GetHashResponse" />
+  </message>
+  <message name="Content_GetImageFile_InputMessage">
+    <part name="parameters" element="tns:GetImageFile" />
+  </message>
+  <message name="Content_GetImageFile_OutputMessage">
+    <part name="parameters" element="tns:GetImageFileResponse" />
+  </message>
+  <message name="Content_GetLiveStream_InputMessage">
+    <part name="parameters" element="tns:GetLiveStream" />
+  </message>
+  <message name="Content_GetLiveStream_OutputMessage">
+    <part name="parameters" element="tns:GetLiveStreamResponse" />
+  </message>
+  <message name="Content_GetLiveStreamList_InputMessage">
+    <part name="parameters" element="tns:GetLiveStreamList" />
+  </message>
+  <message name="Content_GetLiveStreamList_OutputMessage">
+    <part name="parameters" element="tns:GetLiveStreamListResponse" />
+  </message>
+  <message name="Content_GetMusic_InputMessage">
+    <part name="parameters" element="tns:GetMusic" />
+  </message>
+  <message name="Content_GetMusic_OutputMessage">
+    <part name="parameters" element="tns:GetMusicResponse" />
+  </message>
+  <message name="Content_GetPreviewImage_InputMessage">
+    <part name="parameters" element="tns:GetPreviewImage" />
+  </message>
+  <message name="Content_GetPreviewImage_OutputMessage">
+    <part name="parameters" element="tns:GetPreviewImageResponse" />
+  </message>
+  <message name="Content_GetProgramArtworkList_InputMessage">
+    <part name="parameters" element="tns:GetProgramArtworkList" />
+  </message>
+  <message name="Content_GetProgramArtworkList_OutputMessage">
+    <part name="parameters" element="tns:GetProgramArtworkListResponse" />
+  </message>
+  <message name="Content_GetRecording_InputMessage">
+    <part name="parameters" element="tns:GetRecording" />
+  </message>
+  <message name="Content_GetRecording_OutputMessage">
+    <part name="parameters" element="tns:GetRecordingResponse" />
+  </message>
+  <message name="Content_GetRecordingArtwork_InputMessage">
+    <part name="parameters" element="tns:GetRecordingArtwork" />
+  </message>
+  <message name="Content_GetRecordingArtwork_OutputMessage">
+    <part name="parameters" element="tns:GetRecordingArtworkResponse" />
+  </message>
+  <message name="Content_GetRecordingArtworkList_InputMessage">
+    <part name="parameters" element="tns:GetRecordingArtworkList" />
+  </message>
+  <message name="Content_GetRecordingArtworkList_OutputMessage">
+    <part name="parameters" element="tns:GetRecordingArtworkListResponse" />
+  </message>
+  <message name="Content_GetVideo_InputMessage">
+    <part name="parameters" element="tns:GetVideo" />
+  </message>
+  <message name="Content_GetVideo_OutputMessage">
+    <part name="parameters" element="tns:GetVideoResponse" />
+  </message>
+  <message name="Content_GetVideoArtwork_InputMessage">
+    <part name="parameters" element="tns:GetVideoArtwork" />
+  </message>
+  <message name="Content_GetVideoArtwork_OutputMessage">
+    <part name="parameters" element="tns:GetVideoArtworkResponse" />
+  </message>
+  <message name="Content_RemoveLiveStream_InputMessage">
+    <part name="parameters" element="tns:RemoveLiveStream" />
+  </message>
+  <message name="Content_RemoveLiveStream_OutputMessage">
+    <part name="parameters" element="tns:RemoveLiveStreamResponse" />
+  </message>
+  <message name="Content_StopLiveStream_InputMessage">
+    <part name="parameters" element="tns:StopLiveStream" />
+  </message>
+  <message name="Content_StopLiveStream_OutputMessage">
+    <part name="parameters" element="tns:StopLiveStreamResponse" />
+  </message>
+  <portType name="Content">
+    <operation name="AddLiveStream">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/AddLiveStream" message="tns:Content_AddLiveStream_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/AddLiveStreamResponse" message="tns:Content_AddLiveStream_OutputMessage" />
+    </operation>
+    <operation name="AddRecordingLiveStream">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/AddRecordingLiveStream" message="tns:Content_AddRecordingLiveStream_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/AddRecordingLiveStreamResponse" message="tns:Content_AddRecordingLiveStream_OutputMessage" />
+    </operation>
+    <operation name="AddVideoLiveStream">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/AddVideoLiveStream" message="tns:Content_AddVideoLiveStream_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/AddVideoLiveStreamResponse" message="tns:Content_AddVideoLiveStream_OutputMessage" />
+    </operation>
+    <operation name="DownloadFile">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/DownloadFile" message="tns:Content_DownloadFile_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/DownloadFileResponse" message="tns:Content_DownloadFile_OutputMessage" />
+    </operation>
+    <operation name="GetAlbumArt">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetAlbumArt" message="tns:Content_GetAlbumArt_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetAlbumArtResponse" message="tns:Content_GetAlbumArt_OutputMessage" />
+    </operation>
+    <operation name="GetFile">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetFile" message="tns:Content_GetFile_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetFileResponse" message="tns:Content_GetFile_OutputMessage" />
+    </operation>
+    <operation name="GetFileList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetFileList" message="tns:Content_GetFileList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetFileListResponse" message="tns:Content_GetFileList_OutputMessage" />
+    </operation>
+    <operation name="GetFilteredLiveStreamList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetFilteredLiveStreamList" message="tns:Content_GetFilteredLiveStreamList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetFilteredLiveStreamListResponse" message="tns:Content_GetFilteredLiveStreamList_OutputMessage" />
+    </operation>
+    <operation name="GetHash">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetHash" message="tns:Content_GetHash_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetHashResponse" message="tns:Content_GetHash_OutputMessage" />
+    </operation>
+    <operation name="GetImageFile">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetImageFile" message="tns:Content_GetImageFile_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetImageFileResponse" message="tns:Content_GetImageFile_OutputMessage" />
+    </operation>
+    <operation name="GetLiveStream">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetLiveStream" message="tns:Content_GetLiveStream_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetLiveStreamResponse" message="tns:Content_GetLiveStream_OutputMessage" />
+    </operation>
+    <operation name="GetLiveStreamList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetLiveStreamList" message="tns:Content_GetLiveStreamList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetLiveStreamListResponse" message="tns:Content_GetLiveStreamList_OutputMessage" />
+    </operation>
+    <operation name="GetMusic">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetMusic" message="tns:Content_GetMusic_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetMusicResponse" message="tns:Content_GetMusic_OutputMessage" />
+    </operation>
+    <operation name="GetPreviewImage">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetPreviewImage" message="tns:Content_GetPreviewImage_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetPreviewImageResponse" message="tns:Content_GetPreviewImage_OutputMessage" />
+    </operation>
+    <operation name="GetProgramArtworkList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetProgramArtworkList" message="tns:Content_GetProgramArtworkList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetProgramArtworkListResponse" message="tns:Content_GetProgramArtworkList_OutputMessage" />
+    </operation>
+    <operation name="GetRecording">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetRecording" message="tns:Content_GetRecording_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetRecordingResponse" message="tns:Content_GetRecording_OutputMessage" />
+    </operation>
+    <operation name="GetRecordingArtwork">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetRecordingArtwork" message="tns:Content_GetRecordingArtwork_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetRecordingArtworkResponse" message="tns:Content_GetRecordingArtwork_OutputMessage" />
+    </operation>
+    <operation name="GetRecordingArtworkList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetRecordingArtworkList" message="tns:Content_GetRecordingArtworkList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetRecordingArtworkListResponse" message="tns:Content_GetRecordingArtworkList_OutputMessage" />
+    </operation>
+    <operation name="GetVideo">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetVideo" message="tns:Content_GetVideo_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetVideoResponse" message="tns:Content_GetVideo_OutputMessage" />
+    </operation>
+    <operation name="GetVideoArtwork">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/GetVideoArtwork" message="tns:Content_GetVideoArtwork_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/GetVideoArtworkResponse" message="tns:Content_GetVideoArtwork_OutputMessage" />
+    </operation>
+    <operation name="RemoveLiveStream">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/RemoveLiveStream" message="tns:Content_RemoveLiveStream_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/RemoveLiveStreamResponse" message="tns:Content_RemoveLiveStream_OutputMessage" />
+    </operation>
+    <operation name="StopLiveStream">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Content/StopLiveStream" message="tns:Content_StopLiveStream_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Content/StopLiveStreamResponse" message="tns:Content_StopLiveStream_OutputMessage" />
+    </operation>
+  </portType>
+  <binding name="BasicHttpBinding_Content" type="tns:Content">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddLiveStream">
+      <soap:operation soapAction="http://mythtv.org/Content/AddLiveStream" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddRecordingLiveStream">
+      <soap:operation soapAction="http://mythtv.org/Content/AddRecordingLiveStream" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddVideoLiveStream">
+      <soap:operation soapAction="http://mythtv.org/Content/AddVideoLiveStream" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DownloadFile">
+      <soap:operation soapAction="http://mythtv.org/Content/DownloadFile" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAlbumArt">
+      <soap:operation soapAction="http://mythtv.org/Content/GetAlbumArt" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetFile">
+      <soap:operation soapAction="http://mythtv.org/Content/GetFile" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetFileList">
+      <soap:operation soapAction="http://mythtv.org/Content/GetFileList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetFilteredLiveStreamList">
+      <soap:operation soapAction="http://mythtv.org/Content/GetFilteredLiveStreamList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetHash">
+      <soap:operation soapAction="http://mythtv.org/Content/GetHash" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetImageFile">
+      <soap:operation soapAction="http://mythtv.org/Content/GetImageFile" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLiveStream">
+      <soap:operation soapAction="http://mythtv.org/Content/GetLiveStream" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLiveStreamList">
+      <soap:operation soapAction="http://mythtv.org/Content/GetLiveStreamList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetMusic">
+      <soap:operation soapAction="http://mythtv.org/Content/GetMusic" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetPreviewImage">
+      <soap:operation soapAction="http://mythtv.org/Content/GetPreviewImage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetProgramArtworkList">
+      <soap:operation soapAction="http://mythtv.org/Content/GetProgramArtworkList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecording">
+      <soap:operation soapAction="http://mythtv.org/Content/GetRecording" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordingArtwork">
+      <soap:operation soapAction="http://mythtv.org/Content/GetRecordingArtwork" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordingArtworkList">
+      <soap:operation soapAction="http://mythtv.org/Content/GetRecordingArtworkList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVideo">
+      <soap:operation soapAction="http://mythtv.org/Content/GetVideo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVideoArtwork">
+      <soap:operation soapAction="http://mythtv.org/Content/GetVideoArtwork" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveLiveStream">
+      <soap:operation soapAction="http://mythtv.org/Content/RemoveLiveStream" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="StopLiveStream">
+      <soap:operation soapAction="http://mythtv.org/Content/StopLiveStream" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ContentServices">
+    <documentation>Interface Version 1.32 - </documentation>
+    <port name="BasicHttpBinding_Content" binding="tns:BasicHttpBinding_Content">
+      <soap:address location="http://10.0.0.197:6544/Content" />
+    </port>
+  </service>
+</definitions>

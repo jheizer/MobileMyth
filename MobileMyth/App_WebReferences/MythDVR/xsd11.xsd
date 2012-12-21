@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=Encoder" />
+  <xs:complexType name="ArrayOfEncoder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Encoder" nillable="true" type="tns:Encoder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEncoder" nillable="true" type="tns:ArrayOfEncoder" />
+</xs:schema>
