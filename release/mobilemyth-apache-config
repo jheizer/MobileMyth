@@ -1,4 +1,4 @@
-Alias /mobilemyth "/var/www//mobilemyth"
+Alias /mobilemyth "/var/www/mobilemyth"
 
 MonoServerPath mobilemyth "/usr/bin/mod-mono-server4"
 MonoDebug mobilemyth true
