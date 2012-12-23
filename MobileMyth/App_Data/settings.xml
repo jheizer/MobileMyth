@@ -14,5 +14,15 @@
       <ShowEncoders>True</ShowEncoders>
       <ShowUpcoming>False</ShowUpcoming>
     </Frontend>
+    <Frontend name="::1">
+      <UIType>tablet</UIType>
+      <Resolution>720p</Resolution>
+      <ShowRecentRecordings>True</ShowRecentRecordings>
+      <ShowRecentVideos>False</ShowRecentVideos>
+      <ShowConflicts>True</ShowConflicts>
+      <ShowDiskSpace>True</ShowDiskSpace>
+      <ShowEncoders>True</ShowEncoders>
+      <ShowUpcoming>False</ShowUpcoming>
+    </Frontend>
   </Frontends>
 </settings>

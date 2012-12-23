@@ -53,6 +53,21 @@ Partial Class recording
         EpisodeSubTitle.Text = Rec.SubTitle & TotalMinutes
         EpisodeDescription.Text = Rec.Description
 
+        RecordingDate.Text = "Recorded: " & Rec.Recording.StartTs.Value.ToString
+        OriginalDate.Text = "Originally Aired: " & Rec.Airdate
+
+        If Rec.Season > 0 OrElse Rec.Episode > 0 Then
+            Episode.Text = "Season " & Rec.Season & " Episode " & Rec.Episode
+        End If
+
+        'Display stream info if transcoding has already been started
+        Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
+        If Streams.LiveStreamInfos.Count > 0 Then
+            TranscodePanel.Visible = True
+            transcodinginfo.Text = "Transcoding Progress: " & Streams.LiveStreamInfos(0).PercentComplete & "%"
+            progressbarvalue.Style.Add("width", Streams.LiveStreamInfos(0).PercentComplete & "%")
+        End If
+
         WatchNowLink.NavigateUrl = "startstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks
         DownloadLink.NavigateUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
 

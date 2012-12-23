@@ -43,7 +43,7 @@ Partial Class shows
         maincontent.Controls.Add(List)
         List.Attributes.Add("data-role", "listview")
 
-        Dim li As New ShowListItem("All Programs", Recordings.Programs.Count, "recordings.aspx", "", "")
+        Dim li As New ShowListItem("All Programs", Recordings.Programs.Count, "episodes.aspx", "", "")
         List.Controls.Add(li)
 
         For Each Rec In Lst

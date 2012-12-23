@@ -40,7 +40,7 @@ Partial Class admin_general
         End If
 
         If Not WSCache.ReInitServiceReferences() Then
-            Master.ShowError("Error connecting to the master backend.")
+            'Master.ShowError("Error connecting to the master backend.")
         End If
     End Sub
 End Class

@@ -23,7 +23,7 @@ Partial Class viewstream
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Dim Url As String = HttpUtility.UrlDecode(Request.QueryString("url"))
         Dim lit As New LiteralControl
-        lit.Text = "<video width=""" & Resolutions.MyResolution.Width & """ controls=""controls""><source src=""" & Url & """></video>"
+        lit.Text = "<video width=""100%"" height=""" & Resolutions.MyResolution.Height & """ controls=""controls""><source src=""" & Url & """></video>"
         maincontent.Controls.Add(lit)
 
         Dim brs As New LiteralControl

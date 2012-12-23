@@ -20,6 +20,9 @@
 Partial Class admin_admin
     Inherits System.Web.UI.MasterPage
 
+    Protected Sub Page_Init(sender As Object, e As System.EventArgs) Handles Me.Init
+    End Sub
+
     Public Sub ShowError(ByVal ErrorText As String)
         Errors.Text = ErrorText
         ErrorsPanel.Visible = True

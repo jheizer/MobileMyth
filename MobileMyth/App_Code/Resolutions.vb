@@ -57,7 +57,7 @@ End Class
 '  <Resolution Name="224p" Width="224" VRate="225" ARate="96000"></Resolution>
 Public Class VideoResolution
     Public Name As String
-    Public Width As String
+    Public Height As String
     Public VRate As String
     Public ARate As String
 
@@ -66,7 +66,7 @@ Public Class VideoResolution
 
     Public Sub New(ByVal Res As XElement)
         Name = Res.Attribute("Name").Value
-        Width = Res.Attribute("Width").Value
+        Height = Res.Attribute("Height").Value
         VRate = Res.Attribute("VRate").Value
         ARate = Res.Attribute("ARate").Value
     End Sub

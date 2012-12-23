@@ -2,6 +2,75 @@
 <%@ MasterType VirtualPath="MasterPage.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+    <style type="text/css">
+        .meter { 
+	        height: 15px;  /* Can be anything */
+	        position: relative;
+	        background: #444;
+	        -moz-border-radius: 25px;
+	        -webkit-border-radius: 25px;
+	        border-radius: 25px;
+	        padding: 7px;
+	        -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	        -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+	        box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+        }
+
+        .meter > span {
+	        display: block;
+	        height: 100%;
+	           -webkit-border-top-right-radius: 8px;
+	        -webkit-border-bottom-right-radius: 8px;
+	               -moz-border-radius-topright: 8px;
+	            -moz-border-radius-bottomright: 8px;
+	                   border-top-right-radius: 8px;
+	                border-bottom-right-radius: 8px;
+	            -webkit-border-top-left-radius: 20px;
+	         -webkit-border-bottom-left-radius: 20px;
+	                -moz-border-radius-topleft: 20px;
+	             -moz-border-radius-bottomleft: 20px;
+	                    border-top-left-radius: 20px;
+	                 border-bottom-left-radius: 20px;
+	        background-color: rgb(43,194,83);
+	        background-image: -webkit-gradient(
+	          linear,
+	          left bottom,
+	          left top,
+	          color-stop(0, rgb(43,194,83)),
+	          color-stop(1, rgb(84,240,84))
+	         );
+	        background-image: -webkit-linear-gradient(
+	          center bottom,
+	          rgb(43,194,83) 37%,
+	          rgb(84,240,84) 69%
+	         );
+	        background-image: -moz-linear-gradient(
+	          center bottom,
+	          rgb(43,194,83) 37%,
+	          rgb(84,240,84) 69%
+	         );
+	        background-image: -ms-linear-gradient(
+	          center bottom,
+	          rgb(43,194,83) 37%,
+	          rgb(84,240,84) 69%
+	         );
+	        background-image: -o-linear-gradient(
+	          center bottom,
+	          rgb(43,194,83) 37%,
+	          rgb(84,240,84) 69%
+	         );
+	        -webkit-box-shadow: 
+	          inset 0 2px 9px  rgba(255,255,255,0.3),
+	          inset 0 -2px 6px rgba(0,0,0,0.4);
+	        -moz-box-shadow: 
+	          inset 0 2px 
+	          9px  rgba(255,255,255,0.3),
+	          inset 0 -2px 6px rgba(0,0,0,0.4);
+	        position: relative;
+	        overflow: hidden;
+        }
+</style>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHolder" Runat="Server">
@@ -11,7 +80,19 @@
 	            <div class="ui-block-a" style="padding-left: 10px;">
                     <h1><asp:Label runat="server" ID="EpisodeTitle" ></asp:Label></h1>
                     <h3><asp:Label runat="server" ID="EpisodeSubTitle" ></asp:Label></h3>
-                    <asp:Label runat="server" ID="EpisodeDescription" ></asp:Label>
+                    <asp:Label runat="server" ID="EpisodeDescription" ></asp:Label><br /><br />
+                    <asp:Label runat="server" ID="RecordingDate" ></asp:Label><br />
+                    <asp:Label runat="server" ID="OriginalDate" ></asp:Label><br />
+                    <asp:Label runat="server" ID="Episode" ></asp:Label><br />
+                    
+                    <asp:Panel runat="server" ID="TranscodePanel" Visible="false">
+                        <div style="text-align: center;">
+                            <asp:Label runat="server" id="transcodinginfo"></asp:Label>
+                        </div>
+                        <asp:Panel class="meter" runat="server" id="progressbar">
+	                        <span runat="server" id="progressbarvalue"></span>
+                        </asp:Panel>
+                    </asp:Panel>
                 </div>
 	            <div class="ui-block-b" style="text-align: center;">
                     <asp:Image runat="server" ID="coverimage" Visible="false" />

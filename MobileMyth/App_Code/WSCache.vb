@@ -37,7 +37,6 @@ Public Class WSCache
 
     Public Shared Function ReInitServiceReferences() As Boolean
         Try
-
             Dim Address As String = SiteSettings.Setting("MythServiceAPIAddress")
             Dim Port As String = SiteSettings.Setting("MythServiceAPIPort")
 
@@ -47,17 +46,13 @@ Public Class WSCache
             WSCache.Guide = New MythGuide.GuideClient("BasicHttpBinding_Guide", "http://" & Address & ":" & Port & "/Guide")
             WSCache.Video = New MythVideo.VideoClient("BasicHttpBinding_Video", "http://" & Address & ":" & Port & "/Video")
 
-            Dim Con As New TcpClient()
-            Dim State As IAsyncResult = Con.BeginConnect(Address, Port, New AsyncCallback(AddressOf Con.EndConnect), Con)
-            Dim Connected As Boolean = State.AsyncWaitHandle.WaitOne(1000, True)
-
-            If Not Connected OrElse Not Con.Connected Then
-                Return False
-            End If
-
-            Try
-                Con.Close()
+            Try                Dim WC As New Net.WebClient
+                Dim html As String = WC.DownloadString("http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Status/GetStatus")
+                If Not html.Contains("<Status") Then
+                    Return False
+                End If
             Catch ex As Exception
+                Return False
             End Try
 
         Catch ex As Exception

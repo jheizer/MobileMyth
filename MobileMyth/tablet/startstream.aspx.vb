@@ -43,7 +43,7 @@ Partial Class startstream
                 Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
 
                 If Streams.LiveStreamInfos.Count = 0 Then
-                    Str = WSCache.Content.AddRecordingLiveStream(ChanId, StartTime, 0, VidSet.Width, 0, VidSet.VRate, VidSet.ARate, 48000)
+                    Str = WSCache.Content.AddRecordingLiveStream(ChanId, StartTime, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
 
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
@@ -61,7 +61,7 @@ Partial Class startstream
                 Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Vidinfo.Id)
 
                 If Streams.LiveStreamInfos.Count = 0 Then
-                    Str = WSCache.Content.AddVideoLiveStream(Vid, 0, VidSet.Width, 0, VidSet.VRate, VidSet.ARate, 48000)
+                    Str = WSCache.Content.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
 
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
