@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
@@ -34,13 +34,13 @@ Partial Class recording
 
             'If we have a number lets try to display a banner
             If Not String.IsNullOrEmpty(rec.Inetref) Then
-                bannerimage.ImageUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetRecordingArtwork?Inetref=" & rec.Inetref & "&Type=banner&Season=" & rec.Season
+                bannerimage.ImageUrl = Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & rec.Inetref & "&Type=banner&Season=" & rec.Season
                 bannerimage.Visible = True
             End If
 
             Dim TotalMinutes As String = ""
             Try
-                TotalMinutes = "   (" & Convert.ToDateTime(rec.EndTime).Subtract(Convert.ToDateTime(rec.StartTime)).TotalMinutes & " Minutes)"
+                TotalMinutes = "   (" & rec.EndTime.Value.Subtract(rec.StartTime.Value).TotalMinutes & " Minutes)"
             Catch ex As Exception
             End Try
 
@@ -49,7 +49,7 @@ Partial Class recording
             EpisodeDescription.Text = rec.Description
 
             WatchNowLink.NavigateUrl = "startstream.aspx?id=" & rec.ProgramId
-            DownloadLink.NavigateUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
+            DownloadLink.NavigateUrl = Common.GetServiceUrl & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
             DeleteLink.NavigateUrl = "http://google.com"
             DeleteButton.PostBackUrl = "recording.aspx?id=" & Id
 

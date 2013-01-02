@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Partial Class _default
@@ -22,7 +22,7 @@ Partial Class _default
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         If String.IsNullOrEmpty(SiteSettings.Setting("MythServiceAPIAddress")) Then
-            Response.Redirect("~/admin/general.aspx", False)
+            Response.Redirect("~/admin/default.aspx", False)
 
         ElseIf String.IsNullOrEmpty(SiteSettings.FrontendSetting("UIType")) Then
             Response.Redirect("~/admin/frontendsettings.aspx", False)

@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports Microsoft.VisualBasic
@@ -46,8 +46,9 @@ Public Class WSCache
             WSCache.Guide = New MythGuide.GuideClient("BasicHttpBinding_Guide", "http://" & Address & ":" & Port & "/Guide")
             WSCache.Video = New MythVideo.VideoClient("BasicHttpBinding_Video", "http://" & Address & ":" & Port & "/Video")
 
-            Try                Dim WC As New Net.WebClient
-                Dim html As String = WC.DownloadString("http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Status/GetStatus")
+            Try
+                Dim WC As New Net.WebClient
+                Dim html As String = WC.DownloadString(Common.GetServiceUrl & "/Status/GetStatus")
                 If Not html.Contains("<Status") Then
                     Return False
                 End If

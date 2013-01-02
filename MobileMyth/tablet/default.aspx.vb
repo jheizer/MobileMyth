@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
@@ -35,22 +35,6 @@ Partial Class _default
         DisplayUpcoming()
     End Sub
 
-    Private Function FormatSizes(ByVal MB As Integer) As String
-        Dim Sz As Integer = Integer.Parse(MB)
-        Dim Out As Decimal = 0
-        Dim Unit As String = "MB"
-
-        If Sz > 1000000 Then
-            Out = Sz / 1000000
-            Unit = "TB"
-        ElseIf Sz > 1000 Then
-            Out = Sz / 1000
-            Unit = "GB"
-        End If
-
-        Return Out.ToString("#.##") & " " & Unit
-    End Function
-
     Private Sub DisplayRecentSlider()
 
         If SiteSettings.FrontendSettingBool("ShowRecentRecordings") Then
@@ -68,7 +52,7 @@ Partial Class _default
                 Lnk.Attributes.Add("data-ajax", "false")
 
                 Dim img As New Image
-                img.ImageUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & _
+                img.ImageUrl = Common.GetServiceUrl & _
                                 "/Content/GetPreviewImage?ChanId=" & Prog.Channel.ChanId & "&StartTime=" & _
                                 Convert.ToDateTime(Prog.Recording.StartTs).ToString("yyyy-MM-ddTHH:mm:ssZ") & _
                                 "&Height=200"
@@ -105,7 +89,7 @@ Partial Class _default
                 Lnk.Attributes.Add("data-ajax", "false")
 
                 Dim img As New Image 'http://BackendServerIP:6544/Content/GetVideoArtwork?Id=100&Type=coverart
-                img.ImageUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & _
+                img.ImageUrl = Common.GetServiceUrl & _
                                "/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=200"
                 img.Height = 200
                 img.Width = 134
@@ -163,7 +147,7 @@ Partial Class _default
                 For Each Enc As Encoder In Encods.Encoders
                     Li = New HtmlListItem
                     If Enc.State = 7 Then
-                        Li.InnerText = Enc.Id & " is recording " & Enc.Recording.Title & " till " & Enc.Recording.Recording.EndTs.Value.ToLocalTime.ToShortTimeString
+                        Li.InnerText = Enc.Id & " is recording " & Enc.Recording.Title & " till " & Enc.Recording.Recording.EndTs.Value.ToLocalTime.ToString("hh:mm tt")
                     Else
                         Li.InnerText = Enc.Id & " is not recording"
                     End If
@@ -180,7 +164,7 @@ Partial Class _default
         If SiteSettings.FrontendSettingBool("ShowDiskSpace") Then
             DiskSpacePanel.Visible = True
             Dim WC As New Net.WebClient
-            Dim xml As String = WC.DownloadString("http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Status/GetStatus")
+            Dim xml As String = WC.DownloadString(Common.GetServiceUrl & "/Status/GetStatus")
 
             Dim Doc As New XmlDocument
             Doc.LoadXml(xml)
@@ -192,7 +176,7 @@ Partial Class _default
             Dim Used As Integer = Integer.Parse(Nd.Attributes("used").InnerText)
             Dim Perc As Decimal = Used / Total
 
-            diskinfo.Text = (Perc * 100).ToString("##") & "% Used &nbsp;&nbsp;&nbsp;" & FormatSizes(Free) & " Free &nbsp;&nbsp;&nbsp;" & FormatSizes(Total) & " Total"
+            diskinfo.Text = (Perc * 100).ToString("##") & "% Used &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Free) & " Free &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Total) & " Total"
             If Perc > 0.9 Then
                 progressbar.CssClass = "meter red"
             ElseIf Perc > 0.8 Then
@@ -211,7 +195,7 @@ Partial Class _default
 
             For Each Up As Program In UpcomingList.Programs
                 Dim Li As New HtmlListItem
-                Li.InnerText = Up.StartTime.Value.ToShortTimeString & " - " & Up.Title
+                Li.InnerText = Up.StartTime.Value.ToLocalTime.ToString("hh:mm tt") & " - " & Up.Title
                 Upcoming.Controls.Add(Li)
             Next
         End If

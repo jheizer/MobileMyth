@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
@@ -48,7 +48,7 @@ Partial Class startstream
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
                     Str = Streams.LiveStreamInfos(0)
-                    Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode(Str.FullURL))
+                    Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode(Common.GetServiceUrl & Str.RelativeURL))
 
                 End If
 
@@ -58,16 +58,14 @@ Partial Class startstream
                 Dim Vidinfo As VideoMetadataInfo = WSCache.Video.GetVideo(Vid)
 
                 Dim Str As LiveStreamInfo
-                Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Vidinfo.Id)
+                Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Vidinfo.FileName)
 
                 If Streams.LiveStreamInfos.Count = 0 Then
                     Str = WSCache.Content.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
-
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
                     Str = Streams.LiveStreamInfos(0)
-                    Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode(Str.FullURL))
-
+                    Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode(Common.GetServiceUrl & Str.RelativeURL))
                 End If
 
         End Select

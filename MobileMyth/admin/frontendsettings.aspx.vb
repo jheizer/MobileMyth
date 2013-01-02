@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Partial Class admin_frontendsettings
@@ -33,12 +33,17 @@ Partial Class admin_frontendsettings
             VideoQuality.SelectedValue = SiteSettings.FrontendSetting("Resolution")
         End If
 
+        ServiceServer.Text = SiteSettings.FrontendSetting("ServiceServer")
+        ServicePort.Text = SiteSettings.FrontendSetting("ServicePort")
+
         ShowTabletSettings()
     End Sub
 
     Protected Sub submit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles submit.Click
         SiteSettings.FrontendSetting("UIType") = uitype.SelectedValue
         SiteSettings.FrontendSetting("Resolution") = VideoQuality.SelectedValue
+        SiteSettings.FrontendSetting("ServiceServer") = ServiceServer.Text
+        SiteSettings.FrontendSetting("ServicePort") = ServicePort.Text
 
         If SiteSettings.FrontendSetting("UIType") = "tablet" Then
             SiteSettings.FrontendSettingBool("ShowRecentRecordings") = RecentRecordings.Checked

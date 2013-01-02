@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Partial Class status
@@ -24,7 +24,7 @@ Partial Class status
         Master.PageTitle = "Backend Status"
 
         Dim WC As New Net.WebClient
-        Dim html As String = WC.DownloadString("http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Status/GetStatusHTML")
+        Dim html As String = WC.DownloadString(Common.GetServiceUrl & "/Status/GetStatusHTML")
         Dim Lit As New LiteralControl
         Lit.Text = html
         maincontent.Controls.Add(Lit)

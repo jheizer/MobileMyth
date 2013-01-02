@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
@@ -37,7 +37,7 @@ Partial Class tablet_videos
             Dim Vid As VideoMetadataInfo
             For i As Integer = 0 To Sorted.Count - 1
                 Vid = Sorted(i)
-                Dim Li As New VideoPanel(i, Vid.Title, "video.aspx?id=" & Vid.Id, "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=225")
+                Dim Li As New VideoPanel(i, Vid.Title, "video.aspx?id=" & Vid.Id, Common.GetServiceUrl & "/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=225")
                 maincontent.Controls.Add(Li)
             Next
 

@@ -38,7 +38,7 @@
             <asp:Panel runat="server" id="footerpan" data-role="footer" data-position="fixed">
 		    <div data-role="navbar">
 			    <ul>
-				    <li><a href="general.aspx" data-icon="star">General Settings</a></li>
+				    <li><a href="default.aspx" data-icon="star">General Settings</a></li>
 				    <li><a href="frontendsettings.aspx" data-icon="grid">Frontend</a></li>
 			    </ul>
 		    </div>

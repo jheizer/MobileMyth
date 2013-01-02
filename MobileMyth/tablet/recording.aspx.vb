@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
@@ -35,7 +35,7 @@ Partial Class recording
 
         'If we have a number lets try to display a banner
         If Not String.IsNullOrEmpty(Rec.Inetref) Then
-            coverimage.ImageUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetRecordingArtwork?Inetref=" & Rec.Inetref & "&Type=cover&Height=300&Season=" & Rec.Season
+            coverimage.ImageUrl = Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & Rec.Inetref & "&Type=cover&Height=300&Season=" & Rec.Season
             coverimage.Visible = True
             'ui-content
             'background-color: rgba(255,255,255,0.5);
@@ -55,6 +55,7 @@ Partial Class recording
 
         RecordingDate.Text = "Recorded: " & Rec.Recording.StartTs.Value.ToString
         OriginalDate.Text = "Originally Aired: " & Rec.Airdate
+        FileSize.Text = "File Size: " & Common.FormatSizes(Rec.FileSize / 1048576)
 
         If Rec.Season > 0 OrElse Rec.Episode > 0 Then
             Episode.Text = "Season " & Rec.Season & " Episode " & Rec.Episode
@@ -69,7 +70,7 @@ Partial Class recording
         End If
 
         WatchNowLink.NavigateUrl = "startstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks
-        DownloadLink.NavigateUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
+        DownloadLink.NavigateUrl = Common.GetServiceUrl & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
 
         DeleteTitle.Text = "Delete Recording?"
         DeleteDetails.Text = Rec.Title & "<br>" & Rec.SubTitle

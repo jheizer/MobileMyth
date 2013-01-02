@@ -83,6 +83,7 @@
                     <asp:Label runat="server" ID="EpisodeDescription" ></asp:Label><br /><br />
                     <asp:Label runat="server" ID="RecordingDate" ></asp:Label><br />
                     <asp:Label runat="server" ID="OriginalDate" ></asp:Label><br />
+                    <asp:Label runat="server" ID="FileSize" ></asp:Label><br />
                     <asp:Label runat="server" ID="Episode" ></asp:Label><br />
                     
                     <asp:Panel runat="server" ID="TranscodePanel" Visible="false">

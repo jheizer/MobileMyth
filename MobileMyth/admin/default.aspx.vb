@@ -14,14 +14,33 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Partial Class admin_default
+Partial Class admin_general
     Inherits System.Web.UI.Page
 
-
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-        Response.Redirect("general.aspx", False)
+        ServiceIP.Text = SiteSettings.Setting("MythServiceAPIAddress")
+        ServicePort.Text = SiteSettings.Setting("MythServiceAPIPort")
+        MythWebUrl.Text = SiteSettings.Setting("MythWebUrl")
+    End Sub
+
+    Protected Sub submit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles submit.Click
+        SiteSettings.Setting("MythServiceAPIAddress") = ServiceIP.Text
+        SiteSettings.Setting("MythServiceAPIPort") = ServicePort.Text
+        SiteSettings.Setting("MythWebUrl") = MythWebUrl.Text
+
+        If Not SiteSettings.Setting("MythWebUrl").ToLower.StartsWith("http") Then
+            SiteSettings.Setting("MythWebUrl") = "http://" & SiteSettings.Setting("MythWebUrl")
+        End If
+
+        If Not SiteSettings.Setting("MythWebUrl").EndsWith("/") Then
+            SiteSettings.Setting("MythWebUrl") &= "/"
+        End If
+
+        If Not WSCache.ReInitServiceReferences() Then
+            'Master.ShowError("Error connecting to the master backend.")
+        End If
     End Sub
 End Class

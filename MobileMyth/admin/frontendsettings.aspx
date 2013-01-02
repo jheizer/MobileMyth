@@ -6,7 +6,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHolder" Runat="Server">
-  <dl title="Frontend Settings">
+    <h3>General Frontend Settings</h3>
+  <dl>
         <dt>UI Style</dt>
         <dd>
             <asp:DropDownList runat="server" ID="uitype">
@@ -19,16 +20,43 @@
         <dd>
             <asp:DropDownList runat="server" ID="VideoQuality"></asp:DropDownList>
         </dd>
+        <dt>Override Myth Service Server <a href="#ServerPopup" data-rel="popup">?</a>
+            <div data-role="popup" id="ServerPopup" data-overlay-theme="b">
+				<div class="ui-corner-all ui-body-e" style="padding:5px 15px;">
+		          <p>Ex: If you are connecting remotely via ssh put the port forward server here and only this frontend will use this setting.</p>
+				</div>
+		    </div>
+        </dt>
+        <dd>
+            <asp:TextBox runat="server" ID="ServiceServer"></asp:TextBox>
+        </dd>
+        <dt>Override Myth Service Port <a href="#PortPopup" data-rel="popup">?</a>
+            <div data-role="popup" id="PortPopup" data-overlay-theme="b">
+				<div class="ui-corner-all ui-body-e" style="padding:5px 15px;">
+		          <p>If you are connecting remotely via ssh put the forwarded port here and only this frontend will use this setting.</p>
+				</div>
+		    </div>    
+        </dt>
+        <dd>
+            <asp:TextBox runat="server" ID="ServicePort"></asp:TextBox>
+        </dd>
     </dl>
 
     <asp:Panel runat="server" ID="TabletSettings" Visible="false">
         <h3>Tablet Home Settings</h3>
-        <asp:CheckBox runat="server" ID="RecentRecordings" Text="Show Recent Recordings"/><br />
-        <asp:CheckBox runat="server" ID="Recentvideos" Text="Show Recent Videos"/><br />
-        <asp:CheckBox runat="server" ID="Conflicts" Text="Show Conflicts"/><br />
-        <asp:CheckBox runat="server" ID="DiskSpace" Text="Show Disk Space"/><br />
-        <asp:CheckBox runat="server" ID="Encoders" Text="Show Encoders"/><br />
-        <asp:CheckBox runat="server" ID="Upcoming" Text="Show Upcoming Recordings"/><br />
+        <div class="ui-grid-a">
+	        <div class="ui-block-a">
+                <asp:CheckBox runat="server" ID="RecentRecordings" Text="Show Recent Recordings"/><br />
+                <asp:CheckBox runat="server" ID="Recentvideos" Text="Show Recent Videos"/><br />
+                <asp:CheckBox runat="server" ID="Conflicts" Text="Show Conflicts"/><br />
+            </div>
+            <div class="ui-block-b">
+                <asp:CheckBox runat="server" ID="DiskSpace" Text="Show Disk Space"/><br />
+                <asp:CheckBox runat="server" ID="Encoders" Text="Show Encoders"/><br />
+                <asp:CheckBox runat="server" ID="Upcoming" Text="Show Upcoming Recordings"/><br />      
+            </div>
+        </div>
+          
     </asp:Panel>
 
     <asp:Button runat="server" ID="submit" text="Save" UseSubmitBehavior="false" CausesValidation="false" data-ajax="false" />

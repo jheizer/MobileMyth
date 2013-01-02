@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
@@ -36,12 +36,12 @@ Partial Class upcoming
         Dim StartDate As String = DateTime.MaxValue.ToShortDateString
 
         For Each Rec As Program In Recordings.Programs
-            If Rec.StartTime.Value.ToShortDateString <> StartDate Then
+            If Rec.StartTime.Value.ToLocalTime.ToShortDateString <> StartDate Then
                 Dim Divider As New HtmlListItem
                 Divider.Attributes.Add("data-role", "list-divider")
-                Divider.InnerText = Rec.StartTime.Value.ToShortDateString
+                Divider.InnerText = Rec.StartTime.Value.ToLocalTime.ToShortDateString
                 List.Controls.Add(Divider)
-                StartDate = Rec.StartTime.Value.ToShortDateString
+                StartDate = Rec.StartTime.Value.ToLocalTime.ToShortDateString
             End If
 
             Dim LI As New UpcomingListItem(Rec)

@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports Microsoft.VisualBasic
@@ -26,7 +26,7 @@ Public Class RecordingListItem
     Public Sub New(ByVal rec As Program)
         Dim lit As New LiteralControl
         lit.Text = "<h3>" & rec.Title & "</h3><p><strong>" & rec.SubTitle & "</strong></p><p>" & _
-            rec.Description & "</p><p class=""ui-li-aside""><strong>" & rec.Recording.StartTs.Value.ToShortTimeString & "</strong></p>"
+            rec.Description & "</p><p class=""ui-li-aside""><strong>" & rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt") & "</strong></p>"
 
         Dim Link As New HyperLink
         Link.NavigateUrl = "recording.aspx?chan=" & rec.Channel.ChanId & "&time=" & rec.Recording.StartTs.Value.Ticks
@@ -41,7 +41,7 @@ Public Class UpcomingListItem
     Inherits HtmlListItem
 
     Public Sub New(ByVal Rec As Program)
-        Dim time As String = Convert.ToDateTime(Rec.Recording.StartTs).ToLocalTime.ToShortTimeString & " - " & Convert.ToDateTime(Rec.Recording.EndTs).ToLocalTime.ToShortTimeString
+        Dim time As String = Rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt") & " - " & Rec.Recording.EndTs.Value.ToLocalTime.ToString("h:mm tt")
         Dim lit As New LiteralControl
         lit.Text = "<h3>" & Rec.Title & "</h3><p><strong>" & Rec.SubTitle & "</strong></p><p>" & Rec.Description & _
                    "</p><p class=""ui-li-aside""><strong>" & Time & "</strong></p>"
@@ -65,7 +65,7 @@ Public Class ShowListItem
 
         If Not Title = "All Programs" AndAlso Not String.IsNullOrEmpty(InetRef) Then
             Dim Img As New Image
-            Img.ImageUrl = "http://" & SiteSettings.Setting("MythServiceAPIAddress") & ":" & SiteSettings.Setting("MythServiceAPIPort") & "/Content/GetRecordingArtwork?Inetref=" & InetRef & "&Type=banner&Height=82&Season=" & Season
+            Img.ImageUrl = Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & InetRef & "&Type=banner&Height=82&Season=" & Season
             Img.AlternateText = Title
             Img.Style.Add("max-width", "100%")
             Link.Controls.Add(Img)
