@@ -35,6 +35,7 @@ Partial Class admin_frontendsettings
 
         ServiceServer.Text = SiteSettings.FrontendSetting("ServiceServer")
         ServicePort.Text = SiteSettings.FrontendSetting("ServicePort")
+        UseAnyStream.Checked = SiteSettings.FrontendSettingBool("UseAnyStream")
 
         ShowTabletSettings()
     End Sub
@@ -44,6 +45,7 @@ Partial Class admin_frontendsettings
         SiteSettings.FrontendSetting("Resolution") = VideoQuality.SelectedValue
         SiteSettings.FrontendSetting("ServiceServer") = ServiceServer.Text
         SiteSettings.FrontendSetting("ServicePort") = ServicePort.Text
+        SiteSettings.FrontendSettingBool("UseAnyStream") = UseAnyStream.Checked
 
         If SiteSettings.FrontendSetting("UIType") = "tablet" Then
             SiteSettings.FrontendSettingBool("ShowRecentRecordings") = RecentRecordings.Checked

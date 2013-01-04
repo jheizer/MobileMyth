@@ -23,6 +23,8 @@ Imports MythContent
 Partial Class viewstream
     Inherits System.Web.UI.Page
 
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(viewstream))
+
     Private Rec As Program
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
@@ -58,11 +60,13 @@ Partial Class viewstream
         If Not Rec Is Nothing Then
             Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
 
+            Logger.Info("Deleting Livestreams: " & Rec.FileName)
             For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
                 WSCache.Content.RemoveLiveStream(Str.Id)
             Next
 
             If WSCache.DVR.RemoveRecorded(Rec.Channel.ChanId, Rec.Recording.StartTs) Then
+                Logger.Info("Recording Deleted: Chan-" & Rec.Channel.ChanId & "StartTs-" & Rec.Recording.StartTs.ToString)
                 Response.Redirect("confirmation.aspx?msg=1", False)
             End If
         End If

@@ -18,12 +18,20 @@
 #End Region
 
 Public Class SiteSettings
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(SiteSettings))
+
     Private Shared Path As String = ""
     Private Shared Data As XElement
 
     Shared Sub New()
-        Path = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "settings.xml")
-        Data = XElement.Load(Path)
+        Try
+            Logger.Info("Loading settings file")
+
+            Path = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "settings.xml")
+            Data = XElement.Load(Path)
+        Catch ex As Exception
+            Logger.Error("Error loading settings file" & ControlChars.NewLine & ex.ToString)
+        End Try
     End Sub
 
     Public Shared Property Setting(ByVal Name As String) As String

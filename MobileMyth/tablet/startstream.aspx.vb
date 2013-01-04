@@ -25,6 +25,8 @@ Imports MythVideo
 Partial Class startstream
     Inherits System.Web.UI.Page
 
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(startstream))
+
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
 
         Dim VidSet As VideoResolution = Resolutions.MyResolution
@@ -38,33 +40,27 @@ Partial Class startstream
                 Dim StartTime As New DateTime(Time)
 
                 Dim Rec As Program = WSCache.DVR.GetRecorded(ChanId, StartTime)
+                Dim Str As LiveStreamInfo = PickAStream(Rec.FileName)
 
-                Dim Str As LiveStreamInfo
-                Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
-
-                If Streams.LiveStreamInfos.Count = 0 Then
+                If Str Is Nothing Then
+                    Logger.Info("Starting stream on " & Rec.FileName)
                     Str = WSCache.Content.AddRecordingLiveStream(ChanId, StartTime, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
-
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
-                    Str = Streams.LiveStreamInfos(0)
                     Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode(Common.GetServiceUrl & Str.RelativeURL))
-
                 End If
 
             Case Is = "v"
 
                 Dim Vid As String = Request.QueryString("vid")
                 Dim Vidinfo As VideoMetadataInfo = WSCache.Video.GetVideo(Vid)
+                Dim Str As LiveStreamInfo = PickAStream(Vidinfo.FileName)
 
-                Dim Str As LiveStreamInfo
-                Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Vidinfo.FileName)
-
-                If Streams.LiveStreamInfos.Count = 0 Then
+                If Str Is Nothing Then
+                    Logger.Info("Starting stream on " & Vidinfo.FileName)
                     Str = WSCache.Content.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
-                    Str = Streams.LiveStreamInfos(0)
                     Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode(Common.GetServiceUrl & Str.RelativeURL))
                 End If
 
@@ -72,4 +68,24 @@ Partial Class startstream
 
 
     End Sub
+
+    Private Function PickAStream(ByVal Filename As String) As LiveStreamInfo
+        Dim str As LiveStreamInfo = Nothing
+        Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Filename)
+
+        If Streams.LiveStreamInfos.Count > 0 Then
+            If Not SiteSettings.FrontendSettingBool("UseAnyStream") Then
+                'We want our exact settings all the time
+                str = Streams.LiveStreamInfos.ToList.Find(Function(s) s.Height = Resolutions.MyResolution.Height)
+            Else
+                'See if we can find our settings, if not just pick the first one
+                str = Streams.LiveStreamInfos.ToList.Find(Function(s) s.Height = Resolutions.MyResolution.Height)
+                If str Is Nothing Then
+                    str = Streams.LiveStreamInfos(0)
+                End If
+            End If
+        End If
+
+        Return str
+    End Function
 End Class

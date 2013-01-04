@@ -28,8 +28,8 @@ Partial Class tablet_guide
         Link.Text = "Full Guide on MythWeb"
         maincontent.Controls.Add(Link)
 
-        Dim Gd As ProgramGuide = WSCache.Guide.GetProgramGuide(DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ssZ"), _
-                                                                        DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ssZ"), _
+        Dim Gd As ProgramGuide = WSCache.Guide.GetProgramGuide(DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ss"), _
+                                                                        DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ss"), _
                                                                         0, 1000, False)
         Dim Chan As ChannelInfo
         For i As Integer = 0 To Gd.Channels.Count - 1
@@ -43,7 +43,10 @@ Partial Class tablet_guide
             Bar.Style.Add("height", "75px")
 
             Dim Lit As New LiteralControl
-            Lit.Text = Chan.CallSign & "<br>" & Chan.ChanNum
+            If Not String.IsNullOrEmpty(Chan.IconURL) Then
+                Lit.Text = "<img src=""" & Common.GetServiceUrl & Chan.IconURL & """ style=""height: 70px;margin-right: 10px;float:left;"" />"
+            End If
+            Lit.Text &= Chan.CallSign & "<br>" & Chan.ChanNum
 
             Bar.Controls.Add(Lit)
             block.Controls.Add(Bar)

@@ -20,6 +20,8 @@
 Partial Class admin_general
     Inherits System.Web.UI.Page
 
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(admin_general))
+
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         ServiceIP.Text = SiteSettings.Setting("MythServiceAPIAddress")
         ServicePort.Text = SiteSettings.Setting("MythServiceAPIPort")
@@ -40,7 +42,7 @@ Partial Class admin_general
         End If
 
         If Not WSCache.ReInitServiceReferences() Then
-            'Master.ShowError("Error connecting to the master backend.")
+            Logger.Error("Error Connecting to the Backend")
         End If
     End Sub
 End Class

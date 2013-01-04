@@ -25,6 +25,8 @@ Imports System.Net.Sockets
 Imports MythVideo
 
 Public Class WSCache
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(WSCache))
+
     Public Shared Content As MythContent.ContentClient
     Public Shared DVR As MythDVR.DvrClient
     Public Shared Service As MythService.MythClient
@@ -37,6 +39,8 @@ Public Class WSCache
 
     Public Shared Function ReInitServiceReferences() As Boolean
         Try
+            Logger.Info("Reinitalizing webservice references.")
+
             Dim Address As String = SiteSettings.Setting("MythServiceAPIAddress")
             Dim Port As String = SiteSettings.Setting("MythServiceAPIPort")
 
@@ -71,11 +75,11 @@ Public Class WSCache
 
             If Recordings Is Nothing Then
                 Recordings = DVR.GetRecordedList(True, 0, 10000)
-                HttpContext.Current.Cache.Add("GetRecordedList", Recordings, Nothing, Now.AddMinutes(1), Nothing, Nothing, Nothing)
+                HttpContext.Current.Cache.Add("GetRecordedList", Recordings, Nothing, Now.AddMinutes(1), Nothing, CacheItemPriority.Low, Nothing)
             End If
 
         Catch ex As Exception
-            'On error return nothing 
+            Logger.Error("Error loading recorded list" & ControlChars.NewLine & ex.ToString)
         End Try
 
         Return Recordings

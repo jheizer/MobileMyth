@@ -20,7 +20,7 @@
         <dd>
             <asp:DropDownList runat="server" ID="VideoQuality"></asp:DropDownList>
         </dd>
-        <dt>Override Myth Service Server <a href="#ServerPopup" data-rel="popup">?</a>
+        <dt>Override Myth Service Server (NOT TESTED YET, DON'T USE) <a href="#ServerPopup" data-rel="popup">?</a>
             <div data-role="popup" id="ServerPopup" data-overlay-theme="b">
 				<div class="ui-corner-all ui-body-e" style="padding:5px 15px;">
 		          <p>Ex: If you are connecting remotely via ssh put the port forward server here and only this frontend will use this setting.</p>
@@ -30,7 +30,7 @@
         <dd>
             <asp:TextBox runat="server" ID="ServiceServer"></asp:TextBox>
         </dd>
-        <dt>Override Myth Service Port <a href="#PortPopup" data-rel="popup">?</a>
+        <dt>Override Myth Service Port (NOT TESTED YET, DON'T USE) <a href="#PortPopup" data-rel="popup">?</a>
             <div data-role="popup" id="PortPopup" data-overlay-theme="b">
 				<div class="ui-corner-all ui-body-e" style="padding:5px 15px;">
 		          <p>If you are connecting remotely via ssh put the forwarded port here and only this frontend will use this setting.</p>
@@ -40,6 +40,14 @@
         <dd>
             <asp:TextBox runat="server" ID="ServicePort"></asp:TextBox>
         </dd>
+        <dt><asp:CheckBox runat="server" ID="UseAnyStream" Text="Use Any Stream" style="width: 300px; display: inline-block;"/> <a href="#AnyPopup" data-rel="popup">?</a>
+            <div data-role="popup" id="AnyPopup" data-overlay-theme="b">
+				<div class="ui-corner-all ui-body-e" style="padding:5px 15px;">
+		          <p>Use an existing stream, if any exist, even if it does not match your resolution settings instead of creating a second transcoding for the same recording.</p>
+				</div>
+		    </div>
+        
+        </dt>
     </dl>
 
     <asp:Panel runat="server" ID="TabletSettings" Visible="false">

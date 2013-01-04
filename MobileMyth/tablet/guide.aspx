@@ -6,6 +6,16 @@
     <asp:PlaceHolder runat="server" ID="maincontent"></asp:PlaceHolder>
 
         <asp:Panel runat="server" ID="GuideList" class="ui-grid-b">
+            <div class="ui-block-a">
+	    		<div class="ui-bar ui-bar-e" >
+                    &nbsp;
+                </div>
+            </div>
+            <div class="ui-block-b">
+	    		<div class="ui-bar ui-bar-e" >
+			    	On Now
+    			</div>
+		    </div>
 		</asp:Panel>
 
 </asp:Content>

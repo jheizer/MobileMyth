@@ -5,7 +5,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHolder" Runat="Server">
-    <h4>Video Streaming is not implemented yet</h4>
     <div class="ui-grid-d">
         <asp:PlaceHolder runat="server" ID="maincontent"></asp:PlaceHolder>
     </div> 

@@ -20,19 +20,23 @@
 Imports Microsoft.VisualBasic
 
 Public Class Resolutions
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(Resolutions))
 
     Private Shared Resolutions As New Generic.Dictionary(Of String, VideoResolution)
 
     Shared Sub New()
-        Dim Path As String = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "resolutions.xml")
-        Dim Data As XElement = XElement.Load(Path)
-
         Try
+            Logger.Info("Loading resolutions file")
+
+            Dim Path As String = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "resolutions.xml")
+            Dim Data As XElement = XElement.Load(Path)
+
             For Each nd As XElement In (From s In Data.Descendants("Resolution") Select s).ToList
                 Resolutions.Add(nd.Attribute("Name").Value, New VideoResolution(nd))
             Next
 
         Catch ex As Exception
+            Logger.Error("Error loading resolution settings" & ControlChars.NewLine & ex.ToString)
         End Try
     End Sub
 

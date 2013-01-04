@@ -4,7 +4,9 @@
 <script runat="server">
  
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
-       
+        log4net.Config.XmlConfigurator.Configure()
+        Dim logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(global_asax))
+        logger.Info("Site started")
     End Sub
     
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)

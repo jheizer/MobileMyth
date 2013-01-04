@@ -40,6 +40,7 @@
 			    <ul>
 				    <li><a href="default.aspx" data-icon="star">General Settings</a></li>
 				    <li><a href="frontendsettings.aspx" data-icon="grid">Frontend</a></li>
+				    <li><a href="viewlog.aspx" data-icon="alert">Vew Log</a></li>
 			    </ul>
 		    </div>
         </asp:Panel>
