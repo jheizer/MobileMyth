@@ -28,6 +28,13 @@ Public Class SiteSettings
             Logger.Info("Loading settings file")
 
             Path = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "settings.xml")
+
+            If Not IO.File.Exists(Path) Then
+                Dim NwFile As New IO.StreamWriter(Path)
+                NwFile.Write("<settings><Frontends>f</Frontends></settings>")
+                NwFile.Close()
+            End If
+
             Data = XElement.Load(Path)
         Catch ex As Exception
             Logger.Error("Error loading settings file" & ControlChars.NewLine & ex.ToString)
