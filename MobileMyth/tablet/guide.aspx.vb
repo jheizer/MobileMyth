@@ -44,7 +44,7 @@ Partial Class tablet_guide
 
             Dim Lit As New LiteralControl
             If Not String.IsNullOrEmpty(Chan.IconURL) Then
-                Lit.Text = "<img src=""" & Common.GetServiceUrl & Chan.IconURL & """ style=""height: 70px;margin-right: 10px;float:left;"" />"
+                Lit.Text = "<img src=""" & Common.ProxyURL(Chan.IconURL) & """ style=""height: 70px;margin-right: 10px;float:left;"" />"
             End If
             Lit.Text &= Chan.CallSign & "<br>" & Chan.ChanNum
 

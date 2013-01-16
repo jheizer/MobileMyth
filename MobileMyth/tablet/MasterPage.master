@@ -29,9 +29,9 @@
     <div data-role="page">
 
         <div data-role="header">
-            <a href="default.aspx" data-icon="home" data-ajax="false">Home</a>  
-            <h3><asp:Label runat="server" ID="HeaderPageTitle">Mobile MythTV</asp:Label></h3>
-            <a href="../admin/default.aspx" data-icon="gear">Settings</a>  
+            <a href="default.aspx" data-icon="home" data-ajax="false"><asp:literal runat="server" Text="Home" /></a>  
+            <h3><asp:Label runat="server" ID="HeaderPageTitle"><asp:literal runat="server" Text="Mobile MythTV" /></asp:Label></h3>
+            <a href="../admin/default.aspx" data-icon="gear"><asp:literal runat="server" Text="Settings" /></a>  
         </div> 
 
         <asp:Panel runat="server" ID="ContentPanel" data-role="content">
@@ -41,11 +41,11 @@
             <asp:Panel runat="server" id="footerpan" data-role="footer" data-position="fixed">
 		    <div data-role="navbar">
 			    <ul>
-				    <li><a href="recordings.aspx" data-icon="star">Recordings</a></li>
-				    <li><a href="videos.aspx" data-icon="grid">Videos</a></li>
-				    <li><a href="guide.aspx" data-icon="grid">Guide</a></li>
-				    <li><a href="upcoming.aspx" data-icon="forward">Upcoming</a></li>
-				    <li><a href="status.aspx" data-icon="info">Status</a></li>
+				    <li><a href="recordings.aspx" data-icon="star"><asp:literal runat="server" Text="Recordings" /></a></li>
+				    <li><a href="videos.aspx" data-icon="grid"><asp:literal runat="server" Text="Videos" /></a></li>
+				    <li><a href="guide.aspx" data-icon="grid"><asp:literal runat="server" Text="Guide" /></a></li>
+				    <li><a href="upcoming.aspx" data-icon="forward"><asp:literal runat="server" Text="Upcoming" /></a></li>
+				    <li><a href="status.aspx" data-icon="info"><asp:literal runat="server" Text="Status" /></a></li>
 			    </ul>
 		    </div>
         </asp:Panel>

@@ -47,6 +47,12 @@ Public Class Resolutions
         Return Nothing
     End Function
 
+    Public Shared Function ResolutionByHeight(ByVal Height As Integer) As VideoResolution
+        Return (From r In Resolutions.Values
+                Where r.Height > Height - 20 AndAlso r.Height < Height + 20
+                Select r).FirstOrDefault
+    End Function
+
     Public Shared Function MyResolution() As VideoResolution
         Return Resolution(SiteSettings.FrontendSetting("Resolution"))
     End Function

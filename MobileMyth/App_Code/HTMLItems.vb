@@ -36,3 +36,39 @@ Public Class HtmlListItem
     End Sub
 
 End Class
+
+Public Class HtmlSpan
+    Inherits HtmlGenericControl
+
+    Public Sub New()
+        Me.TagName = "span"
+    End Sub
+End Class
+
+
+Public Class ProgressBar
+    Inherits Panel
+
+    Public Sub New(ByVal Text As String, ByVal Percent As Integer)
+        Me.New(Text, Percent, "")
+    End Sub
+
+    Public Sub New(ByVal Text As String, ByVal Percent As Integer, ByVal Color As String)
+        If Not String.IsNullOrEmpty(Text) Then
+            Dim Txt As New Panel
+            Txt.Style.Add("text-align", "center")
+            Dim Lbl As New Label
+            Lbl.Text = Text
+            Txt.Controls.Add(Lbl)
+            Me.Controls.Add(Txt)
+        End If
+
+        Dim Meter As New Panel
+        Meter.CssClass = "meter " & Color
+        Dim Value As New HtmlSpan
+        Value.Style.Add("width", Percent.ToString("##") & "%")
+        Meter.Controls.Add(Value)
+        Me.Controls.Add(Meter)
+
+    End Sub
+End Class

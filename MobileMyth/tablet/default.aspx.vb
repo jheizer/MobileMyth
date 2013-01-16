@@ -52,10 +52,9 @@ Partial Class _default
                 Lnk.Attributes.Add("data-ajax", "false")
 
                 Dim img As New Image
-                img.ImageUrl = Common.GetServiceUrl & _
-                                "/Content/GetPreviewImage?ChanId=" & Prog.Channel.ChanId & "&StartTime=" & _
-                                Convert.ToDateTime(Prog.Recording.StartTs).ToString("yyyy-MM-ddTHH:mm:ssZ") & _
-                                "&Height=200"
+                img.ImageUrl = Common.ProxyURL("/Content/GetPreviewImage?ChanId=" & Prog.Channel.ChanId & "&StartTime=" & _
+                                Prog.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") & _
+                                "&Height=200")
                 Lnk.Controls.Add(img)
 
                 Dim EpisodeNumber As String = ""
@@ -89,8 +88,7 @@ Partial Class _default
                 Lnk.Attributes.Add("data-ajax", "false")
 
                 Dim img As New Image 'http://BackendServerIP:6544/Content/GetVideoArtwork?Id=100&Type=coverart
-                img.ImageUrl = Common.GetServiceUrl & _
-                               "/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=200"
+                img.ImageUrl = Common.ProxyURL("/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=200")
                 img.Height = 200
                 img.Width = 134
                 img.AlternateText = "Missing CoverArt"
@@ -176,14 +174,14 @@ Partial Class _default
             Dim Used As Integer = Integer.Parse(Nd.Attributes("used").InnerText)
             Dim Perc As Decimal = Used / Total
 
-            diskinfo.Text = (Perc * 100).ToString("##") & "% Used &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Free) & " Free &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Total) & " Total"
+            Dim Pro As New ProgressBar((Perc * 100).ToString("##") & "% Used &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Free) & " Free &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Total) & " Total", Perc * 100)
             If Perc > 0.9 Then
-                progressbar.CssClass = "meter red"
+                pro = New ProgressBar((Perc * 100).ToString("##") & "% Used &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Free) & " Free &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Total) & " Total", Perc * 100, "red")
             ElseIf Perc > 0.8 Then
-                progressbar.CssClass = "meter yellow"
+                pro = New ProgressBar((Perc * 100).ToString("##") & "% Used &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Free) & " Free &nbsp;&nbsp;&nbsp;" & Common.FormatSizes(Total) & " Total", Perc * 100, "yellow")
             End If
 
-            progressbarvalue.Style.Add("width", (Perc * 100).ToString("##") & "%")
+            DiskSpacePanel.Controls.Add(Pro)
         End If
 
     End Sub

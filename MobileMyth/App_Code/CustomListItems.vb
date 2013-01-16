@@ -64,11 +64,13 @@ Public Class ShowListItem
         Link.NavigateUrl = URL
 
         If Not Title = "All Programs" AndAlso Not String.IsNullOrEmpty(InetRef) Then
-            Dim Img As New Image
-            Img.ImageUrl = Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & InetRef & "&Type=banner&Height=82&Season=" & Season
-            Img.AlternateText = Title
-            Img.Style.Add("max-width", "100%")
-            Link.Controls.Add(Img)
+            If Not SiteSettings.FrontendSettingBool("NoImages") Then
+                Dim Img As New Image
+                Img.ImageUrl = Common.ProxyURL("/Content/GetRecordingArtwork?Inetref=" & InetRef & "&Type=banner&Height=82&Season=" & Season)
+                Img.AlternateText = Title
+                Img.Style.Add("max-width", "100%")
+                Link.Controls.Add(Img)
+            End If
         End If
 
         Dim lit As New LiteralControl

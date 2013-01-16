@@ -1,10 +1,10 @@
 ﻿<Resolutions>
   <Resolution Name="224p" Height="224" VRate="225000" ARate="96000"></Resolution>
-  <Resolution Name="270p" Height="270" VRate="300000" ARate="96000"></Resolution>
-  <Resolution Name="360p" Height="360" VRate="550000" ARate="96000"></Resolution>
+  <Resolution Name="288p" Height="288" VRate="300000" ARate="96000"></Resolution>
+  <Resolution Name="368p" Height="368" VRate="550000" ARate="96000"></Resolution>
   <Resolution Name="480p" Height="480" VRate="800000" ARate="128000"></Resolution>
   <Resolution Name="640p" Height="640" VRate="1500000" ARate="128000"></Resolution>
   <Resolution Name="720p" Height="720" VRate="1900000" ARate="192000"></Resolution>
   <Resolution Name="768p" Height="768" VRate="2000000" ARate="192000"></Resolution>
-  <Resolution Name="1080p" Height="1080" VRate="3000000" ARate="192000"></Resolution>
+  <Resolution Name="1080p" Height="1072" VRate="3000000" ARate="192000"></Resolution>
 </Resolutions>

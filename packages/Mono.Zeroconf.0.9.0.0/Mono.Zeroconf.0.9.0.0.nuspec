@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Mono.Zeroconf</id>
+    <version>0.9.0.0</version>
+    <title>Mono.Zeroconf</title>
+    <authors>Aaron Bockover,  the Mono team</authors>
+    <owners>Aaron Bockover,  the Mono team</owners>
+    <licenseUrl>https://github.com/mono/Mono.Zeroconf/blob/master/COPYING</licenseUrl>
+    <projectUrl>http://mono-project.com/Mono.Zeroconf</projectUrl>
+    <iconUrl>https://nugetgallery.blob.core.windows.net/icons/Mono.Zeroconf.0.9.0.0.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Mono.Zeroconf is a cross platform Zero Configuration Networking library for Mono and .NET. It provides a unified API for performing the most common zeroconf operations on a variety of platforms and subsystems: all the operating systems supported by Mono and both the Avahi and Bonjour/mDNSResponder transports.
+
+By using Mono.Zeroconf developers can use a single API that will work regardless of the underlying implementation that a particular operating system uses.
+
+Developers can publish services that will be exposed to other computers on the network and also query the local machines on the network for services that could have been exposed.</description>
+    <summary>Mono.Zeroconf is a cross platform Zero Configuration Networking library for Mono and .NET</summary>
+    <tags>mono</tags>
+    <references>
+      <reference file="Mono.Zeroconf.dll" />
+      <reference file="Mono.Zeroconf.Providers.Bonjour.dll" />
+    </references>
+  </metadata>
+</package>

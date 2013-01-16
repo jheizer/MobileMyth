@@ -36,35 +36,71 @@ Public Class SiteSettings
 
     Public Shared Property Setting(ByVal Name As String) As String
         Get
-            SyncLock (Data)
-                Try
-                    Dim Ret As String = HttpContext.Current.Cache("Setting:" & Name)
+            Dim Ret As String = HttpContext.Current.Cache("Setting:" & Name)
 
-                    If Ret Is Nothing Then
+            If Ret Is Nothing Then
+                SyncLock (Data)
+                    Try
                         Ret = (From s In Data.Descendants(Name)
-                           Select s).First().Value
+                               Select s).First().Value
 
                         HttpContext.Current.Cache.Insert("Setting:" & Name, Ret, New System.Web.Caching.CacheDependency(Path))
 
-                    End If
+                    Catch ex As Exception
+                        Ret = ""
+                    End Try
 
-                    Return Ret
+                End SyncLock
+            End If
 
-                Catch ex As Exception
-                    Return ""
-                End Try
-
-            End SyncLock
+            Return Ret
 
         End Get
         Set(ByVal value As String)
-            SyncLock (Data)
-                Dim St As XElement = (From s In Data.Descendants(Name)
+            Dim St As XElement = (From s In Data.Descendants(Name)
                                       Select s).FirstOrDefault
+            SyncLock (Data)
+                If St Is Nothing Then
+                    St = New XElement(Name)
+                    Data.Add(St)
+                End If
                 St.Value = value
                 Data.Save(Path)
             End SyncLock
         End Set
+    End Property
+
+    Public Shared Property SettingBool(ByVal Name As String) As Boolean
+        Get
+            Dim ret As String = Setting(Name)
+            If Not String.IsNullOrEmpty(ret) Then
+                Dim tmp As Boolean = False
+                If Boolean.TryParse(ret, tmp) Then
+                    Return tmp
+                End If
+            End If
+            Return False
+        End Get
+        Set(ByVal value As Boolean)
+            Setting(Name) = value.ToString
+        End Set
+    End Property
+
+    Public Shared ReadOnly Property SettingBool(ByVal Name As String, ByVal DefaultValue As Boolean) As Boolean
+        Get
+            Dim ret As String = Setting(Name)
+            If Not String.IsNullOrEmpty(ret) Then
+                Dim tmp As Boolean = False
+                If Boolean.TryParse(ret, tmp) Then
+                    Return tmp
+                Else
+                    Return DefaultValue
+                End If
+            Else
+                Return DefaultValue
+            End If
+            Return False
+        End Get
     End Property
 
     Public Shared Property FrontendSettingBool(ByVal Name As String) As Boolean
@@ -84,51 +120,70 @@ Public Class SiteSettings
         End Set
     End Property
 
+    Public Shared ReadOnly Property FrontendSettingBool(ByVal Name As String, ByVal DefaultValue As Boolean) As Boolean
+        Get
+            Dim ret As String = FrontendSetting(Name)
+            If Not String.IsNullOrEmpty(ret) Then
+                Dim tmp As Boolean = False
+                If Boolean.TryParse(ret, tmp) Then
+                    Return tmp
+                Else
+                    Return DefaultValue
+                End If
+            End If
+            Return False
+
+        End Get
+    End Property
+
     Public Shared Property FrontendSetting(ByVal Name As String) As String
         Get
-            SyncLock (Data)
-                Try
-                    Dim FE As String = HttpContext.Current.Request.UserHostName
-                    Dim Ret As String = HttpContext.Current.Cache(FE & Name)
+            Dim FE As String = HttpContext.Current.Request.UserHostName
+            Dim Ret As String = HttpContext.Current.Cache(FE & Name)
 
-                    If Ret Is Nothing Then
+            If Ret Is Nothing Then
+
+                SyncLock (Data)
+                    Try
                         Dim Nd As XElement = (From s In Data.Descendants("Frontend")
-                                              Where s.Attribute("name") = FE
-                                              Select s).FirstOrDefault()
+                                                  Where s.Attribute("name") = FE
+                                                  Select s).FirstOrDefault()
                         If Nd Is Nothing Then
                             Return ""
                         End If
-
 
                         Ret = Nd.Element(Name).Value
 
                         HttpContext.Current.Cache.Insert(FE & Name, Ret, New System.Web.Caching.CacheDependency(Path))
 
-                    End If
+                    Catch ex As Exception
+                        Ret = ""
+                    End Try
 
-                    Return Ret
+                End SyncLock
 
-                Catch ex As Exception
-                    Return ""
-                End Try
+            End If
 
-            End SyncLock
+            Return Ret
+
         End Get
         Set(ByVal value As String)
-            SyncLock (Data)
                 Dim FE As String = HttpContext.Current.Request.UserHostName
 
+                'Look for the FE
                 Dim Nd As XElement = (From s In Data.Descendants("Frontend")
                                           Where s.Attribute("name") = FE
                                           Select s).FirstOrDefault()
+
+            SyncLock (Data)
                 If Nd Is Nothing Then
                     Nd = New XElement("Frontend")
                     Nd.SetAttributeValue("name", FE)
                     Data.Descendants("Frontends").First.Add(Nd)
                 End If
 
+                'Find the value
                 Dim ValNd As XElement = Nd.Descendants(Name).FirstOrDefault
-
 
                 If ValNd Is Nothing Then
                     ValNd = New XElement(Name)

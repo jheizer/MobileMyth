@@ -28,7 +28,14 @@ Partial Class viewstream
     Private Rec As Program
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-        Dim Url As String = HttpUtility.UrlDecode(Request.QueryString("url"))
+        Dim Url As String = Request.QueryString("url")
+
+        If SiteSettings.FrontendSettingBool("ProxyVideo") Then
+            Url = ".." & Url
+        Else
+            Url = Common.GetServiceUrl & Url
+        End If
+
         Dim lit As New LiteralControl
         lit.Text = "<video width=""100%"" height=""" & Resolutions.MyResolution.Height & """ controls=""controls""><source src=""" & Url & """></video>"
         maincontent.Controls.Add(lit)
@@ -42,7 +49,6 @@ Partial Class viewstream
         Lnk.NavigateUrl = Url
         Lnk.Attributes.Add("data-role", "button")
         maincontent.Controls.Add(Lnk)
-
 
         If Request.QueryString("type") = "r" Then
             Dim ChanId As Integer = Integer.Parse(Request.QueryString("chan"))

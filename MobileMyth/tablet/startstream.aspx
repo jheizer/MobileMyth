@@ -4,12 +4,12 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="DialogHeader" Runat="Server">
-    <h1>Loading</h1>
+    <h1><asp:literal runat="server" Text="Loading" /></h1>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="DialogContent" Runat="Server">
     <div style="text-align: center;">
-        <img src="http://jquerymobile.com/test/css/themes/default/images/ajax-loader.gif" /><p>Creating Video Stream...</p>
+        <img src="http://jquerymobile.com/test/css/themes/default/images/ajax-loader.gif" /><p><asp:literal runat="server" Text="Creating Video Stream..." /></p>
     </div>
 
     <script type="text/javascript" >

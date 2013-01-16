@@ -26,12 +26,16 @@ Partial Class admin_general
         ServiceIP.Text = SiteSettings.Setting("MythServiceAPIAddress")
         ServicePort.Text = SiteSettings.Setting("MythServiceAPIPort")
         MythWebUrl.Text = SiteSettings.Setting("MythWebUrl")
+        dateformat.SelectedValue = SiteSettings.Setting("DateFormat")
+        DeviceList.Checked = SiteSettings.SettingBool("DeviceList", True)
     End Sub
 
     Protected Sub submit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles submit.Click
         SiteSettings.Setting("MythServiceAPIAddress") = ServiceIP.Text
         SiteSettings.Setting("MythServiceAPIPort") = ServicePort.Text
         SiteSettings.Setting("MythWebUrl") = MythWebUrl.Text
+        SiteSettings.Setting("DateFormat") = dateformat.SelectedValue
+        SiteSettings.SettingBool("DeviceList") = DeviceList.Checked
 
         If Not SiteSettings.Setting("MythWebUrl").ToLower.StartsWith("http") Then
             SiteSettings.Setting("MythWebUrl") = "http://" & SiteSettings.Setting("MythWebUrl")
@@ -40,6 +44,8 @@ Partial Class admin_general
         If Not SiteSettings.Setting("MythWebUrl").EndsWith("/") Then
             SiteSettings.Setting("MythWebUrl") &= "/"
         End If
+
+        Common.LoadDateFormat()
 
         If Not WSCache.ReInitServiceReferences() Then
             Logger.Error("Error Connecting to the Backend")

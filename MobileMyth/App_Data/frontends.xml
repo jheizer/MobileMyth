@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<frontends>
+  <!--
+  <frontend name="Friendly Name for Frontend" address="10.0.0.111" />
+  -->
+  
+  <frontend name="Familyroom" address="10.0.0.111" />
+  <frontend name="Livingroom" address="10.0.0.161" />
+</frontends>

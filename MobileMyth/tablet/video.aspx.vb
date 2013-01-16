@@ -36,11 +36,11 @@ Partial Class tablet_video
 
             'If we have a number lets try to display a banner
             If Not String.IsNullOrEmpty(vid.Inetref) Then
-                coverimage.ImageUrl = Common.GetServiceUrl & "/Content/GetVideoArtwork?Id=" & vid.Id & "&Type=coverart&Height=300"
+                coverimage.ImageUrl = Common.ProxyURL("/Content/GetVideoArtwork?Id=" & vid.Id & "&Type=coverart&Height=300")
                 coverimage.Visible = True
                 'ui-content
                 'background-color: rgba(255,255,255,0.5);
-                Master.ContentDiv.Style.Add("background", "url('" & Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & vid.Inetref & "&Type=fanart&Season=" & vid.Season & "') no-repeat center top;")
+                Master.ContentDiv.Style.Add("background", "url('" & Common.ProxyURL("/Content/GetRecordingArtwork?Inetref=" & vid.Inetref & "&Type=fanart&Season=" & vid.Season) & "') no-repeat center top;")
                 Master.ContentDiv.Style.Add("background-color", " rgba(255,255,255,0.5)")
             End If
 

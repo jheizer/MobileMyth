@@ -29,15 +29,48 @@ Partial Class tablet_videos
         Master.PageTitle = "Videos"
 
         Try
+            Dim Folder As String = ""
+
+            If Not Request.QueryString("f") Is Nothing Then
+                Folder = Request.QueryString("f")
+            End If
+
             Dim Videos As MythVideo.VideoMetadataInfoList
             Videos = WSCache.Video.GetVideoList(True, 0, 10000)  'Change the service xml to xs:string for AddDate
-            Dim Sorted As List(Of VideoMetadataInfo) = (From v In Videos.VideoMetadataInfos
-                                               Order By v.Title
-                                               Select v).ToList
+
+            Dim Folders As List(Of String) = (From v In Videos.VideoMetadataInfos
+                                              Where v.FileName.Contains("/") AndAlso v.FileName.Contains(Folder)
+                                              Order By v.FileName
+                                              Select v.FileName.Substring(0, v.FileName.IndexOf("/"))
+                                              Distinct).ToList
+            Folders.Sort()
+            Folders.Remove(Folder)
+
+            Dim Sorted As List(Of VideoMetadataInfo)
+
+            If String.IsNullOrEmpty(Folder) Then
+                Sorted = (From v In Videos.VideoMetadataInfos
+                          Where Not v.FileName.Contains("/")
+                          Order By v.Title
+                          Select v).ToList
+            Else
+                Sorted = (From v In Videos.VideoMetadataInfos
+                          Where v.FileName.StartsWith(Folder & "/")
+                          Order By v.Title
+                          Select v).ToList
+            End If
+
+
+            For i As Integer = 0 To Folders.Count - 1
+                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & Folders(i), "../images/119.png")
+                maincontent.Controls.Add(Li)
+            Next
+
+
             Dim Vid As VideoMetadataInfo
             For i As Integer = 0 To Sorted.Count - 1
                 Vid = Sorted(i)
-                Dim Li As New VideoPanel(i, Vid.Title, "video.aspx?id=" & Vid.Id, Common.GetServiceUrl & "/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=225")
+                Dim Li As New VideoPanel(i, Vid.Title, "video.aspx?id=" & Vid.Id, Common.ProxyURL("/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=225"))
                 maincontent.Controls.Add(Li)
             Next
 

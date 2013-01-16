@@ -47,7 +47,7 @@ Partial Class startstream
                     Str = WSCache.Content.AddRecordingLiveStream(ChanId, StartTime, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
-                    Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode(Common.GetServiceUrl & Str.RelativeURL))
+                    Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode(Str.RelativeURL))
                 End If
 
             Case Is = "v"
@@ -61,7 +61,7 @@ Partial Class startstream
                     Str = WSCache.Content.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
-                    Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode(Common.GetServiceUrl & Str.RelativeURL))
+                    Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode(Str.RelativeURL))
                 End If
 
         End Select

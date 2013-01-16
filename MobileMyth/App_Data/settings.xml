@@ -13,6 +13,9 @@
       <ShowDiskSpace>True</ShowDiskSpace>
       <ShowEncoders>True</ShowEncoders>
       <ShowUpcoming>False</ShowUpcoming>
+      <UseAnyStream>True</UseAnyStream>
+      <NoImages>False</NoImages>
+      <ProxyVideo>True</ProxyVideo>
     </Frontend>
     <Frontend name="::1">
       <UIType>tablet</UIType>
@@ -25,4 +28,6 @@
       <ShowUpcoming>False</ShowUpcoming>
     </Frontend>
   </Frontends>
+  <DateFormat>MM/DD/YYYY</DateFormat>
+  <DeviceList>True</DeviceList>
 </settings>

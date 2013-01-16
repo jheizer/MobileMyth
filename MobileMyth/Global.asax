@@ -6,15 +6,31 @@
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         log4net.Config.XmlConfigurator.Configure()
         Dim logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(global_asax))
-        logger.Info("Site started")
+
+        Try
+            logger.Info("Site Started")
+        
+            Routing.RouteTable.Routes.MapPageRoute("Streaming", "StorageGroup/{*url}", "~/proxy.aspx")
+      
+            FrontendScanner.StartFindFrontends()
+            
+        Catch ex As Exception
+            logger.Error(ex.ToString)
+        End Try
     End Sub
     
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
-        ' Code that runs on application shutdown
+        Try
+            FrontendScanner.StopFindFrontends()
+        Catch ex As Exception
+        End Try
     End Sub
         
     Sub Application_Error(ByVal sender As Object, ByVal e As EventArgs)
-        ' Code that runs when an unhandled error occurs
+        Dim ex As Exception = Server.GetLastError().GetBaseException()
+        
+        Dim logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(global_asax))
+        logger.Error(ex.ToString)
     End Sub
 
     Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
@@ -28,4 +44,15 @@
         ' or SQLServer, the event is not raised.
     End Sub
        
+    Protected Sub Application_BeginRequest(ByVal sender As Object, ByVal e As System.EventArgs)
+        
+        'Dim Req As String = HttpContext.Current.Request.RawUrl.ToString
+        'Req = Req.Replace("MobileMyth/", "").Replace("mobilemyth/", "")
+        'Req = HttpUtility.HtmlEncode(Req)
+        
+        'If Req.Contains("/StorageGroup/") AndAlso Not Req.Contains("proxy.ashx") Then
+        '    Context.RewritePath("~/proxy.ashx?url=" & Req)
+        '    'Response.Redirect("~/proxy.ashx?url=" & Req)
+        'End If
+    End Sub
 </script>

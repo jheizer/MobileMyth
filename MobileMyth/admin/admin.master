@@ -23,24 +23,33 @@
     <div data-role="page">
 
         <div data-role="header">
-            <a href="../default.aspx" data-icon="home">Home</a>  
-            <h3><asp:Label runat="server" ID="HeaderPageTitle">Mobile MythTV - Admin</asp:Label></h3>
-            <a href="default.aspx" data-icon="gear">Settings</a>  
+            <a href="../default.aspx" data-icon="home"><asp:literal runat="server" 
+                Text="Home" meta:resourcekey="LiteralResource1" /></a>  
+            <h3><asp:Label runat="server" ID="HeaderPageTitle" meta:resourcekey="HeaderPageTitleResource1">Mobile MythTV - Admin</asp:Label></h3>
+            <a href="default.aspx" data-icon="gear"><asp:literal runat="server" 
+                Text="Settings" meta:resourcekey="LiteralResource2" /></a>  
         </div> 
 
-        <asp:Panel runat="server" ID="ContentPanel" data-role="content">
-            <asp:Panel runat="server" ID="ErrorsPanel" Visible="false">
-                <asp:Label runat="server" ID="Errors" style="color:Red; font-weight: bold;"></asp:Label> 
+        <asp:Panel runat="server" ID="ContentPanel" data-role="content" 
+            meta:resourcekey="ContentPanelResource1">
+            <asp:Panel runat="server" ID="ErrorsPanel" Visible="False" 
+                meta:resourcekey="ErrorsPanelResource1">
+                <asp:Label runat="server" ID="Errors" style="color:Red; font-weight: bold;" 
+                    meta:resourcekey="ErrorsResource1"></asp:Label> 
             </asp:Panel>
             <asp:ContentPlaceHolder id="ContentHolder" runat="server"></asp:ContentPlaceHolder>
         </asp:Panel> 
 
-            <asp:Panel runat="server" id="footerpan" data-role="footer" data-position="fixed">
+            <asp:Panel runat="server" id="footerpan" data-role="footer" 
+            data-position="fixed" meta:resourcekey="footerpanResource1">
 		    <div data-role="navbar">
 			    <ul>
-				    <li><a href="default.aspx" data-icon="star">General Settings</a></li>
-				    <li><a href="frontendsettings.aspx" data-icon="grid">Frontend</a></li>
-				    <li><a href="viewlog.aspx" data-icon="alert">Vew Log</a></li>
+				    <li><a href="default.aspx" data-icon="star"><asp:literal runat="server" 
+                            Text="General Settings" meta:resourcekey="LiteralResource3" /></a> </li>
+				    <li><a href="frontendsettings.aspx" data-icon="grid"><asp:literal runat="server" 
+                            Text="Frontend" meta:resourcekey="LiteralResource4" /></a> </li>
+				    <li><a href="viewlog.aspx" data-icon="alert"><asp:literal runat="server" 
+                            Text="Vew Log" meta:resourcekey="LiteralResource5" /></a> </li>
 			    </ul>
 		    </div>
         </asp:Panel>

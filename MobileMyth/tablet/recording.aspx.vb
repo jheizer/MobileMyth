@@ -54,8 +54,8 @@ Partial Class recording
         If Not Rec Is Nothing Then
 
             'If we have a number lets try to display a banner
-            If Not String.IsNullOrEmpty(Rec.Inetref) Then
-                coverimage.ImageUrl = Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & Rec.Inetref & "&Type=cover&Height=300&Season=" & Rec.Season
+            If Not String.IsNullOrEmpty(Rec.Inetref) AndAlso Not SiteSettings.FrontendSettingBool("NoImages") Then
+                coverimage.ImageUrl = Common.ProxyURL("/Content/GetRecordingArtwork?Inetref=" & Rec.Inetref & "&Type=cover&Height=300&Season=" & Rec.Season)
                 coverimage.Visible = True
                 'ui-content
                 'background-color: rgba(255,255,255,0.5);
@@ -73,7 +73,7 @@ Partial Class recording
             EpisodeSubTitle.Text = Rec.SubTitle & TotalMinutes
             EpisodeDescription.Text = Rec.Description
 
-            RecordingDate.Text = "Recorded: " & Rec.Recording.StartTs.Value.ToString
+            RecordingDate.Text = "Recorded: " & Rec.Recording.StartTs.Value.ToLocalTime.ToString(Common.DateFormat & " H:mm tt")
             OriginalDate.Text = "Originally Aired: " & Rec.Airdate
             FileSize.Text = "File Size: " & Common.FormatSizes(Rec.FileSize / 1048576)
 
@@ -81,17 +81,27 @@ Partial Class recording
                 Episode.Text = "Season " & Rec.Season & " Episode " & Rec.Episode
             End If
 
+
             'Display stream info(0) if transcoding has already been started
             Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
-            If Streams.LiveStreamInfos.Count > 0 Then
+            For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
                 TranscodePanel.Visible = True
-                transcodinginfo.Text = "Transcoding Progress: " & Streams.LiveStreamInfos(0).PercentComplete & "%"
-                progressbarvalue.Style.Add("width", Streams.LiveStreamInfos(0).PercentComplete & "%")
-            End If
+                Dim Pro As New ProgressBar("Transcoding Progress (" & Resolutions.ResolutionByHeight(Str.Height).Name & "): " & Str.PercentComplete & "%", Str.PercentComplete)
+                TranscodePanel.Controls.Add(Pro)
+            Next
 
             WatchNowLink.NavigateUrl = "startstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks
-            DownloadLink.NavigateUrl = Common.GetServiceUrl & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
 
+            'FE Links
+            For Each ky As String In Frontends.Frontends.Keys
+                FEList.Items.Add(New ListItem(ky, Frontends.Frontends(ky)))
+            Next
+
+            PlayFE.Attributes.Add("onclick", "PlayOnFrontend($('#" & FEList.ClientID & "').val(), '" & Rec.Channel.ChanId & "', '" & Rec.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") & "')")
+
+            DownloadLink.NavigateUrl = Common.ProxyURL("/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00")
+
+            'Info for delete popup
             DeleteTitle.Text = "Delete Recording?"
             DeleteDetails.Text = Rec.Title & "<br>" & Rec.SubTitle
 

@@ -11,13 +11,13 @@
 
     <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
 		<div data-role="header" data-theme="a" class="ui-corner-top">
-			<h1>Delete?</h1>
+			<h1><asp:literal runat="server" Text="Delete?" /></h1>
 		</div>
 		<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
 			<h3 class="ui-title"><asp:Label runat="server" ID="DeleteTitle"></asp:Label></h3>
 			<p><asp:Label runat="server" ID="DeleteDetails"></asp:Label></p>
-			<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>  
-            <asp:LinkButton runat="server" ID="DeleteButton" data-role="button" data-inline="true" data-transition="flow" data-theme="b" data-ajax="false">Delete</asp:LinkButton>
+			<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c"><asp:literal runat="server" Text="Cancel" /></a>  
+            <asp:LinkButton runat="server" ID="DeleteButton" data-role="button" data-inline="true" data-transition="flow" data-theme="b" data-ajax="false"><asp:literal runat="server" Text="Delete" /></asp:LinkButton>
             
 		</div>
 	</div>

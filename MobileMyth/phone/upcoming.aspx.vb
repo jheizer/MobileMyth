@@ -31,15 +31,15 @@ Partial Class upcoming
         maincontent.Controls.Add(List)
         List.Attributes.Add("data-role", "listview")
 
-        Dim StartDate As String = DateTime.MaxValue.ToShortDateString
+        Dim StartDate As String = DateTime.MaxValue.ToLongDateString
 
         For Each Rec As Program In Recordings.Programs
-            If Rec.StartTime.Value.ToShortDateString <> StartDate Then
+            If Rec.StartTime.Value.ToLongDateString <> StartDate Then
                 Dim Divider As New HtmlListItem
                 Divider.Attributes.Add("data-role", "list-divider")
-                Divider.InnerText = Rec.StartTime.Value.ToShortDateString
+                Divider.InnerText = Rec.StartTime.Value.ToLongDateString
                 List.Controls.Add(Divider)
-                StartDate = Rec.StartTime.Value.ToShortDateString
+                StartDate = Rec.StartTime.Value.ToLongDateString
             End If
 
             Dim LI As New UpcomingListItem(Rec)

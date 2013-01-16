@@ -20,6 +20,8 @@
 Partial Class admin_frontendsettings
     Inherits System.Web.UI.Page
 
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(admin_frontendsettings))
+
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         uitype.SelectedValue = SiteSettings.FrontendSetting("UIType")
 
@@ -33,57 +35,53 @@ Partial Class admin_frontendsettings
             VideoQuality.SelectedValue = SiteSettings.FrontendSetting("Resolution")
         End If
 
-        ServiceServer.Text = SiteSettings.FrontendSetting("ServiceServer")
-        ServicePort.Text = SiteSettings.FrontendSetting("ServicePort")
         UseAnyStream.Checked = SiteSettings.FrontendSettingBool("UseAnyStream")
+        ProxyVideo.Checked = SiteSettings.FrontendSettingBool("ProxyVideo")
+        NoImages.Checked = SiteSettings.FrontendSettingBool("NoImages")
+
+        'Let the device be reported
+        DeviceLog.Visible = SiteSettings.SettingBool("DeviceList", True)
 
         ShowTabletSettings()
     End Sub
 
     Protected Sub submit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles submit.Click
-        SiteSettings.FrontendSetting("UIType") = uitype.SelectedValue
-        SiteSettings.FrontendSetting("Resolution") = VideoQuality.SelectedValue
-        SiteSettings.FrontendSetting("ServiceServer") = ServiceServer.Text
-        SiteSettings.FrontendSetting("ServicePort") = ServicePort.Text
-        SiteSettings.FrontendSettingBool("UseAnyStream") = UseAnyStream.Checked
+        Try
 
-        If SiteSettings.FrontendSetting("UIType") = "tablet" Then
-            SiteSettings.FrontendSettingBool("ShowRecentRecordings") = RecentRecordings.Checked
-            SiteSettings.FrontendSettingBool("ShowRecentVideos") = Recentvideos.Checked
-            SiteSettings.FrontendSettingBool("ShowConflicts") = Conflicts.Checked
-            SiteSettings.FrontendSettingBool("ShowDiskSpace") = DiskSpace.Checked
-            SiteSettings.FrontendSettingBool("ShowEncoders") = Encoders.Checked
-            SiteSettings.FrontendSettingBool("ShowUpcoming") = Upcoming.Checked
-        End If
+            SiteSettings.FrontendSetting("UIType") = uitype.SelectedValue
+            SiteSettings.FrontendSetting("Resolution") = VideoQuality.SelectedValue
+            SiteSettings.FrontendSettingBool("UseAnyStream") = UseAnyStream.Checked
+            SiteSettings.FrontendSettingBool("ProxyVideo") = ProxyVideo.Checked
 
-        Response.Redirect("frontendsettings.aspx", False) 'Not sure what is going on here...
+            If SiteSettings.FrontendSetting("UIType") = "tablet" Then
+                SiteSettings.FrontendSettingBool("ShowRecentRecordings") = RecentRecordings.Checked
+                SiteSettings.FrontendSettingBool("ShowRecentVideos") = Recentvideos.Checked
+                SiteSettings.FrontendSettingBool("ShowConflicts") = Conflicts.Checked
+                SiteSettings.FrontendSettingBool("ShowDiskSpace") = DiskSpace.Checked
+                SiteSettings.FrontendSettingBool("ShowEncoders") = Encoders.Checked
+                SiteSettings.FrontendSettingBool("ShowUpcoming") = Upcoming.Checked
+
+                SiteSettings.FrontendSettingBool("NoImages") = NoImages.Checked
+            End If
+
+            Response.Redirect("frontendsettings.aspx", False)
+
+        Catch ex As Exception
+            Logger.Error(ex.ToString)
+        End Try
     End Sub
 
     Private Sub ShowTabletSettings()
         If SiteSettings.FrontendSetting("UIType") = "tablet" Then
             TabletSettings.Visible = True
-            TabletDefaults()
 
-            RecentRecordings.Checked = SiteSettings.FrontendSettingBool("ShowRecentRecordings")
-            Recentvideos.Checked = SiteSettings.FrontendSettingBool("ShowRecentVideos")
-            Conflicts.Checked = SiteSettings.FrontendSettingBool("ShowConflicts")
-            DiskSpace.Checked = SiteSettings.FrontendSettingBool("ShowDiskSpace")
-            Encoders.Checked = SiteSettings.FrontendSettingBool("ShowEncoders")
-            Upcoming.Checked = SiteSettings.FrontendSettingBool("ShowUpcoming")
+            RecentRecordings.Checked = SiteSettings.FrontendSettingBool("ShowRecentRecordings", True)
+            Recentvideos.Checked = SiteSettings.FrontendSettingBool("ShowRecentVideos", False)
+            Conflicts.Checked = SiteSettings.FrontendSettingBool("ShowConflicts", True)
+            DiskSpace.Checked = SiteSettings.FrontendSettingBool("ShowDiskSpace", True)
+            Encoders.Checked = SiteSettings.FrontendSettingBool("ShowEncoders", True)
+            Upcoming.Checked = SiteSettings.FrontendSettingBool("ShowUpcoming", False)
         End If
     End Sub
-
-
-    Private Sub TabletDefaults()
-        If String.IsNullOrEmpty(SiteSettings.FrontendSetting("ShowRecentRecordings")) Then
-            SiteSettings.FrontendSettingBool("ShowRecentRecordings") = True
-            SiteSettings.FrontendSettingBool("ShowRecentVideos") = False
-            SiteSettings.FrontendSettingBool("ShowConflicts") = True
-            SiteSettings.FrontendSettingBool("ShowDiskSpace") = True
-            SiteSettings.FrontendSettingBool("ShowEncoders") = True
-            SiteSettings.FrontendSettingBool("ShowUpcoming") = False
-        End If
-    End Sub
-
 
 End Class

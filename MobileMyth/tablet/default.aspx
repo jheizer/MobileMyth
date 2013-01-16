@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="MasterPage.master" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="_default" EnableViewState="false" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="MasterPage.master" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="_default" EnableViewState="false" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 <%@ MasterType VirtualPath="MasterPage.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -135,8 +135,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHolder" Runat="Server">
-    <asp:Panel runat="server" ID="RecentRecordingsPanel" Visible="false">
-        <h3 style="margin-top: 0px; margin-bottom: 3px;">Recent Recordings</h3>
+    <asp:Panel runat="server" ID="RecentRecordingsPanel" Visible="False" 
+    meta:resourcekey="RecentRecordingsPanelResource1">
+        <h3 style="margin-top: 0px; margin-bottom: 3px;"><asp:literal runat="server" 
+                Text="Recent Recordings" meta:resourcekey="LiteralResource1" /></h3>
         <div class='iosSlider'>
     	    <div class='slider'>
                 <asp:PlaceHolder runat="server" ID="RecordingsSlideHolder"></asp:PlaceHolder>
@@ -144,8 +146,10 @@
         </div>
     </asp:Panel>
 
-    <asp:Panel runat="server" ID="RecentVideosPanel" Visible="false">
-        <h3 style="margin-bottom: 3px;">Recent Videos</h3>
+    <asp:Panel runat="server" ID="RecentVideosPanel" Visible="False" 
+    meta:resourcekey="RecentVideosPanelResource1">
+        <h3 style="margin-bottom: 3px;"><asp:literal runat="server" Text="Recent Videos" 
+                meta:resourcekey="LiteralResource2" /></h3>
         <div class='iosSlider'>
     	    <div class='slider'>
                 <asp:PlaceHolder runat="server" ID="VideosSliderHolder"></asp:PlaceHolder>
@@ -158,33 +162,35 @@
             <div style="padding-right: 10px;">
              
 
-                <asp:Panel runat="server" ID="ConflictsPanel" Visible="false">
-                    <h3>Conflicts</h3>
+                <asp:Panel runat="server" ID="ConflictsPanel" Visible="False" 
+                    meta:resourcekey="ConflictsPanelResource1">
+                    <h3><asp:literal runat="server" Text="Conflicts" 
+                            meta:resourcekey="LiteralResource3" /></h3>
                     <ul data-role="listview" data-inset="true" runat="server" id="Conflicts" style="margin-right: 10px;">   
                     </ul>
                 </asp:Panel>
 
-                <asp:Panel runat="server" ID="DiskSpacePanel" Visible="false">
-                    <h3>Disk Space</h3>
-                    <div style="text-align: center;">
-                        <asp:Label runat="server" id="diskinfo"></asp:Label>
-                    </div>
-
-                    <asp:Panel class="meter" runat="server" id="progressbar">
-	                    <span runat="server" id="progressbarvalue"></span>
-                    </asp:Panel>
+                <asp:Panel runat="server" ID="DiskSpacePanel" Visible="False" 
+                    meta:resourcekey="DiskSpacePanelResource1">
+                    <h3><asp:literal runat="server" Text="Disk Space" 
+                            meta:resourcekey="LiteralResource4" /></h3>
+                    
                 </asp:Panel>
             </div>
         </div>
 	    <div class="ui-block-b">
-            <asp:Panel runat="server" ID="UpcomingPanel" Visible="false">
-                <h3>Upcoming Recordings</h3>
+            <asp:Panel runat="server" ID="UpcomingPanel" Visible="False" 
+                meta:resourcekey="UpcomingPanelResource1">
+                <h3><asp:literal runat="server" Text="Upcoming Recordings" 
+                        meta:resourcekey="LiteralResource5" /></h3>
                 <ul data-role="listview" data-inset="true" runat="server" id="Upcoming">   
                 </ul>
             </asp:Panel>
 
-            <asp:Panel runat="server" ID="EncodersPanel" Visible="false">
-                <h3>Encoders</h3>
+            <asp:Panel runat="server" ID="EncodersPanel" Visible="False" 
+                meta:resourcekey="EncodersPanelResource1">
+                <h3><asp:literal runat="server" Text="Encoders" 
+                        meta:resourcekey="LiteralResource6" /></h3>
                 <ul data-role="listview" data-inset="true" runat="server" id="Encoders">   
                 </ul>
             </asp:Panel>

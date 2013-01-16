@@ -34,26 +34,26 @@ Partial Class recording
 
             'If we have a number lets try to display a banner
             If Not String.IsNullOrEmpty(rec.Inetref) Then
-                bannerimage.ImageUrl = Common.GetServiceUrl & "/Content/GetRecordingArtwork?Inetref=" & rec.Inetref & "&Type=banner&Season=" & rec.Season
+                bannerimage.ImageUrl = Common.ProxyURL("/Content/GetRecordingArtwork?Inetref=" & rec.Inetref & "&Type=banner&Season=" & rec.Season)
                 bannerimage.Visible = True
             End If
 
-            Dim TotalMinutes As String = ""
-            Try
-                TotalMinutes = "   (" & rec.EndTime.Value.Subtract(rec.StartTime.Value).TotalMinutes & " Minutes)"
-            Catch ex As Exception
-            End Try
+                Dim TotalMinutes As String = ""
+                Try
+                    TotalMinutes = "   (" & rec.EndTime.Value.Subtract(rec.StartTime.Value).TotalMinutes & " Minutes)"
+                Catch ex As Exception
+                End Try
 
-            EpisodeTitle.Text = rec.Title
-            EpisodeSubTitle.Text = rec.SubTitle & TotalMinutes
-            EpisodeDescription.Text = rec.Description
+                EpisodeTitle.Text = rec.Title
+                EpisodeSubTitle.Text = rec.SubTitle & TotalMinutes
+                EpisodeDescription.Text = rec.Description
 
-            WatchNowLink.NavigateUrl = "startstream.aspx?id=" & rec.ProgramId
-            DownloadLink.NavigateUrl = Common.GetServiceUrl & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
-            DeleteLink.NavigateUrl = "http://google.com"
-            DeleteButton.PostBackUrl = "recording.aspx?id=" & Id
+                WatchNowLink.NavigateUrl = "startstream.aspx?id=" & rec.ProgramId
+                DownloadLink.NavigateUrl = Common.ProxyURL("/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00")
+                DeleteLink.NavigateUrl = "http://google.com"
+                DeleteButton.PostBackUrl = "recording.aspx?id=" & Id
 
-        End If
+            End If
 
     End Sub
 

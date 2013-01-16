@@ -49,7 +49,7 @@ Partial Class recordings
             StartPg = Integer.Parse(Request.QueryString("pg"))
         End If
 
-        Dim StartDate As String = DateTime.MaxValue.ToShortDateString
+        Dim StartDate As String = DateTime.MaxValue.ToString(Common.DateFormat)
 
         Dim Index As Integer = StartPg * 50
         Dim Rec As Program = Nothing
@@ -58,12 +58,12 @@ Partial Class recordings
         While Index < StartPg * 50 + 50 AndAlso Index < Programs.Count
             Rec = Programs(Index)
 
-            If Rec.StartTime.Value.ToShortDateString <> StartDate Then
+            If Rec.StartTime.Value.ToString(Common.DateFormat) <> StartDate Then
                 Dim Divider As New HtmlListItem
                 Divider.Attributes.Add("data-role", "list-divider")
-                Divider.InnerText = Rec.StartTime.Value.ToShortDateString
+                Divider.InnerText = Rec.StartTime.Value.ToString(Common.DateFormat)
                 List.Controls.Add(Divider)
-                StartDate = Rec.StartTime.Value.ToShortDateString
+                StartDate = Rec.StartTime.Value.ToString(Common.DateFormat)
             End If
 
             Dim LI As New RecordingListItem(Rec)
