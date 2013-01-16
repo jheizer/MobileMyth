@@ -25,6 +25,8 @@ Imports MythVideo
 Partial Class tablet_videos
     Inherits System.Web.UI.Page
 
+    Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(tablet_videos))
+
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Master.PageTitle = "Videos"
 
@@ -37,14 +39,32 @@ Partial Class tablet_videos
 
             Dim Videos As MythVideo.VideoMetadataInfoList
             Videos = WSCache.Video.GetVideoList(True, 0, 10000)  'Change the service xml to xs:string for AddDate
+            
+            Dim Folders As New List(Of String)
+            Dim Fold As String
+            Dim temp As String
+            For Each V As VideoMetadataInfo In Videos.VideoMetadataInfos
+                Fold = V.FileName
+                temp = ""
+                If Fold.Contains("/") Then
+                    If Fold.StartsWith(Folder) Then
+                        If Not String.IsNullOrEmpty(Folder) Then
+                            Fold = Fold.Substring(Folder.Length + 1)
+                        End If
 
-            Dim Folders As List(Of String) = (From v In Videos.VideoMetadataInfos
-                                              Where v.FileName.Contains("/") AndAlso v.FileName.Contains(Folder)
-                                              Order By v.FileName
-                                              Select v.FileName.Substring(0, v.FileName.IndexOf("/"))
-                                              Distinct).ToList
+                        If Fold.Contains("/") Then
+                            temp = Fold.Substring(0, Fold.IndexOf("/"))
+                            If Not Folders.Contains(temp) Then
+                                Folders.Add(temp)
+                            End If
+                        End If
+
+                    End If
+                End If
+            Next
+
+
             Folders.Sort()
-            Folders.Remove(Folder)
 
             Dim Sorted As List(Of VideoMetadataInfo)
 
@@ -55,7 +75,7 @@ Partial Class tablet_videos
                           Select v).ToList
             Else
                 Sorted = (From v In Videos.VideoMetadataInfos
-                          Where v.FileName.StartsWith(Folder & "/")
+                          Where v.FileName.Contains(Folder & "/") AndAlso v.FileName.IndexOf(Folder & "/") = v.FileName.LastIndexOf("/") - Folder.Length
                           Order By v.Title
                           Select v).ToList
             End If
@@ -75,6 +95,7 @@ Partial Class tablet_videos
             Next
 
         Catch ex As Exception
+            Logger.Error(ex.ToString)
         End Try
 
         'This was needed before I changes teh service references to treat the dates for videos as strings

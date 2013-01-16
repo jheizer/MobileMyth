@@ -39,7 +39,7 @@
             <div data-role="popup" id="ProxyPopup" data-overlay-theme="b">
                 <div class="ui-corner-all ui-body-e" style="padding: 5px 15px;">
                     <p>
-                        <asp:Literal ID="Literal1" runat="server" Text="If you are going to be using your device ourside your network you must check this.  Right now on some devices the player will time out or something and drop the feed.  I have tried numerious methods of proxying the data but on for eaxmple our Kindle Fir HD the vidoe will drop around 30 minutes in usually."  /></p>
+                        <asp:Literal ID="Literal1" runat="server" Text="If you are going to be using your device ourside your network you must check this.  Right now on some devices the player will time out or something and drop the feed.  I have tried numerious methods of proxying the data but on for eaxmple our Kindle Fire HD the video will drop around 30 minutes in usually.  If the transcode is complete or you are on a device that can skip at will it is not a big deal though."  /></p>
                 </div>
             </div>
         </dt>
