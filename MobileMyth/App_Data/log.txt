@@ -1249,3 +1249,4 @@
 2013-01-16 17:45:06,428 [6] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=71221&Type=cover&Height=300&Season=0
 2013-01-16 17:45:06,453 [6] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=cover&Height=300&Season=0
 2013-01-16 17:45:06,461 [6] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=cover&Height=300&Season=0
+2013-01-17 10:47:34,977 [78] INFO  Resolutions Loading resolutions file

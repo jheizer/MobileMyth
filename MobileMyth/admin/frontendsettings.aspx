@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/admin/admin.master" AutoEventWireup="false" CodeFile="frontendsettings.aspx.vb" Inherits="admin_frontendsettings" Culture="auto" meta:resourcekey="PageResource1" UICulture="auto" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/admin/admin.master" AutoEventWireup="false" CodeFile="frontendsettings.aspx.vb" Inherits="admin_frontendsettings" Culture="auto" meta:resourcekey="PageResource1" UICulture="auto" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
