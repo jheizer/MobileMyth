@@ -80,6 +80,7 @@
     <br />
     <br />
     <br />
+    Current Version: v5.1<br />
     <a href="http://mobilemyth.net">MobileMyth Home Page</a><br />
     GNU General Public License.<br />
     Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
