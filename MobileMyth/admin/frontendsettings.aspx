@@ -8,12 +8,20 @@
     <dl>
         <dt>
             <asp:Literal runat="server" Text="UI Style" meta:resourcekey="LiteralResource2" />
+            <a href="#UITypePopup" data-rel="popup">?</a>
+            <div data-role="popup" id="UITypePopup" data-overlay-theme="b">
+                <div class="ui-corner-all ui-body-e" style="padding: 5px 15px;">
+                    <p>
+                        <asp:Literal ID="Literal2" runat="server" Text="Phone UI is not yet complete.  If you select the desktop mode your backend must have JW player installed.  Go to http://yourbackend:6544, 3rdPary, and install JW player." /></p>
+                </div>
+            </div>
         </dt>
         <dd>
             <asp:DropDownList runat="server" ID="uitype" meta:resourcekey="uitypeResource1">
                 <asp:ListItem Value="" Text="" meta:resourcekey="ListItemResource1"></asp:ListItem>
                 <asp:ListItem Value="phone" Text="Phone (Not Available Yet)" meta:resourcekey="ListItemResource2"></asp:ListItem>
                 <asp:ListItem Value="tablet" Text="Tablet" meta:resourcekey="ListItemResource3"></asp:ListItem>
+                <asp:ListItem Value="desktop" Text="Desktop"></asp:ListItem>
             </asp:DropDownList>
         </dd>
         <dt>

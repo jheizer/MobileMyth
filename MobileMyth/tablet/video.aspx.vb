@@ -54,6 +54,15 @@ Partial Class tablet_video
             VideoSubTitle.Text = vid.SubTitle & TotalMinutes
             VideoDescription.Text = vid.Description
 
+            'Display stream info(0) if transcoding has already been started
+            Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(vid.FileName)
+            For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
+                TranscodePanel.Visible = True
+                Dim Pro As New ProgressBar("Transcoding Progress (" & Resolutions.ResolutionByHeight(Str.Height).Name & "): " & Str.PercentComplete & "%", Str.PercentComplete)
+                TranscodePanel.Controls.Add(Pro)
+            Next
+
+
             WatchNowLink.NavigateUrl = "startstream.aspx?type=v&vid=" & vid.Id
             DownloadLink.NavigateUrl = Common.GetServiceUrl & "/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00"
             DownloadLink.Visible = False

@@ -2,9 +2,9 @@
 <settings>
   <Frontends>
     <Frontend name="127.0.0.1">
-      <UIType>tablet</UIType>
+      <UIType>desktop</UIType>
       <Resolution>720p</Resolution>
-      <UseAnyStream>True</UseAnyStream>
+      <UseAnyStream>False</UseAnyStream>
       <ProxyVideo>False</ProxyVideo>
       <ShowRecentRecordings>True</ShowRecentRecordings>
       <ShowRecentVideos>False</ShowRecentVideos>

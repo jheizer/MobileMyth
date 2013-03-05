@@ -45,9 +45,14 @@ Partial Class startstream
                 If Str Is Nothing Then
                     Logger.Info("Starting stream on " & Rec.FileName)
                     Str = WSCache.Content.AddRecordingLiveStream(ChanId, StartTime, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
+
+                ElseIf Str.CurrentSegment < 3 Then
+                    Message.Text = "Transcode Started.  Waiting for stream to reach 1%."
+
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
                     Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode(Str.RelativeURL))
+
                 End If
 
             Case Is = "v"
@@ -59,6 +64,10 @@ Partial Class startstream
                 If Str Is Nothing Then
                     Logger.Info("Starting stream on " & Vidinfo.FileName)
                     Str = WSCache.Content.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
+
+                ElseIf Str.PercentComplete = 0 Then
+                    Message.Text = "Transcode Started.  Waiting for stream to reach 1%."
+
                 Else
                     'Lets wait to forward till after one refresh after the encoding starts to give it time to get going
                     Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode(Str.RelativeURL))

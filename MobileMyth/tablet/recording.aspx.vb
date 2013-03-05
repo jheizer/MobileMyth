@@ -82,7 +82,7 @@ Partial Class recording
             End If
 
 
-            'Display stream info(0) if transcoding has already been started
+            'Display stream info if transcoding has already been started
             Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
             For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
                 TranscodePanel.Visible = True

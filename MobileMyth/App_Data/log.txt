@@ -1250,3 +1250,1133 @@
 2013-01-16 17:45:06,453 [6] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=cover&Height=300&Season=0
 2013-01-16 17:45:06,461 [6] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=cover&Height=300&Season=0
 2013-01-17 10:47:34,977 [78] INFO  Resolutions Loading resolutions file
+2013-01-17 18:40:21,884 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=248741&Type=banner&Height=82&Season=2
+2013-01-17 18:40:21,885 [72] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=210841&Type=banner&Height=82&Season=2
+2013-01-17 18:40:21,928 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248741&Type=banner&Height=82&Season=2
+2013-01-17 18:40:21,937 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248741&Type=banner&Height=82&Season=2
+2013-01-17 18:40:21,937 [72] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=210841&Type=banner&Height=82&Season=2
+2013-01-17 18:40:21,945 [72] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=210841&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,189 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=264416&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,189 [72] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=141181&Type=banner&Height=82&Season=4
+2013-01-17 18:40:22,191 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=199011&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,189 [69] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=70814&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,210 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,214 [72] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=141181&Type=banner&Height=82&Season=4
+2013-01-17 18:40:22,227 [69] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=70814&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,238 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,244 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=200951&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,245 [69] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=70814&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,245 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=264416&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,256 [72] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=141181&Type=banner&Height=82&Season=4
+2013-01-17 18:40:22,257 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=208101&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,258 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=200951&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,273 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=264416&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,274 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=208101&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,275 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=200951&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,280 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=208101&Type=banner&Height=82&Season=1
+2013-01-17 18:40:22,544 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=107671&Type=banner&Height=82&Season=5
+2013-01-17 18:40:22,561 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=107671&Type=banner&Height=82&Season=5
+2013-01-17 18:40:22,561 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=261272&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,561 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=172181&Type=banner&Height=82&Season=4
+2013-01-17 18:40:22,572 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=172181&Type=banner&Height=82&Season=4
+2013-01-17 18:40:22,577 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=78904&Type=banner&Height=82&Season=8
+2013-01-17 18:40:22,626 [69] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=75978&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,628 [72] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=255608&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,628 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=107671&Type=banner&Height=82&Season=5
+2013-01-17 18:40:22,642 [72] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=255608&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,642 [69] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75978&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,642 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=78904&Type=banner&Height=82&Season=8
+2013-01-17 18:40:22,651 [72] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=255608&Type=banner&Height=82&Season=2
+2013-01-17 18:40:22,657 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=78904&Type=banner&Height=82&Season=8
+2013-01-17 18:40:22,658 [69] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75978&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,665 [5] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:40:22,666 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=172181&Type=banner&Height=82&Season=4
+2013-01-17 18:40:22,942 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=82066&Type=banner&Height=82&Season=5
+2013-01-17 18:40:22,960 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=82066&Type=banner&Height=82&Season=5
+2013-01-17 18:40:22,960 [69] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=251418&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,965 [72] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=83610&Type=banner&Height=82&Season=3
+2013-01-17 18:40:22,965 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=83622&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,972 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=257609&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,972 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=75760&Type=banner&Height=82&Season=8
+2013-01-17 18:40:22,979 [69] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=251418&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,979 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83622&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,989 [72] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83610&Type=banner&Height=82&Season=3
+2013-01-17 18:40:22,990 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=82066&Type=banner&Height=82&Season=5
+2013-01-17 18:40:22,993 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=257609&Type=banner&Height=82&Season=0
+2013-01-17 18:40:22,993 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75760&Type=banner&Height=82&Season=8
+2013-01-17 18:40:22,997 [69] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=251418&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,005 [72] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83610&Type=banner&Height=82&Season=3
+2013-01-17 18:40:23,007 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=257609&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,018 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75760&Type=banner&Height=82&Season=8
+2013-01-17 18:40:23,021 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83622&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,307 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=79485&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,311 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=85168&Type=banner&Height=82&Season=2
+2013-01-17 18:40:23,312 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=247965&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,313 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=258035&Type=banner&Height=82&Season=1
+2013-01-17 18:40:23,329 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=247965&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,329 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=85168&Type=banner&Height=82&Season=2
+2013-01-17 18:40:23,340 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=247965&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,414 [5] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:40:23,414 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=71221&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,414 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=85168&Type=banner&Height=82&Season=2
+2013-01-17 18:40:23,414 [77] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:40:23,420 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=80552&Type=banner&Height=82&Season=5
+2013-01-17 18:40:23,425 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,429 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=80552&Type=banner&Height=82&Season=5
+2013-01-17 18:40:23,436 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,439 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=80552&Type=banner&Height=82&Season=5
+2013-01-17 18:40:23,647 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=72229&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,663 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=72229&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,684 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=72229&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,722 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=265265&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,722 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=166591&Type=banner&Height=82&Season=5
+2013-01-17 18:40:23,726 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=149091&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,735 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=166591&Type=banner&Height=82&Season=5
+2013-01-17 18:40:23,740 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=265265&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,750 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=241421&Type=banner&Height=82&Season=1
+2013-01-17 18:40:23,759 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=149091&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,760 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=166591&Type=banner&Height=82&Season=5
+2013-01-17 18:40:23,763 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=265265&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,767 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=73388&Type=banner&Height=82&Season=11
+2013-01-17 18:40:23,773 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=149091&Type=banner&Height=82&Season=0
+2013-01-17 18:40:23,777 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=241421&Type=banner&Height=82&Season=1
+2013-01-17 18:40:23,788 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=241421&Type=banner&Height=82&Season=1
+2013-01-17 18:40:23,788 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=73388&Type=banner&Height=82&Season=11
+2013-01-17 18:40:23,797 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=73388&Type=banner&Height=82&Season=11
+2013-01-17 18:40:23,991 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=248682&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,002 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248682&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,017 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248682&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,067 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=111051&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,072 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=256300&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,074 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=111051&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,079 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=74105&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,081 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=256300&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,090 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=74105&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,096 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=111051&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,102 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=100981&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,103 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=74105&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,106 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=13394&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,108 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=256300&Type=banner&Height=82&Season=2
+2013-01-17 18:40:24,123 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=100981&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,136 [77] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:40:24,147 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=100981&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,324 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=253457&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,333 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=253457&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,346 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=253457&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,403 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=107651&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,409 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=160671&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,424 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=160671&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,434 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=72194&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,449 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=72194&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,450 [5] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:40:24,461 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=73244&Type=banner&Height=82&Season=9
+2013-01-17 18:40:24,468 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=160671&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,466 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=71663&Type=banner&Height=82&Season=24
+2013-01-17 18:40:24,475 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=72194&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,477 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=73244&Type=banner&Height=82&Season=9
+2013-01-17 18:40:24,482 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71663&Type=banner&Height=82&Season=24
+2013-01-17 18:40:24,497 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=73244&Type=banner&Height=82&Season=9
+2013-01-17 18:40:24,501 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71663&Type=banner&Height=82&Season=24
+2013-01-17 18:40:24,652 [77] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=70336&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,661 [77] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=70336&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,671 [77] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=70336&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,766 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=74626&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,774 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=74626&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,776 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=82374&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,782 [5] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=261765&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,790 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=74626&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,794 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=82374&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,797 [5] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=261765&Type=banner&Height=82&Season=1
+2013-01-17 18:40:24,814 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=82374&Type=banner&Height=82&Season=0
+2013-01-17 18:40:24,826 [5] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=261765&Type=banner&Height=82&Season=1
+2013-01-17 18:40:32,105 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=199011&Type=cover&Height=300&Season=2
+2013-01-17 18:40:32,145 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=cover&Height=300&Season=2
+2013-01-17 18:40:32,157 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=cover&Height=300&Season=2
+2013-01-17 18:40:39,731 [77] INFO  startstream Starting stream on 5120_20130110030000.mpg
+2013-01-17 18:43:56,754 [14] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T22:30:00Z&Height=200
+2013-01-17 18:43:56,755 [68] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 18:43:56,755 [79] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 18:43:57,057 [76] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-17T04:33:00Z&Height=200
+2013-01-17 18:43:57,057 [71] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T02:00:00Z&Height=200
+2013-01-17 18:43:57,057 [74] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 18:43:57,108 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T02:00:00Z&Height=200
+2013-01-17 18:43:57,125 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 18:43:57,141 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-17T04:33:00Z&Height=200
+2013-01-17 18:43:57,233 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T02:00:00Z&Height=200
+2013-01-17 18:43:57,242 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-17T04:33:00Z&Height=200
+2013-01-17 18:43:57,253 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 18:43:57,537 [76] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 18:43:57,546 [74] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:30:00Z&Height=200
+2013-01-17 18:43:57,556 [73] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:00:00Z&Height=200
+2013-01-17 18:43:57,590 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 18:43:57,604 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:30:00Z&Height=200
+2013-01-17 18:43:57,608 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:00:00Z&Height=200
+2013-01-17 18:43:57,707 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 18:43:57,715 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:30:00Z&Height=200
+2013-01-17 18:43:57,726 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:00:00Z&Height=200
+2013-01-17 18:43:58,012 [74] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-16T21:59:00Z&Height=200
+2013-01-17 18:43:58,021 [71] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-16T20:59:00Z&Height=200
+2013-01-17 18:43:58,029 [76] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-16T04:33:00Z&Height=200
+2013-01-17 18:43:58,048 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-16T21:59:00Z&Height=200
+2013-01-17 18:43:58,053 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-16T04:33:00Z&Height=200
+2013-01-17 18:43:58,068 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-16T20:59:00Z&Height=200
+2013-01-17 18:43:58,167 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-16T04:33:00Z&Height=200
+2013-01-17 18:43:58,173 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-16T21:59:00Z&Height=200
+2013-01-17 18:43:58,184 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-16T20:59:00Z&Height=200
+2013-01-17 18:43:58,472 [74] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 18:43:58,477 [71] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5186&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 18:43:58,487 [76] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T22:30:00Z&Height=200
+2013-01-17 18:43:58,511 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 18:43:58,520 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5186&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 18:43:58,546 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T22:30:00Z&Height=200
+2013-01-17 18:43:58,602 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 18:43:58,608 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5186&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 18:43:58,638 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T22:30:00Z&Height=200
+2013-01-17 18:43:58,654 [79] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 18:43:58,700 [79] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 18:43:58,907 [74] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 18:43:58,913 [76] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 18:43:58,941 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 18:43:58,944 [71] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5120&StartTime=2013-01-15T06:00:00Z&Height=200
+2013-01-17 18:43:58,967 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 18:43:58,988 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5120&StartTime=2013-01-15T06:00:00Z&Height=200
+2013-01-17 18:43:59,005 [79] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-15T04:33:00Z&Height=200
+2013-01-17 18:43:59,055 [79] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-15T04:33:00Z&Height=200
+2013-01-17 18:43:59,087 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 18:43:59,092 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 18:43:59,102 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5120&StartTime=2013-01-15T06:00:00Z&Height=200
+2013-01-17 18:43:59,119 [79] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-15T04:33:00Z&Height=200
+2013-01-17 18:43:59,392 [76] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5120&StartTime=2013-01-15T03:31:00Z&Height=200
+2013-01-17 18:43:59,422 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5120&StartTime=2013-01-15T03:31:00Z&Height=200
+2013-01-17 18:43:59,560 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5120&StartTime=2013-01-15T03:31:00Z&Height=200
+2013-01-17 18:44:00,003 [14] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T22:30:00Z&Height=200
+2013-01-17 18:44:00,291 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 18:44:04,154 [14] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T22:30:00Z&Height=200
+2013-01-17 18:44:04,306 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 18:44:04,733 [76] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=248741&Type=banner&Height=82&Season=2
+2013-01-17 18:44:04,781 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248741&Type=banner&Height=82&Season=2
+2013-01-17 18:44:04,786 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248741&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,034 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=210841&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,035 [14] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=70814&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,036 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=264416&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,037 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=141181&Type=banner&Height=82&Season=4
+2013-01-17 18:44:05,038 [76] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=199011&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,044 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=210841&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,064 [14] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=70814&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,068 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=210841&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,065 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=141181&Type=banner&Height=82&Season=4
+2013-01-17 18:44:05,071 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,064 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=264416&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,097 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=141181&Type=banner&Height=82&Season=4
+2013-01-17 18:44:05,089 [14] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=70814&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,090 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=200951&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,096 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,113 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=264416&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,113 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=200951&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,120 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=200951&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,384 [14] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=208101&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,393 [14] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=208101&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,407 [79] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=107671&Type=banner&Height=82&Season=5
+2013-01-17 18:44:05,410 [14] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=208101&Type=banner&Height=82&Season=1
+2013-01-17 18:44:05,411 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=172181&Type=banner&Height=82&Season=4
+2013-01-17 18:44:05,415 [79] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=107671&Type=banner&Height=82&Season=5
+2013-01-17 18:44:05,419 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=261272&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,419 [14] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=78904&Type=banner&Height=82&Season=8
+2013-01-17 18:44:05,421 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=172181&Type=banner&Height=82&Season=4
+2013-01-17 18:44:05,430 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=255608&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,432 [79] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=107671&Type=banner&Height=82&Season=5
+2013-01-17 18:44:05,446 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=172181&Type=banner&Height=82&Season=4
+2013-01-17 18:44:05,457 [14] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=78904&Type=banner&Height=82&Season=8
+2013-01-17 18:44:05,457 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=255608&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,470 [74] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:44:05,478 [14] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=78904&Type=banner&Height=82&Season=8
+2013-01-17 18:44:05,482 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=255608&Type=banner&Height=82&Season=2
+2013-01-17 18:44:05,717 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=75978&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,726 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75978&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,746 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75978&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,748 [79] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=82066&Type=banner&Height=82&Season=5
+2013-01-17 18:44:05,753 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=251418&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,755 [79] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=82066&Type=banner&Height=82&Season=5
+2013-01-17 18:44:05,761 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=251418&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,782 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=83610&Type=banner&Height=82&Season=3
+2013-01-17 18:44:05,783 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=251418&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,787 [79] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=82066&Type=banner&Height=82&Season=5
+2013-01-17 18:44:05,789 [76] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=257609&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,790 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=83622&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,799 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83610&Type=banner&Height=82&Season=3
+2013-01-17 18:44:05,802 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=257609&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,802 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83622&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,809 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83610&Type=banner&Height=82&Season=3
+2013-01-17 18:44:05,814 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=83622&Type=banner&Height=82&Season=0
+2013-01-17 18:44:05,815 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=257609&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,054 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=75760&Type=banner&Height=82&Season=8
+2013-01-17 18:44:06,062 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75760&Type=banner&Height=82&Season=8
+2013-01-17 18:44:06,083 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=75760&Type=banner&Height=82&Season=8
+2013-01-17 18:44:06,095 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=79485&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,097 [79] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=85168&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,107 [79] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=85168&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,132 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=247965&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,145 [76] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=258035&Type=banner&Height=82&Season=1
+2013-01-17 18:44:06,145 [68] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:44:06,148 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=71221&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,151 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=247965&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,158 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,159 [79] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=85168&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,163 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=247965&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,202 [76] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 18:44:06,205 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=71221&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,389 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=80552&Type=banner&Height=82&Season=5
+2013-01-17 18:44:06,399 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=80552&Type=banner&Height=82&Season=5
+2013-01-17 18:44:06,409 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=80552&Type=banner&Height=82&Season=5
+2013-01-17 18:44:06,459 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=72229&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,467 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=72229&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,469 [76] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=265265&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,478 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=265265&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,485 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=72229&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,491 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=265265&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,495 [76] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=166591&Type=banner&Height=82&Season=5
+2013-01-17 18:44:06,506 [76] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=166591&Type=banner&Height=82&Season=5
+2013-01-17 18:44:06,509 [71] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=149091&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,509 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=241421&Type=banner&Height=82&Season=1
+2013-01-17 18:44:06,516 [76] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=166591&Type=banner&Height=82&Season=5
+2013-01-17 18:44:06,520 [71] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=149091&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,520 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=241421&Type=banner&Height=82&Season=1
+2013-01-17 18:44:06,531 [71] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=149091&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,535 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=241421&Type=banner&Height=82&Season=1
+2013-01-17 18:44:06,713 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=73388&Type=banner&Height=82&Season=11
+2013-01-17 18:44:06,728 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=73388&Type=banner&Height=82&Season=11
+2013-01-17 18:44:06,742 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=73388&Type=banner&Height=82&Season=11
+2013-01-17 18:44:06,791 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=248682&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,796 [14] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=111051&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,802 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248682&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,807 [14] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=111051&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,820 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=248682&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,822 [79] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=256300&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,828 [14] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=111051&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,836 [79] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=256300&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,836 [73] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=74105&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,840 [74] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=100981&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,847 [73] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=74105&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,849 [74] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=100981&Type=banner&Height=82&Season=0
+2013-01-17 18:44:06,852 [79] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=256300&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,859 [73] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=74105&Type=banner&Height=82&Season=2
+2013-01-17 18:44:06,860 [74] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=100981&Type=banner&Height=82&Season=0
+2013-01-17 18:44:08,443 [68] INFO  proxy Starting proxy: /Content/GetRecordingArtwork?Inetref=199011&Type=cover&Height=300&Season=2
+2013-01-17 18:44:08,464 [68] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=cover&Height=300&Season=2
+2013-01-17 18:44:08,473 [68] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=199011&Type=cover&Height=300&Season=2
+2013-01-17 18:44:09,905 [68] INFO  startstream Starting stream on 5120_20130110033100.mpg
+2013-01-17 18:47:00,967 [72] INFO  startstream Starting stream on 5120_20130110033100.mpg
+2013-01-17 21:04:00,335 [67] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-18T02:00:00Z&Height=200
+2013-01-17 21:04:00,349 [66] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-18T00:59:00Z&Height=200
+2013-01-17 21:04:00,349 [78] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T22:30:00Z&Height=200
+2013-01-17 21:04:00,607 [78] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T22:30:00Z&Height=200
+2013-01-17 21:04:00,747 [78] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T22:30:00Z&Height=200
+2013-01-17 21:04:00,753 [78] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-18T00:59:00Z&Height=200
+2013-01-17 21:04:01,567 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 21:04:01,626 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 21:04:01,792 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 21:04:01,805 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 21:04:01,852 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 21:04:02,020 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-17T21:59:00Z&Height=200
+2013-01-17 21:04:02,030 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-17T04:33:00Z&Height=200
+2013-01-17 21:04:02,085 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-17T04:33:00Z&Height=200
+2013-01-17 21:04:02,187 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-17T04:33:00Z&Height=200
+2013-01-17 21:04:02,195 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T02:00:00Z&Height=200
+2013-01-17 21:04:02,246 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T02:00:00Z&Height=200
+2013-01-17 21:04:02,336 [66] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-18T00:59:00Z&Height=200
+2013-01-17 21:04:02,389 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-17T02:00:00Z&Height=200
+2013-01-17 21:04:02,394 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 21:04:02,424 [66] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-18T00:59:00Z&Height=200
+2013-01-17 21:04:02,434 [67] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-18T02:00:00Z&Height=200
+2013-01-17 21:04:02,445 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 21:04:02,490 [67] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-18T02:00:00Z&Height=200
+2013-01-17 21:04:02,496 [67] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:30:00Z&Height=200
+2013-01-17 21:04:02,513 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-17T00:59:00Z&Height=200
+2013-01-17 21:04:02,536 [67] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:30:00Z&Height=200
+2013-01-17 21:04:02,578 [67] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:30:00Z&Height=200
+2013-01-17 21:04:02,694 [66] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:00:00Z&Height=200
+2013-01-17 21:04:02,729 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-16T21:59:00Z&Height=200
+2013-01-17 21:04:02,733 [66] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:00:00Z&Height=200
+2013-01-17 21:04:02,760 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-16T21:59:00Z&Height=200
+2013-01-17 21:04:02,796 [67] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-16T20:59:00Z&Height=200
+2013-01-17 21:04:02,826 [67] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-16T20:59:00Z&Height=200
+2013-01-17 21:04:02,871 [66] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-16T22:00:00Z&Height=200
+2013-01-17 21:04:02,873 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-16T21:59:00Z&Height=200
+2013-01-17 21:04:02,873 [66] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-16T04:33:00Z&Height=200
+2013-01-17 21:04:02,882 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 21:04:02,895 [66] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-16T04:33:00Z&Height=200
+2013-01-17 21:04:02,910 [67] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5182&StartTime=2013-01-16T20:59:00Z&Height=200
+2013-01-17 21:04:02,926 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 21:04:02,946 [66] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3251&StartTime=2013-01-16T04:33:00Z&Height=200
+2013-01-17 21:04:02,963 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 21:04:03,047 [78] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-18T00:59:00Z&Height=200
+2013-01-17 21:04:03,142 [78] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3431&StartTime=2013-01-18T00:59:00Z&Height=200
+2013-01-17 21:04:03,174 [67] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5186&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 21:04:03,177 [66] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T22:30:00Z&Height=200
+2013-01-17 21:04:03,211 [9] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 21:04:03,218 [67] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5186&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 21:04:03,248 [78] INFO  proxy Starting proxy: /Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 21:04:03,275 [66] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T22:30:00Z&Height=200
+2013-01-17 21:04:03,278 [9] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 21:04:03,306 [67] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5186&StartTime=2013-01-16T01:59:00Z&Height=200
+2013-01-17 21:04:03,335 [78] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 21:04:03,387 [66] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T22:30:00Z&Height=200
+2013-01-17 21:04:03,388 [9] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=5059&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 21:04:03,401 [78] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetPreviewImage?ChanId=3191&StartTime=2013-01-15T21:59:00Z&Height=200
+2013-01-17 21:05:17,541 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=4&Type=coverart&Height=225
+2013-01-17 21:05:17,541 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=3&Type=coverart&Height=225
+2013-01-17 21:05:17,543 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=251&Type=coverart&Height=225
+2013-01-17 21:05:17,548 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=5&Type=coverart&Height=225
+2013-01-17 21:05:17,549 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=10&Type=coverart&Height=225
+2013-01-17 21:05:17,550 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=9&Type=coverart&Height=225
+2013-01-17 21:05:17,557 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,560 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,567 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,570 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,572 [69] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,573 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,867 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=6&Type=coverart&Height=225
+2013-01-17 21:05:17,871 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=7&Type=coverart&Height=225
+2013-01-17 21:05:17,879 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,880 [9] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=8&Type=coverart&Height=225
+2013-01-17 21:05:17,889 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,889 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=12&Type=coverart&Height=225
+2013-01-17 21:05:17,891 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=11&Type=coverart&Height=225
+2013-01-17 21:05:17,893 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=13&Type=coverart&Height=225
+2013-01-17 21:05:17,896 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,903 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,904 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:17,914 [69] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,191 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=14&Type=coverart&Height=225
+2013-01-17 21:05:18,197 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=15&Type=coverart&Height=225
+2013-01-17 21:05:18,198 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,206 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=16&Type=coverart&Height=225
+2013-01-17 21:05:18,208 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,211 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=17&Type=coverart&Height=225
+2013-01-17 21:05:18,211 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=32&Type=coverart&Height=225
+2013-01-17 21:05:18,213 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,219 [69] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,219 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,230 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=260&Type=coverart&Height=225
+2013-01-17 21:05:18,244 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,507 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=35&Type=coverart&Height=225
+2013-01-17 21:05:18,517 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=34&Type=coverart&Height=225
+2013-01-17 21:05:18,522 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=33&Type=coverart&Height=225
+2013-01-17 21:05:18,527 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=42&Type=coverart&Height=225
+2013-01-17 21:05:18,529 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=51&Type=coverart&Height=225
+2013-01-17 21:05:18,538 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,549 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=52&Type=coverart&Height=225
+2013-01-17 21:05:18,559 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,559 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,559 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,562 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,567 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,847 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=53&Type=coverart&Height=225
+2013-01-17 21:05:18,858 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,876 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=54&Type=coverart&Height=225
+2013-01-17 21:05:18,879 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=55&Type=coverart&Height=225
+2013-01-17 21:05:18,883 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=56&Type=coverart&Height=225
+2013-01-17 21:05:18,883 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=57&Type=coverart&Height=225
+2013-01-17 21:05:18,890 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,883 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,888 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,885 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=58&Type=coverart&Height=225
+2013-01-17 21:05:18,913 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:18,928 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,168 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=59&Type=coverart&Height=225
+2013-01-17 21:05:19,178 [69] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,200 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=60&Type=coverart&Height=225
+2013-01-17 21:05:19,204 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=263&Type=coverart&Height=225
+2013-01-17 21:05:19,208 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=101&Type=coverart&Height=225
+2013-01-17 21:05:19,209 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,222 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=102&Type=coverart&Height=225
+2013-01-17 21:05:19,227 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,230 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,233 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=264&Type=coverart&Height=225
+2013-01-17 21:05:19,236 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,239 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,487 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=104&Type=coverart&Height=225
+2013-01-17 21:05:19,500 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,525 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=105&Type=coverart&Height=225
+2013-01-17 21:05:19,532 [9] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=103&Type=coverart&Height=225
+2013-01-17 21:05:19,537 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=106&Type=coverart&Height=225
+2013-01-17 21:05:19,541 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=155&Type=coverart&Height=225
+2013-01-17 21:05:19,545 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=156&Type=coverart&Height=225
+2013-01-17 21:05:19,558 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,579 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,580 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,584 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,587 [69] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,811 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=270&Type=coverart&Height=225
+2013-01-17 21:05:19,835 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,864 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=157&Type=coverart&Height=225
+2013-01-17 21:05:19,871 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,889 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=269&Type=coverart&Height=225
+2013-01-17 21:05:19,890 [9] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=158&Type=coverart&Height=225
+2013-01-17 21:05:19,892 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=265&Type=coverart&Height=225
+2013-01-17 21:05:19,893 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=168&Type=coverart&Height=225
+2013-01-17 21:05:19,895 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,900 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,901 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:19,932 [69] INFO  proxy Got response: http://10.0.0.197:6544/Content/GetVideoArtwork?Id=269&Type=coverart&Height=225
+2013-01-17 21:05:19,939 [69] INFO  proxy Response written: http://10.0.0.197:6544/Content/GetVideoArtwork?Id=269&Type=coverart&Height=225
+2013-01-17 21:05:20,143 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=160&Type=coverart&Height=225
+2013-01-17 21:05:20,154 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,185 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=159&Type=coverart&Height=225
+2013-01-17 21:05:20,192 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,204 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=267&Type=coverart&Height=225
+2013-01-17 21:05:20,207 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=266&Type=coverart&Height=225
+2013-01-17 21:05:20,209 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=161&Type=coverart&Height=225
+2013-01-17 21:05:20,217 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,224 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,225 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,243 [72] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=196&Type=coverart&Height=225
+2013-01-17 21:05:20,260 [72] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,464 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=194&Type=coverart&Height=225
+2013-01-17 21:05:20,473 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,501 [67] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=195&Type=coverart&Height=225
+2013-01-17 21:05:20,523 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,526 [69] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=268&Type=coverart&Height=225
+2013-01-17 21:05:20,537 [69] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,538 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=246&Type=coverart&Height=225
+2013-01-17 21:05:20,546 [9] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=163&Type=coverart&Height=225
+2013-01-17 21:05:20,556 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,556 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,571 [4] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=162&Type=coverart&Height=225
+2013-01-17 21:05:20,579 [4] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,785 [78] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=247&Type=coverart&Height=225
+2013-01-17 21:05:20,799 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,834 [9] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=248&Type=coverart&Height=225
+2013-01-17 21:05:20,844 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,850 [70] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=249&Type=coverart&Height=225
+2013-01-17 21:05:20,859 [70] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-17 21:05:20,865 [66] INFO  proxy Starting proxy: /Content/GetVideoArtwork?Id=250&Type=coverart&Height=225
+2013-01-17 21:05:20,877 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 37
+2013-01-22 22:46:22,412 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,412 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,419 [11] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,412 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,467 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,467 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,808 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,852 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,879 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,879 [11] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,922 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:22,933 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,202 [11] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,294 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,295 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,295 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,331 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,331 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,691 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,702 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,707 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,707 [11] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,739 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:23,739 [89] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:24,022 [94] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 22:46:24,046 [87] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:19:20,666 [83] INFO  ASP.global_asax Site Started
+2013-01-22 23:19:20,707 [83] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2013-01-22 23:19:49,160 [94] INFO  WSCache Reinitalizing webservice references.
+2013-01-22 23:19:49,163 [94] INFO  SiteSettings Loading settings file
+2013-01-22 23:21:34,496 [95] INFO  Resolutions Loading resolutions file
+2013-01-22 23:46:03,609 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:46:04,301 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:46:04,566 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:46:05,255 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:46:05,326 [66] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:46:13,381 [65] INFO  Frontends Loading Frontends file
+2013-01-22 23:47:38,432 [129] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:38,438 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:38,787 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:38,833 [74] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:38,865 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:38,865 [129] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:38,893 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,146 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,202 [74] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,319 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,320 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,320 [129] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,498 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,544 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,709 [74] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,750 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,784 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,840 [74] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:39,881 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:40,186 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:40,213 [129] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:40,216 [67] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:40,223 [74] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:40,237 [9] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:47:44,827 [14] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:48:31,817 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:48:54,577 [78] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:49:26,559 [17] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-01-22 23:49:29,050 [65] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:18:22,382 [4] INFO  ASP.global_asax Site Started
+2013-03-04 18:18:22,430 [4] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2013-03-04 18:18:25,751 [4] INFO  WSCache Reinitalizing webservice references.
+2013-03-04 18:18:25,754 [4] INFO  SiteSettings Loading settings file
+2013-03-04 18:33:27,172 [16] ERROR ASP.global_asax System.Web.HttpCompileException (0x80004005): C:\Code\MobileMyth\MobileMyth\cleanup.ashx(16): error BC30311: Value of type 'MythService.StorageGroupDirList' cannot be converted to '1-dimensional array of String'.
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-03-04 18:51:52,607 [16] INFO  Resolutions Loading resolutions file
+2013-03-04 18:51:57,589 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:57,589 [16] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:57,621 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:57,628 [18] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,052 [18] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,052 [16] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,278 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,353 [16] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,364 [18] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,364 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,387 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,682 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,702 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,723 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:58,766 [20] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:59,022 [16] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:59,044 [18] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:59,064 [16] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:51:59,092 [18] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:52:02,483 [16] ERROR proxy System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 82
+   at proxy.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 35
+2013-03-04 18:59:12,833 [24] INFO  ASP.global_asax Site Started
+2013-03-04 18:59:12,849 [24] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2013-03-04 18:59:12,902 [24] INFO  SiteSettings Loading settings file
+2013-03-04 18:59:15,254 [9] INFO  Resolutions Loading resolutions file
+2013-03-04 19:42:29,259 [16] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/adaptiveProvider.swf
+2013-03-04 19:50:58,686 [10] ERROR ASP.global_asax System.Web.HttpException (0x80004005): The file '/MobileMyth/tablet/proxy.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-03-04 19:51:10,872 [16] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/adaptiveProvider.swf
+2013-03-04 19:51:13,777 [26] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/adaptiveProvider.swf
+2013-03-04 19:53:54,302 [10] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/adaptiveProvider.swf
+2013-03-04 19:56:18,330 [6] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/jwplayer.js
+2013-03-04 19:56:24,876 [6] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/jwplayer.js
+2013-03-04 19:56:53,396 [24] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/jwplayer.js
+2013-03-04 19:57:17,058 [19] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/jwplayer.js
+2013-03-04 19:57:53,279 [19] ERROR proxy Invalid Proxy URL/StorageGroup/3rdParty/JW_Player/jwplayer.js
+2013-03-04 20:17:33,819 [4] INFO  ASP.global_asax Site Started
+2013-03-04 20:17:33,858 [4] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2013-03-04 20:17:33,950 [4] INFO  SiteSettings Loading settings file
+2013-03-04 20:17:35,711 [4] INFO  Resolutions Loading resolutions file
+2013-03-05 12:51:13,270 [17] INFO  ASP.global_asax Site Started
+2013-03-05 12:51:13,286 [17] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2013-03-05 12:51:14,219 [17] INFO  SiteSettings Loading settings file
+2013-03-05 12:51:14,226 [17] INFO  Resolutions Loading resolutions file
+2013-03-05 12:57:13,636 [20] INFO  WSCache Reinitalizing webservice references.

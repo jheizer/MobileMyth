@@ -2,6 +2,55 @@
 <%@ MasterType VirtualPath="MasterPage.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <script language="JavaScript" type="text/javascript" src="../proxy.aspx?url=%2FStorageGroup%2F3rdParty%2FJW_Player%2Fjwplayer.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+    <script type="text/javascript">
+        function playStreamLink(url, width, height) {
+            var jwpcall = 'playStreamInJWPlayer("' + url + '", ' + width + ', ' +
+                          height + ');';
+            return "<a href='javascript: " + jwpcall + "'><i18n>Play</i18n></a>" +
+                " - <a href='" + url + "'>m3u8</a>";
+        }
+
+        var jwIsSetup = 0;
+        function playStreamInJWPlayer(playlist, width, height) {
+            $("#playerwrapper").show();
+
+            if (jwIsSetup) {
+                jwplayer('player').load({file: playlist, provider: "../StorageGroup/3rdParty/JW_Player/adaptiveProvider.swf"});
+                //jwplayer('player').load({file: playlist, provider: "../proxy.aspx?url=%2FStorageGroup%2F3rdParty%2FJW_Player%2FadaptiveProvider.swf"});
+                jwplayer('player').play();
+                return;
+            }
+
+            jwplayer('player').setup({
+                file: playlist,
+                width: width,
+                height: height,
+                modes: [
+                  { type: "flash", 
+                    src: "../StorageGroup/3rdParty/JW_Player/player.swf", 
+                    //src: "../proxy.aspx?url=%2FStorageGroup%2F3rdParty%2FJW_Player%2Fplayer.swf", 
+                    config: {
+                      file: playlist,
+                      provider: "../StorageGroup/3rdParty/JW_Player/adaptiveProvider.swf"
+                      //provider: "../proxy.aspx?url=%2FStorageGroup%2F3rdParty%2FJW_Player%2FadaptiveProvider.swf"
+                    }
+                  },
+                  { type: "html5",
+                    config: {
+                      file: playlist,
+                    }
+                  },
+                  { type: "download" }
+                ]
+          });
+          jwplayer('player').play();
+          jwIsSetup = 1;
+        }
+
+    </script>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHolder" Runat="Server">

@@ -21,7 +21,7 @@ Partial Class admin_frontendsettings
     Inherits System.Web.UI.Page
 
     Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(admin_frontendsettings))
-
+    'http://10.0.0.197:6544/3rdParty/jwplayer.qsp
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         uitype.SelectedValue = SiteSettings.FrontendSetting("UIType")
 

@@ -10,14 +10,13 @@ Partial Class proxy
 
         Dim url As String = Context.Request.QueryString("url")
 
-        Logger.Info("Starting proxy: " & url)
-
         If Page.RouteData.Values.Count > 0 Then
             url = Page.RouteData.Values("url")
+
+            url = "/StorageGroup/" & url
             If url.StartsWith("Streaming") Then
-                url = "/StorageGroup/" & url
+                IsStream = True
             End If
-            IsStream = True
         End If
 
         If Not IsStream Then
@@ -84,8 +83,6 @@ Partial Class proxy
         Dim Resp As Net.HttpWebResponse = Req.GetResponse
         Dim RespStream As IO.Stream = Resp.GetResponseStream
 
-        Logger.Info("Got response: " & Url)
-
         Context.Response.ContentType = Resp.ContentType
         Context.Response.BufferOutput = False
         Context.Response.Buffer = False
@@ -105,8 +102,6 @@ Partial Class proxy
         Else
             Logger.Error(Resp.StatusCode & "  " & Resp.StatusDescription & ": " & Url)
         End If
-
-        Logger.Info("Response written: " & Url)
 
     End Sub
 
@@ -152,7 +147,8 @@ Partial Class proxy
                                                         "/Content/GetRecordingArtwork", _
                                                         "/Content/GetVideoArtwork", _
                                                         "/StorageGroup/Stream", _
-                                                        "/Guide/GetChannelIcon"}
+                                                        "/Guide/GetChannelIcon", _
+                                                        "/StorageGroup/3rdParty/JW_Player"}
 
         For Each Method As String In AcceptableCalls
             If Url.StartsWith(Method) Then

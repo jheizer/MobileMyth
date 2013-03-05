@@ -9,7 +9,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="DialogContent" Runat="Server">
     <div style="text-align: center;">
-        <img src="http://jquerymobile.com/test/css/themes/default/images/ajax-loader.gif" /><p><asp:literal runat="server" Text="Creating Video Stream..." /></p>
+        <img src="http://jquerymobile.com/test/css/themes/default/images/ajax-loader.gif" /><p><asp:literal runat="server" ID="Message" Text="Creating Video Stream..." /></p>
     </div>
 
     <script type="text/javascript" >

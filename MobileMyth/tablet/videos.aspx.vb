@@ -76,7 +76,7 @@ Partial Class tablet_videos
             Else
                 Sorted = (From v In Videos.VideoMetadataInfos
                           Where v.FileName.Contains(Folder & "/") AndAlso v.FileName.IndexOf(Folder & "/") = v.FileName.LastIndexOf("/") - Folder.Length
-                          Order By v.Title
+                          Order By v.Title, v.Season, v.Episode
                           Select v).ToList
             End If
 
@@ -86,11 +86,15 @@ Partial Class tablet_videos
                 maincontent.Controls.Add(Li)
             Next
 
-
+            Dim title As String = ""
             Dim Vid As VideoMetadataInfo
             For i As Integer = 0 To Sorted.Count - 1
                 Vid = Sorted(i)
-                Dim Li As New VideoPanel(i, Vid.Title, "video.aspx?id=" & Vid.Id, Common.ProxyURL("/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=225"))
+                title = Vid.Title
+                If Vid.Episode > 0 Then
+                    title &= " " & Vid.Season & "x" & Vid.Episode.ToString("00")
+                End If
+                Dim Li As New VideoPanel(i, title, "video.aspx?id=" & Vid.Id, Common.ProxyURL("/Content/GetVideoArtwork?Id=" & Vid.Id & "&Type=coverart&Height=225"))
                 maincontent.Controls.Add(Li)
             Next
 
