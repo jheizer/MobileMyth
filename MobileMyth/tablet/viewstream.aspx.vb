@@ -70,7 +70,7 @@ Partial Class viewstream
 
     Protected Sub DeleteButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles DeleteButton.Click
         If Not Rec Is Nothing Then
-            Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
+            Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(Rec.FileName)
 
             Logger.Info("Deleting Livestreams: " & Rec.FileName)
             For Each Str As LiveStreamInfo In Streams.LiveStreamInfos

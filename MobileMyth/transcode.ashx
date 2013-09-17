@@ -31,7 +31,7 @@ Public Class transcode : Implements IHttpHandler
             
                 'recordings
                 For Each rec As MythDVR.Program In Recordings.Programs.ToList.FindAll(Function(r) r.Title.ToLower.Contains(nd.Attribute("title").Value.ToLower) AndAlso r.Recording.StartTs.Value > StartDate)
-                    Streams = WSCache.Content.GetFilteredLiveStreamList(rec.FileName)
+                    Streams = WSCache.GetFilteredStreamList(rec.FileName)
 
                     If Streams.LiveStreamInfos.Count = 0 Then
                         If test Then
@@ -47,7 +47,7 @@ Public Class transcode : Implements IHttpHandler
                             While Str.PercentComplete < 100
                                 Threading.Thread.Sleep(60000)
                                 
-                                Streams = WSCache.Content.GetFilteredLiveStreamList(rec.FileName)
+                                Streams = WSCache.GetFilteredStreamList(rec.FileName)
                                 Str = Streams.LiveStreamInfos(0)
                             End While
                             
@@ -60,7 +60,7 @@ Public Class transcode : Implements IHttpHandler
                 Dim Vid As MythVideo.VideoMetadataInfo
                 
                 For Each Vid In Videos.VideoMetadataInfos.ToList.FindAll(Function(v) v.FileName.ToLower.Contains(nd.Attribute("title").Value.ToLower) AndAlso v.AddDate > StartDate)
-                    Streams = WSCache.Content.GetFilteredLiveStreamList(Vid.FileName)
+                    Streams = WSCache.GetFilteredStreamList(Vid.FileName)
 
                     If Streams.LiveStreamInfos.Count = 0 Then
                         If test Then
@@ -77,7 +77,7 @@ Public Class transcode : Implements IHttpHandler
                             While Str.PercentComplete < 100
                                 Threading.Thread.Sleep(60000)
                                 
-                                Streams = WSCache.Content.GetFilteredLiveStreamList(Vid.FileName)
+                                Streams = WSCache.GetFilteredStreamList(Vid.FileName)
                                 Str = Streams.LiveStreamInfos(0)
                             End While
                             
@@ -94,7 +94,7 @@ Public Class transcode : Implements IHttpHandler
         
 
     End Sub
- 
+        
     Public ReadOnly Property IsReusable() As Boolean Implements IHttpHandler.IsReusable
         Get
             Return False

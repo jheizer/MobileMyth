@@ -42,7 +42,7 @@
             </div>
         </dt>
         <dt>
-            <asp:CheckBox runat="server" ID="ProxyVideo" Text="Proxy Video Stream" Style="width: 300px; display: inline-block;"/>
+            <asp:CheckBox runat="server" ID="ProxyVideo" Text="Proxy Video Stream (EXPERIAMENTAL)" Style="width: 300px; display: inline-block;"/>
             <a href="#ProxyPopup" data-rel="popup">?</a>
             <div data-role="popup" id="ProxyPopup" data-overlay-theme="b">
                 <div class="ui-corner-all ui-body-e" style="padding: 5px 15px;">

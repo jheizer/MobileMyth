@@ -40,6 +40,13 @@ Partial Class startstream
                 Dim StartTime As New DateTime(Time)
 
                 Dim Rec As Program = WSCache.DVR.GetRecorded(ChanId, StartTime)
+
+                'NoTranscode option
+                If Resolutions.MyResolution.Name = "NoTranscode" Then
+                    Response.Redirect("viewstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks & "&url=" & HttpUtility.UrlEncode("/Content/GetFile?StorageGroup=Default&FileName=" & Rec.FileName))
+                    Exit Sub
+                End If
+
                 Dim Str As LiveStreamInfo = PickAStream(Rec.FileName)
 
                 If Str Is Nothing Then
@@ -59,6 +66,13 @@ Partial Class startstream
 
                 Dim Vid As String = Request.QueryString("vid")
                 Dim Vidinfo As VideoMetadataInfo = WSCache.Video.GetVideo(Vid)
+
+                'NoTranscode option
+                If Resolutions.MyResolution.Name = "NoTranscode" Then
+                    Response.Redirect("viewstream.aspx?type=v&url=" & HttpUtility.UrlEncode("/Content/GetFile?StorageGroup=Default&FileName=" & Vidinfo.FileName))
+                    Exit Sub
+                End If
+
                 Dim Str As LiveStreamInfo = PickAStream(Vidinfo.FileName)
 
                 If Str Is Nothing Then
@@ -80,7 +94,7 @@ Partial Class startstream
 
     Private Function PickAStream(ByVal Filename As String) As LiveStreamInfo
         Dim str As LiveStreamInfo = Nothing
-        Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Filename)
+        Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(Filename)
 
         If Streams.LiveStreamInfos.Count > 0 Then
             If Not SiteSettings.FrontendSettingBool("UseAnyStream") Then

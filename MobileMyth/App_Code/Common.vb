@@ -42,3 +42,9 @@ Public Class Common
         Return Out.ToString("#.##") & " " & Unit
     End Function
 End Class
+
+Public Enum MythTvVersion As Integer
+    v25 = 0
+    v26 = 1
+    v27 = 2
+End Enum

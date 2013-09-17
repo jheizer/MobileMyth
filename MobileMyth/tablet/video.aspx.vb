@@ -55,7 +55,8 @@ Partial Class tablet_video
             VideoDescription.Text = vid.Description
 
             'Display stream info(0) if transcoding has already been started
-            Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(vid.FileName)
+            Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(vid.FileName)
+            
             For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
                 TranscodePanel.Visible = True
                 Dim Pro As New ProgressBar("Transcoding Progress (" & Resolutions.ResolutionByHeight(Str.Height).Name & "): " & Str.PercentComplete & "%", Str.PercentComplete)

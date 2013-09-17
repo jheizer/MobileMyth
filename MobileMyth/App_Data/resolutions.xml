@@ -7,4 +7,5 @@
   <Resolution Name="720p" Height="720" VRate="1900000" ARate="192000"></Resolution>
   <Resolution Name="768p" Height="768" VRate="2000000" ARate="192000"></Resolution>
   <Resolution Name="1080p" Height="1072" VRate="3000000" ARate="192000"></Resolution>
+  <Resolution Name="NoTranscode" Height="1072" VRate="0" ARate="0"></Resolution>
 </Resolutions>

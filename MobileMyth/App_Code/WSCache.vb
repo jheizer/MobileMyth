@@ -33,6 +33,10 @@ Public Class WSCache
     Public Shared Guide As MythGuide.GuideClient
     Public Shared Video As MythVideo.VideoClient
 
+    Public Shared Content27 As MythContent_27.ContentClient
+
+    Public Shared MythVersion As MythTvVersion = MythTvVersion.v26
+
     Shared Sub New()
         ReInitServiceReferences()
     End Sub
@@ -50,12 +54,21 @@ Public Class WSCache
             WSCache.Guide = New MythGuide.GuideClient("BasicHttpBinding_Guide", "http://" & Address & ":" & Port & "/Guide")
             WSCache.Video = New MythVideo.VideoClient("BasicHttpBinding_Video", "http://" & Address & ":" & Port & "/Video")
 
+            WSCache.Content27 = New MythContent_27.ContentClient("BasicHttpBinding_Content1", "http://" & Address & ":" & Port & "/Content")
+
             Try
                 Dim WC As New Net.WebClient
                 Dim html As String = WC.DownloadString(Common.GetServiceUrl & "/Status/GetStatus")
                 If Not html.Contains("<Status") Then
                     Return False
                 End If
+
+                'Detect Mythtv version
+                html = WC.DownloadString(Common.GetServiceUrl & "/Dvr/wsdl?raw=1")
+                If html.Contains("Interface Version 1.9") Then
+                    MythVersion = MythTvVersion.v27
+                End If
+
             Catch ex As Exception
                 Return False
             End Try
@@ -90,5 +103,36 @@ Public Class WSCache
         HttpContext.Current.Cache.Remove("GetRecordedList")
     End Sub
 
+    Public Shared Function GetFilteredStreamList(ByVal Filename As String) As MythContent.LiveStreamInfoList
+        If WSCache.MythVersion = MythTvVersion.v27 Then
+            Dim Streams As MythContent_27.LiveStreamInfoList
+            Streams = WSCache.Content27.GetLiveStreamList(Filename)
+
+            Dim Lst As New List(Of MythContent.LiveStreamInfo)
+            Dim Str As MythContent.LiveStreamInfo
+            For Each Strm As MythContent_27.LiveStreamInfo In Streams.LiveStreamInfos
+                Str = New MythContent.LiveStreamInfo
+
+                Dim oldtype As Type = Str.GetType()
+
+                For Each prop As Reflection.PropertyInfo In Strm.GetType.GetProperties
+                    Dim propgetter As Reflection.MethodInfo = prop.GetGetMethod
+                    Dim propsetter As Reflection.MethodInfo = oldtype.GetProperty(prop.Name).GetSetMethod
+                    Dim value As Object = propgetter.Invoke(Strm, Nothing)
+                    propsetter.Invoke(Str, New Object() {value})
+                Next
+
+                Lst.Add(Str)
+            Next
+
+            Dim ret As New MythContent.LiveStreamInfoList
+            ret.LiveStreamInfos = Lst.ToArray
+
+            Return ret
+
+        Else
+            Return WSCache.Content.GetFilteredLiveStreamList(Filename)
+        End If
+    End Function
 
 End Class

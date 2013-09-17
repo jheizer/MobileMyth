@@ -83,7 +83,8 @@ Partial Class recording
 
 
             'Display stream info if transcoding has already been started
-            Dim Streams As LiveStreamInfoList = WSCache.Content.GetFilteredLiveStreamList(Rec.FileName)
+            Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(Rec.FileName)
+
             For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
                 TranscodePanel.Visible = True
                 Dim Pro As New ProgressBar("Transcoding Progress (" & Resolutions.ResolutionByHeight(Str.Height).Name & "): " & Str.PercentComplete & "%", Str.PercentComplete)
