@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Public Class SiteSettings
@@ -31,7 +31,7 @@ Public Class SiteSettings
 
             If Not IO.File.Exists(Path) Then
                 Dim NwFile As New IO.StreamWriter(Path)
-                NwFile.Write("<settings><Frontends>f</Frontends></settings>")
+                NwFile.Write("<settings><Frontends></Frontends></settings>")
                 NwFile.Close()
             End If
 

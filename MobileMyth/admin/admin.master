@@ -41,7 +41,7 @@
      <div data-role="page" data-theme="a">
 
         <div data-role="header">
-            <a href="../tablet/default.aspx" data-icon="home" data-ajax="false"><asp:literal runat="server" Text="Home" /></a>  
+            <a href="../default.aspx" data-icon="home" data-ajax="false"><asp:literal runat="server" Text="Home" /></a>  
             <h3><asp:Label runat="server" ID="HeaderPageTitle"><asp:literal runat="server" Text="Mobile MythTV" /></asp:Label></h3>
             <a href="#statuspopup" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" data-icon="info" class="ui-btn-right" style="margin-right: 100px;">
                 <asp:literal ID="Literal2" runat="server" Text="Info" />
