@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="68fb5437-38d3-4f31-88e2-6bb0e395ee02" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4900f04b-b4bb-47f9-b4e9-62576b293115" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,17 +18,17 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.0.0.197:6544/Content/wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.0.0.236:6544/Content/wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="b3278189-8cba-4d77-b49f-c68553300ca6" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfLiveStreamInfo&amp;name=LiveStreamInfo" />
-    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="645f40f3-8851-44d2-9184-387d7af44519" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
-    <MetadataFile FileName="ContentServices.wsdl" MetadataType="Wsdl" ID="d5d5f90b-69ae-45ab-81ad-9d044e5cbbbd" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/wsdl" />
-    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="3235df96-c747-4516-ad70-5a6d8d7d5550" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfoList" />
-    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="5d940509-916a-4a4c-984d-692af10ccc3e" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfString" />
-    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="593919b4-8de8-47bf-8f07-4c84ee5b6630" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfo" />
-    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="13741d5c-b280-4812-b238-4a6205bbc129" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfoList" />
-    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="e706c8b8-acc0-4540-875c-39f1ab9bb34c" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="ContentServices.wsdl" MetadataType="Wsdl" ID="2819c939-4123-4ba0-9ae5-04287d5f8b33" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/wsdl" />
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="85726369-0997-48d7-b1fa-480d3a3554de" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=LiveStreamInfoList" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="4e634724-58aa-4c73-8b9c-8777b109ab37" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=ArrayOfLiveStreamInfo&amp;name=LiveStreamInfo" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="4e80ab7c-f557-420e-b057-1140ca0cea33" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="a8f8c731-5dce-4bc6-be6b-958954c31296" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="46351eb0-2a2d-49b6-a349-dc58a7e16137" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=LiveStreamInfo" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="6f7ca73a-c755-4059-bdf6-5fdba842ddf3" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=ArtworkInfoList" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="00e66cee-1e39-4d09-8911-495d1ce0bbdb" SourceId="1" SourceUrl="http://10.0.0.236:6544/Content/xsd?type=ArrayOfString" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

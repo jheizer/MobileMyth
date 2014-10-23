@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="225c1fb6-6702-4ed2-ab61-971367afa51c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9b25f654-c2e6-4b5f-bafa-d764ab73bb1e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,14 +21,14 @@
     <MetadataSource Address="http://10.0.0.197:6544/Content/wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="c58c820e-28ac-4200-9d51-97ec9af1f327" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
-    <MetadataFile FileName="ContentServices.wsdl" MetadataType="Wsdl" ID="8ef70484-066a-4abb-9cb8-baf7d8f8ad28" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/wsdl" />
-    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="743920cf-be2d-46c5-b15e-634b9849af43" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfo" />
-    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="829ca496-6d3a-4a6b-b757-b32015e71c25" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfLiveStreamInfo&amp;name=LiveStreamInfo" />
-    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="d8ff3942-edb1-4ff5-b18c-bc623ce9a1a6" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfString" />
-    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="f7838e91-8467-4db3-80e9-a4079b0c8c27" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfoList" />
-    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="ab4abe8c-34ff-4ff4-8ea8-da121521daa0" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfoList" />
-    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="f5c6375d-7315-464e-a8ec-e395dc961106" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfo" />
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="6c6be4e3-38a6-451a-b5af-0450f35332e1" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+    <MetadataFile FileName="ContentServices.wsdl" MetadataType="Wsdl" ID="a9396ae0-d19f-4683-b707-dd6a2fbd169e" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/wsdl" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="21073aab-2356-4eff-b2ce-d8535289bdb5" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="0b9f9e4b-9652-4997-a4af-d6ff66479ce4" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfLiveStreamInfo&amp;name=LiveStreamInfo" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="8afb5f60-a0ee-48ae-ba0a-19b930c9bee2" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArrayOfString" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="e8e0b0ca-e543-4087-a602-68934b67ef6d" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfoList" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="f11b712b-6eae-49be-a10b-29b77cc4407d" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfoList" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="30153faa-ebbe-4ccd-a2c6-643c1f802328" SourceId="1" SourceUrl="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfo" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

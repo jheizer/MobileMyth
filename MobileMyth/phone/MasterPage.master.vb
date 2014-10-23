@@ -14,16 +14,12 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Partial Class MasterPage
     Inherits System.Web.UI.MasterPage
 
-    Protected Sub Page_PreRender(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreRender
-        If footerpan.Controls.Count = 3 Then
-            footerpan.Visible = False
-        End If
-    End Sub
+
 End Class
 

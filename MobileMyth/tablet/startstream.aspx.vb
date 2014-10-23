@@ -14,13 +14,12 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
-Imports MythVideo
 
 Partial Class startstream
     Inherits System.Web.UI.Page
@@ -39,7 +38,7 @@ Partial Class startstream
                 Dim Time As Long = Long.Parse(Request.QueryString("time"))
                 Dim StartTime As New DateTime(Time)
 
-                Dim Rec As Program = WSCache.DVR.GetRecorded(ChanId, StartTime)
+                Dim Rec As Program = Common.MBE.DvrAPI.GetRecorded(ChanId, StartTime)
 
                 'NoTranscode option
                 If Resolutions.MyResolution.Name = "NoTranscode" Then
@@ -47,11 +46,11 @@ Partial Class startstream
                     Exit Sub
                 End If
 
-                Dim Str As LiveStreamInfo = PickAStream(Rec.FileName)
+                Dim Str As iMythContent.LiveStreamInfo = PickAStream(Rec.FileName)
 
                 If Str Is Nothing Then
                     Logger.Info("Starting stream on " & Rec.FileName)
-                    Str = WSCache.Content.AddRecordingLiveStream(ChanId, StartTime, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
+                    Str = Common.MBE.ContentAPI.AddRecordingLiveStream(ChanId, StartTime, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
 
                 ElseIf Str.CurrentSegment < 3 Then
                     Message.Text = "Transcode Started.  Waiting for stream to reach 1%."
@@ -65,7 +64,7 @@ Partial Class startstream
             Case Is = "v"
 
                 Dim Vid As String = Request.QueryString("vid")
-                Dim Vidinfo As VideoMetadataInfo = WSCache.Video.GetVideo(Vid)
+                Dim Vidinfo As iMythVideo.VideoMetadataInfo = Common.MBE.VideoAPI.GetVideo(Vid)
 
                 'NoTranscode option
                 If Resolutions.MyResolution.Name = "NoTranscode" Then
@@ -73,11 +72,11 @@ Partial Class startstream
                     Exit Sub
                 End If
 
-                Dim Str As LiveStreamInfo = PickAStream(Vidinfo.FileName)
+                Dim Str As iMythContent.LiveStreamInfo = PickAStream(Vidinfo.FileName)
 
                 If Str Is Nothing Then
                     Logger.Info("Starting stream on " & Vidinfo.FileName)
-                    Str = WSCache.Content.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
+                    Str = Common.MBE.ContentAPI.AddVideoLiveStream(Vid, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
 
                 ElseIf Str.PercentComplete = 0 Then
                     Message.Text = "Transcode Started.  Waiting for stream to reach 1%."
@@ -92,19 +91,19 @@ Partial Class startstream
 
     End Sub
 
-    Private Function PickAStream(ByVal Filename As String) As LiveStreamInfo
-        Dim str As LiveStreamInfo = Nothing
-        Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(Filename)
+    Private Function PickAStream(ByVal Filename As String) As iMythContent.LiveStreamInfo
+        Dim str As iMythContent.LiveStreamInfo = Nothing
+        Dim Streams As List(Of iMythContent.LiveStreamInfo) = Common.MBE.ContentAPI.GetFilteredStreamList(Filename)
 
-        If Streams.LiveStreamInfos.Count > 0 Then
+        If Streams.Count > 0 Then
             If Not SiteSettings.FrontendSettingBool("UseAnyStream") Then
                 'We want our exact settings all the time
-                str = Streams.LiveStreamInfos.ToList.Find(Function(s) s.Height = Resolutions.MyResolution.Height)
+                str = Streams.Find(Function(s) s.Height = Resolutions.MyResolution.Height)
             Else
                 'See if we can find our settings, if not just pick the first one
-                str = Streams.LiveStreamInfos.ToList.Find(Function(s) s.Height = Resolutions.MyResolution.Height)
+                str = Streams.Find(Function(s) s.Height = Resolutions.MyResolution.Height)
                 If str Is Nothing Then
-                    str = Streams.LiveStreamInfos(0)
+                    str = Streams(0)
                 End If
             End If
         End If

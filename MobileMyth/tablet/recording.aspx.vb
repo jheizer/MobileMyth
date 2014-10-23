@@ -14,10 +14,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 
@@ -35,7 +35,7 @@ Partial Class recording
             Dim Time As Long = Long.Parse(Request.QueryString("time"))
             Dim StartTime As New DateTime(Time)
 
-            Rec = WSCache.DVR.GetRecorded(ChanId, StartTime)
+            Rec = Common.MBE.DvrAPI.GetRecorded(ChanId, StartTime)
 
             If Rec Is Nothing Then
                 EpisodeTitle.Text = "Error loading recording"
@@ -83,9 +83,9 @@ Partial Class recording
 
 
             'Display stream info if transcoding has already been started
-            Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(Rec.FileName)
+            Dim Streams As List(Of iMythContent.LiveStreamInfo) = Common.MBE.ContentAPI.GetFilteredStreamList(Rec.FileName)
 
-            For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
+            For Each Str As iMythContent.LiveStreamInfo In Streams
                 TranscodePanel.Visible = True
                 Dim Pro As New ProgressBar("Transcoding Progress (" & Resolutions.ResolutionByHeight(Str.Height).Name & "): " & Str.PercentComplete & "%", Str.PercentComplete)
                 TranscodePanel.Controls.Add(Pro)
@@ -94,13 +94,15 @@ Partial Class recording
             WatchNowLink.NavigateUrl = "startstream.aspx?type=r&chan=" & Rec.Channel.ChanId & "&time=" & Rec.Recording.StartTs.Value.Ticks
 
             'FE Links
+            Dim Fe As ListItem
             For Each ky As String In Frontends.Frontends.Keys
-                FEList.Items.Add(New ListItem(ky, Frontends.Frontends(ky)))
+                Fe = New ListItem(ky, ky)
+                FEList.Items.Add(Fe)
             Next
 
             PlayFE.Attributes.Add("onclick", "PlayOnFrontend($('#" & FEList.ClientID & "').val(), '" & Rec.Channel.ChanId & "', '" & Rec.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") & "')")
 
-            DownloadLink.NavigateUrl = Common.ProxyURL("/Content/GetRecording?ChanId=34736&StartTime=2011-08-29T18:59:00")
+            DownloadLink.NavigateUrl = Common.ProxyURL("/Content/GetRecording?ChanId=" & Rec.Channel.ChanId & "&StartTime=" & Rec.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ"))
 
             'Info for delete popup
             DeleteTitle.Text = "Delete Recording?"
@@ -113,7 +115,7 @@ Partial Class recording
 
     Protected Sub DeleteButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles DeleteButton.Click
         If Not Rec Is Nothing Then
-            If WSCache.DVR.RemoveRecorded(Rec.Channel.ChanId, Rec.Recording.StartTs) Then
+            If Common.MBE.DvrAPI.RemoveRecorded(Rec.Channel.ChanId, Rec.Recording.StartTs) Then
                 Logger.Info("Recording Deleted: Chan-" & Rec.Channel.ChanId & " StartTs-" & Rec.Recording.StartTs.ToString)
                 Response.Redirect("confirmation.aspx?msg=1", False)
             End If

@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MobileMyth", "MobileMyth\", "{0BB60F7E-4758-4518-AE0D-922C478FD45C}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -18,16 +20,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MobileMyth", "MobileMyth\",
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "61936"
+		VWDPort = "53113"
+		SlnRelativePath = "MobileMyth\"
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0BB60F7E-4758-4518-AE0D-922C478FD45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BB60F7E-4758-4518-AE0D-922C478FD45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB60F7E-4758-4518-AE0D-922C478FD45C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB60F7E-4758-4518-AE0D-922C478FD45C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

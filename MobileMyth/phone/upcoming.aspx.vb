@@ -25,7 +25,7 @@ Partial Class upcoming
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-        Dim Recordings As ProgramList = WSCache.DVR.GetUpcomingList(0, 500, False)
+        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 500, False)
 
         Dim List As New HtmlList
         maincontent.Controls.Add(List)

@@ -17,7 +17,7 @@
 '    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 
@@ -25,7 +25,7 @@ Partial Class shows
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-        Dim Recordings As ProgramList = WSCache.GetRecordedList
+        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
 
         Dim Lst = From n In Recordings.Programs _
                  Group n By n.Title Into Count() _

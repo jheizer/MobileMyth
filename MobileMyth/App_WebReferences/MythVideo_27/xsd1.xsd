@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BlurayInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Path" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" name="AltTitle" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscLang" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscNum" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="TotalDiscNum" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="TitleCount" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ThumbCount" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ThumbPath" type="xs:string" />
+      <xs:element minOccurs="0" name="TopMenuSupported" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirstPlaySupported" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NumHDMVTitles" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="NumBDJTitles" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="NumUnsupportedTitles" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="AACSDetected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LibAACSDetected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AACSHandled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BDPlusDetected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LibBDPlusDetected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BDPlusHandled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlurayInfo" nillable="true" type="tns:BlurayInfo" />
+</xs:schema>

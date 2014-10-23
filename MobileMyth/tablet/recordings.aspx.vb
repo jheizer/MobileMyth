@@ -14,10 +14,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 
@@ -27,27 +27,22 @@ Partial Class shows
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Master.PageTitle = "Recordings"
 
-        Dim Recordings As ProgramList = WSCache.GetRecordedList
+        Dim Titles As List(Of iMythDvr.RecordingTitle) = Common.MBE.DvrAPI.GetTitles
 
-        Dim Lst = From n In Recordings.Programs _
-                  Group n By n.Title Into Count() _
-                  Select Title, Episodes = Count, InetRef = (From s In Recordings.Programs _
-                                                  Where s.Title = Title _
-                                                  Select s.Inetref).First _
-                                              , Season = (From s In Recordings.Programs _
-                                                  Where s.Title = Title _
-                                                  Select s.Season).First _
-                  Order By Title
+        Dim Sum As Integer = 0
+        For Each t As iMythDvr.RecordingTitle In Titles
+            Sum += t.Count
+        Next
 
         Dim List As New HtmlList
         maincontent.Controls.Add(List)
         List.Attributes.Add("data-role", "listview")
 
-        Dim li As New ShowListItem("All Programs", Recordings.Programs.Count, "episodes.aspx", "", "")
+        Dim li As New ShowListItem("All Programs", Sum, "episodes.aspx", "", "")
         List.Controls.Add(li)
 
-        For Each Rec In Lst
-            li = New ShowListItem(Rec.Title, Rec.Episodes, "episodes.aspx?title=" & Rec.Title, Rec.InetRef, Rec.Season)
+        For Each Rec In Titles
+            li = New ShowListItem(Rec.Title, Rec.Count, "episodes.aspx?title=" & Rec.Title, Rec.Inetref, 0)
             List.Controls.Add(li)
         Next
 

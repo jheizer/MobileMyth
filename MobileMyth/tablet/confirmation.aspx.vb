@@ -26,7 +26,7 @@ Partial Class confirmation
         Select Case Msg
             Case Is = "1"
                 Message.Text = "Recording Successfully Deleted"
-                WSCache.ClearRecordedListCache()
+                Common.MBE.DvrAPI.ClearRecordedListCache()
         End Select
     End Sub
 

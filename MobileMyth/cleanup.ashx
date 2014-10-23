@@ -2,7 +2,8 @@
 
 Imports System
 Imports System.Web
-Imports MythContent
+
+Imports MythService
 
 Public Class cleanup : Implements IHttpHandler
 
@@ -11,29 +12,30 @@ Public Class cleanup : Implements IHttpHandler
     Public Sub ProcessRequest(ByVal context As HttpContext) Implements IHttpHandler.ProcessRequest
         context.Response.ContentType = "text/plain"
        
-        Dim RecordingFiles As MythContent.ArrayOfString = WSCache.Content.GetFileList("Default")
-        RecordingFiles.AddRange(WSCache.Content.GetFileList("Videos"))
+        Dim RecordingFiles As New List(Of String)
+        RecordingFiles.AddRange(Common.MBE.ContentAPI.GetFileList("Default"))
+        RecordingFiles.AddRange(Common.MBE.ContentAPI.GetFileList("Videos"))
        
         Dim StorageDirs As New List(Of String)
         
-        For Each StrDir As MythService.StorageGroupDir In WSCache.Service.GetStorageGroupDirs("Default", "").StorageGroupDirs
+        For Each StrDir As MythService.StorageGroupDir In Common.MBE.ServiceAPI.GetStorageGroupDirs("Default", "").StorageGroupDirs
             StorageDirs.Add(StrDir.DirName)
         Next
-        For Each StrDir As MythService.StorageGroupDir In WSCache.Service.GetStorageGroupDirs("Videos", "").StorageGroupDirs
+        For Each StrDir As MythService.StorageGroupDir In Common.MBE.ServiceAPI.GetStorageGroupDirs("Videos", "").StorageGroupDirs
             StorageDirs.Add(StrDir.DirName)
         Next
                                        
-        Dim HLSs As MythContent.LiveStreamInfoList = WSCache.Content.GetLiveStreamList()
+        Dim HLSs As List(Of iMythContent.LiveStreamInfo) = Common.MBE.ContentAPI.GetFilteredStreamList("")
         Dim Source As String
         
-        For Each hls As LiveStreamInfo In HLSs.LiveStreamInfos
+        For Each hls As iMythContent.LiveStreamInfo In HLSs
             Source = hls.SourceFile
             For Each Dir As String In StorageDirs
                 Source = Source.Replace(Dir, "")
             Next
             
             If Not RecordingFiles.Contains(Source) Then
-                WSCache.Content.RemoveLiveStream(hls.Id)
+                Common.MBE.ContentAPI.RemoveLiveStream(hls.Id)
                 context.Response.Write(hls.SourceFile & ControlChars.NewLine)
             End If
         Next

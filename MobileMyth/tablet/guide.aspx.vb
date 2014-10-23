@@ -28,7 +28,7 @@ Partial Class tablet_guide
         Link.Text = "Full Guide on MythWeb"
         maincontent.Controls.Add(Link)
 
-        Dim Gd As ProgramGuide = WSCache.Guide.GetProgramGuide(DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ss"), _
+        Dim Gd As ProgramGuide = Common.MBE.GuideAPI.GetProgramGuide(DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ss"), _
                                                                         DateTime.Now.ToUniversalTime.ToString("yyyy-MM-ddTHH:mm:ss"), _
                                                                         0, 1000, False)
         Dim Chan As ChannelInfo

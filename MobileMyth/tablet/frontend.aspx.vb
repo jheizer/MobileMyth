@@ -3,6 +3,9 @@ Partial Class tablet_frontend
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
+        Dim wo As New WOL
+        wo.Wake("48:5b:39:a7:9d:9b")
+
         Dim fe As String = Request.QueryString("fe")
 
         up.Attributes.Add("onclick", "SendCmd('" & fe & "', 'UP')")

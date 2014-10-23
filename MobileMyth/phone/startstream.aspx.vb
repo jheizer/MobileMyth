@@ -17,7 +17,7 @@
 '    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 
@@ -29,18 +29,18 @@ Partial Class startstream
         Dim Id As String = Request.QueryString("id")
 
         If Not Id Is Nothing Then
-            Dim Recordings As ProgramList = WSCache.GetRecordedList
+            Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
 
             Dim rec As Program = Recordings.Programs.ToList.Find(Function(r) r.ProgramId = Id)
 
-            Dim Str As LiveStreamInfo
-            Dim Streams As LiveStreamInfoList = WSCache.Content.GetLiveStreamList()
+            Dim Str As iMythContent.LiveStreamInfo
+            'Dim Streams As LiveStreamInfoList = Common.MBE.ContentAPI.GetLiveStreamL
 
-            Str = Streams.LiveStreamInfos.ToList.Find(Function(s) IO.Path.GetFileName(s.SourceFile) = rec.FileName)
+            'Str = Streams.LiveStreamInfos.ToList.Find(Function(s) IO.Path.GetFileName(s.SourceFile) = rec.FileName)
 
-            If Str Is Nothing Then
-                Str = WSCache.Content.AddLiveStream("Default", rec.FileName, "", 0, SiteSettings.Setting("VideoWidth"), 0, 800000, 64000, 44100)
-            End If
+            'If Str Is Nothing Then
+            '    Str = WSCache.Content.AddLiveStream("Default", rec.FileName, "", 0, SiteSettings.Setting("VideoWidth"), 0, 800000, 64000, 44100)
+            'End If
 
             If Request.QueryString("done") = "t" Then
 

@@ -14,11 +14,11 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythDVR
-Imports MythContent
+
 
 Partial Class viewstream
     Inherits System.Web.UI.Page
@@ -36,12 +36,17 @@ Partial Class viewstream
             Url = Common.GetServiceUrl & Url
         End If
 
+        Dim PlayerHeight As String = Resolutions.MyResolution.Height
+        If CInt(PlayerHeight) > 720 Then
+            PlayerHeight = "720"
+        End If
+
         Dim lit As New LiteralControl
 
         If SiteSettings.FrontendSetting("UIType") = "desktop" Then
-            lit.Text = "<div id=""playerwrapper""><div id='player'></div></div><script type=""text/javascript"">playStreamInJWPlayer(""" & Url & """, 1000 ," & Resolutions.MyResolution.Height & ");</script>"
+            lit.Text = "<div id=""playerwrapper""><div id='player'></div></div><script type=""text/javascript"">playStreamInJWPlayer(""" & Url & """, 1000 ," & PlayerHeight & ");</script>"
         Else
-            lit.Text = "<video width=""100%"" height=""" & Resolutions.MyResolution.Height & """ controls=""controls""><source src=""" & Url & """></video>"
+            lit.Text = "<video width=""100%"" height=""" & PlayerHeight & """ controls=""controls""><source src=""" & Url & """></video>"
         End If
 
         maincontent.Controls.Add(lit)
@@ -61,7 +66,7 @@ Partial Class viewstream
             Dim Time As Long = Long.Parse(Request.QueryString("time"))
             Dim StartTime As New DateTime(Time)
 
-            Rec = WSCache.DVR.GetRecorded(ChanId, StartTime)
+            Rec = Common.MBE.DvrAPI.GetRecorded(ChanId, StartTime)
 
             DeleteTitle.Text = "Delete Recording?"
             DeleteDetails.Text = Rec.Title & "<br>" & Rec.SubTitle
@@ -70,14 +75,14 @@ Partial Class viewstream
 
     Protected Sub DeleteButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles DeleteButton.Click
         If Not Rec Is Nothing Then
-            Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(Rec.FileName)
+            Dim Streams As List(Of iMythContent.LiveStreamInfo) = Common.MBE.ContentAPI.GetFilteredStreamList(Rec.FileName)
 
             Logger.Info("Deleting Livestreams: " & Rec.FileName)
-            For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
-                WSCache.Content.RemoveLiveStream(Str.Id)
+            For Each Str As iMythContent.LiveStreamInfo In Streams
+                Common.MBE.ContentAPI.RemoveLiveStream(Str.Id)
             Next
 
-            If WSCache.DVR.RemoveRecorded(Rec.Channel.ChanId, Rec.Recording.StartTs) Then
+            If Common.MBE.DvrAPI.RemoveRecorded(Rec.Channel.ChanId, Rec.Recording.StartTs) Then
                 Logger.Info("Recording Deleted: Chan-" & Rec.Channel.ChanId & "StartTs-" & Rec.Recording.StartTs.ToString)
                 Response.Redirect("confirmation.aspx?msg=1", False)
             End If

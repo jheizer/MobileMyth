@@ -16,8 +16,8 @@
     </Frontend>
     <Frontend name="::1">
       <UIType>tablet</UIType>
-      <Resolution>NoTranscode</Resolution>
-      <UseAnyStream>False</UseAnyStream>
+      <Resolution>720p</Resolution>
+      <UseAnyStream>True</UseAnyStream>
       <ProxyVideo>False</ProxyVideo>
       <ShowRecentRecordings>True</ShowRecentRecordings>
       <ShowRecentVideos>False</ShowRecentVideos>

@@ -5,12 +5,24 @@
 <html>
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.2.0.min.css" />
+    
+    <link rel="stylesheet" href="../css/themes/jquery.mobile.structure-1.2.1.min.css" />
+    <link rel="stylesheet" href="../css/themes/dark/dark.css" />
+
     <script src="../scripts/jquery.js" type="text/javascript"></script>
      <script type="text/javascript">
          $(document).bind("mobileinit", function () { $.mobile.ajaxEnabled = false; });
     </script>
-    <script src="../scripts/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.mobile-1.2.1.min.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.unveil.min.js" type="text/javascript"></script>
+    
+     <script type="text/javascript">
+        $(document).ready(function() {
+            $("img").unveil();
+        });
+
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -26,15 +38,26 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div data-role="page">
+    <asp:ScriptManager runat="server" ID="sm1" EnablePartialRendering="true" />
+    <div data-role="page" data-theme="a">
 
         <div data-role="header">
             <a href="default.aspx" data-icon="home" data-ajax="false"><asp:literal runat="server" Text="Home" /></a>  
             <h3><asp:Label runat="server" ID="HeaderPageTitle"><asp:literal runat="server" Text="Mobile MythTV" /></asp:Label></h3>
-            <a href="../admin/default.aspx" data-icon="gear"><asp:literal runat="server" Text="Settings" /></a>  
+            <a href="#statuspopup" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" data-icon="info" class="ui-btn-right" style="margin-right: 100px;">
+                <asp:literal ID="Literal2" runat="server" Text="Info" />
+            </a>  
+
+            <div data-role="popup" id="statuspopup" data-theme="a">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="a">
+					<li><a href="status.aspx">Backend Status</a></li>
+					<li><a href="upcoming.aspx">Upcoming Recordings</a></li>
+				</ul>
+			</div>
+            <a href="../admin/default.aspx" data-icon="gear" class="ui-btn-right"><asp:literal runat="server" Text="Settings" /></a>  
         </div> 
 
-        <asp:Panel runat="server" ID="ContentPanel" data-role="content">
+        <asp:Panel runat="server" ID="ContentPanel" data-role="content" data-theme="a" style="background:url('../images/pw_maze_black.png');">
             <asp:ContentPlaceHolder id="ContentHolder" runat="server"></asp:ContentPlaceHolder>
         </asp:Panel> 
 
@@ -43,9 +66,9 @@
 			    <ul>
 				    <li><a href="recordings.aspx" data-icon="star"><asp:literal runat="server" Text="Recordings" /></a></li>
 				    <li><a href="videos.aspx" data-icon="grid"><asp:literal runat="server" Text="Videos" /></a></li>
+                    <li runat="server" id="gallerymenu" visible="false"><a href="gallery.aspx" data-icon="grid"><asp:literal ID="Literal1" runat="server" Text="Gallery" /></a></li>
+				    <!-- <li><a href="music.aspx" data-icon="forward"><asp:literal ID="Literal3" runat="server" Text="Music" /></a></li> -->
 				    <li><a href="guide.aspx" data-icon="grid"><asp:literal runat="server" Text="Guide" /></a></li>
-				    <li><a href="upcoming.aspx" data-icon="forward"><asp:literal runat="server" Text="Upcoming" /></a></li>
-				    <li><a href="status.aspx" data-icon="info"><asp:literal runat="server" Text="Status" /></a></li>
 			    </ul>
 		    </div>
         </asp:Panel>
@@ -53,6 +76,35 @@
     </div>
 
     <asp:ContentPlaceHolder id="AfterFirstPage" runat="server"></asp:ContentPlaceHolder>
+    <div data-role="panel" data-id="menu" data-hash="crumbs" data-panel="menu">
+
+	<div data-role="page" id="searchMenu" data-show="first" class="">
+   
+		<div data-role="header">
+			<h1>search criteria</h1>
+		</div>
+		<div data-role="content">
+			<p class="advice">All search criteria will go here!</p>
+			<a data-role="button" href="#menu2nd" data-panel="menu" data-inline="true">menu2nd</a>
+			<a data-role="button" href="#somesome" data-panel="main" data-inline="true">load somesome</a>
+		</div>
+		
+	</div>
+   
+	<div data-role="page" id="menu2nd" class="">
+   
+		<div data-role="header">
+			<!--<a data-role="button" href="#searchMenu" data-panel="menu" data-transition="reverse" data-inline="true" data-icon="back">back</a>-->
+			<h1>no2</h1>
+		</div>
+		<div data-role="content">
+			<p class="advice">I'm the 2nd menu page</p>
+		</div>
+		
+	</div>
+   
+</div><!-- end search panel -->
+
 
     </form>
 </body>

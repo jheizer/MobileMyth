@@ -17,7 +17,7 @@
 '    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 
@@ -27,8 +27,8 @@ Partial Class recordings
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
 
         Dim Title As String = "Episodes"
-        Dim Recordings As ProgramList = WSCache.GetRecordedList()
-        Dim Programs As List(Of Program) = Recordings.Programs.ToList
+        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
+        Dim Programs As List(Of Program) = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV").ToList
 
         If Not Request.QueryString("title") Is Nothing Then 'If we are only suppose to show a single Title filter that now
             Title = Request.QueryString("title")

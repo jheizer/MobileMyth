@@ -14,6 +14,8 @@
       
             FrontendScanner.StartFindFrontends()
             
+            Common.LoadMBE()
+            
         Catch ex As Exception
             logger.Error(ex.ToString)
         End Try

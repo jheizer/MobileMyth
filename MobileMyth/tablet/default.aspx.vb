@@ -14,14 +14,13 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 Imports System.Xml
-Imports MythVideo
 
 Partial Class _default
     Inherits System.Web.UI.Page
@@ -41,9 +40,10 @@ Partial Class _default
             RecentRecordingsPanel.Visible = True
 
             Dim Recordings As ProgramList = Nothing
-            Recordings = WSCache.DVR.GetRecordedList(True, 0, 20)
+            Recordings = Common.MBE.DvrAPI.GetRecordedList(True, 0, 50, False)
 
-            For Each Prog As Program In Recordings.Programs
+            'Don't show deleted or livetv
+            For Each Prog As Program In Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV")
                 Dim Slide As New Panel
                 Slide.CssClass = "slide"
 
@@ -52,9 +52,10 @@ Partial Class _default
                 Lnk.Attributes.Add("data-ajax", "false")
 
                 Dim img As New Image
-                img.ImageUrl = Common.ProxyURL("/Content/GetPreviewImage?ChanId=" & Prog.Channel.ChanId & "&StartTime=" & _
+                img.ImageUrl = "../images/loader-large.gif"
+                img.Attributes.Add("data-src", Common.ProxyURL("/Content/GetPreviewImage?ChanId=" & Prog.Channel.ChanId & "&StartTime=" & _
                                 Prog.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") & _
-                                "&Height=200")
+                                "&Height=200"))
                 Lnk.Controls.Add(img)
 
                 Dim EpisodeNumber As String = ""
@@ -76,10 +77,10 @@ Partial Class _default
         If SiteSettings.FrontendSettingBool("ShowRecentVideos") Then
             RecentVideosPanel.Visible = True
 
-            Dim Videos As MythVideo.VideoMetadataInfoList
-            Videos = WSCache.Video.GetVideoList(True, 0, 25)  'Change the service xml to xs:string for AddDate
+            Dim Videos As List(Of iMythVideo.VideoMetadataInfo)
+            Videos = Common.MBE.VideoAPI.GetVideoList(True, 0, 25)  'Change the service xml to xs:string for AddDate
 
-            For Each Vid As VideoMetadataInfo In Videos.VideoMetadataInfos
+            For Each Vid As iMythVideo.VideoMetadataInfo In Videos
                 Dim Slide As New Panel
                 Slide.CssClass = "slide"
 
@@ -112,7 +113,7 @@ Partial Class _default
         If SiteSettings.FrontendSettingBool("ShowConflicts") Then
             ConflictsPanel.Visible = True
 
-            Dim Cons As ProgramList = WSCache.DVR.GetConflictList(0, 500)
+            Dim Cons As ProgramList = Common.MBE.DvrAPI.GetConflictList(0, 500)
             Dim Li As New HtmlListItem
 
             'If none, say so
@@ -138,7 +139,7 @@ Partial Class _default
     Private Sub DisplayEncoders()
         If SiteSettings.FrontendSettingBool("ShowEncoders") Then
             EncodersPanel.Visible = True
-            Dim Encods As EncoderList = WSCache.DVR.GetEncoderList
+            Dim Encods As EncoderList = Common.MBE.DvrAPI.GetEncoderList
             Dim Li As New HtmlListItem
 
             If Not Encods Is Nothing Then
@@ -189,7 +190,7 @@ Partial Class _default
     Private Sub DisplayUpcoming()
         If SiteSettings.FrontendSettingBool("ShowUpcoming") Then
             UpcomingPanel.Visible = True
-            Dim UpcomingList As ProgramList = WSCache.DVR.GetUpcomingList(0, 10, False)
+            Dim UpcomingList As ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 10, False)
 
             For Each Up As Program In UpcomingList.Programs
                 Dim Li As New HtmlListItem

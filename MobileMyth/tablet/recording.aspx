@@ -68,16 +68,13 @@
         }
     </style>
     <script type="text/javascript">
-        function PlayOnFrontend(fe, chan, st) {
-            $.get('../fecontrol.ashx?cmd=PlayRecording&fe=' + fe + '&p=' + encodeURIComponent('ChanId=' + chan + '&StartTime=' + st), function (data) {
-                window.location = 'frontend.aspx?fe=' + fe;
-            });
-
+        function PlayOnFrontend(fe, chan, st) {   
+            window.location = 'remotelaunch.aspx?fe=' + fe + '&ChanId=' + chan + '&StartTime=' + st;
         }
     </script>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHolder" runat="Server">
-    <asp:Panel runat="server" ID="FanArtImage" Style="background-color: rgba(250, 250, 250, 0.85)" meta:resourcekey="FanArtImageResource1">
+    <asp:Panel runat="server" ID="FanArtImage" Style="background-color: rgba(250, 250, 250, 0.2)" meta:resourcekey="FanArtImageResource1">
         <div>
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="padding-left: 10px;">
@@ -98,18 +95,29 @@
                     <asp:Image runat="server" ID="coverimage" Visible="False" meta:resourcekey="coverimageResource1" />
                 </div>
             </div>
-            <asp:HyperLink runat="server" ID="WatchNowLink" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false" Text="Watch Now" meta:resourcekey="WatchNowLinkResource1" />
-            <asp:HyperLink runat="server" ID="DownloadLink" data-role="button" data-icon="arrow-r" data-iconpos="right" Visible="False" Text="Download Episode" meta:resourcekey="DownloadLinkResource1" />
+            <div class="ui-grid-a">
+	            <div class="ui-block-a">
+                    <asp:HyperLink runat="server" ID="WatchNowLink" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false" Text="Watch Now" meta:resourcekey="WatchNowLinkResource1" />
+                    <asp:HyperLink runat="server" ID="DownloadLink" data-role="button" data-icon="arrow-r" data-iconpos="right" Visible="False" Text="Download Episode" meta:resourcekey="DownloadLinkResource1" />
+                    <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="delete">
+                        <asp:Literal ID="Literal1" runat="server" Text="Delete" meta:resourcekey="LiteralResource3" />
+                    </a>
+                </div>
 
-            <table>
-                <tr>
-                    <td style="width: 100%"><asp:DropDownList runat="server" ID="FEList" meta:resourcekey="FEListResource1"></asp:DropDownList></td>
-                    <td style="width: 250px;"><asp:HyperLink runat="server" ID="PlayFE" data-role="button" data-icon="arrow-r" data-iconpos="right" Text="Play On Frontend" meta:resourcekey="PlayFEResource1" /></td>
-                </tr>
-            </table>
+                <div class="ui-block-b">
+                    <div data-role="collapsible" data-content-theme="a" data-collapsed="false">
+                        <h3>Remote Playback</h3>
+                        <p>
+                            <asp:DropDownList runat="server" ID="FEList" meta:resourcekey="FEListResource1"></asp:DropDownList>
+                            <asp:HyperLink runat="server" ID="PlayFE" data-role="button" data-icon="arrow-r" data-iconpos="right" Text="Play" meta:resourcekey="PlayFEResource1" />
+                        </p>
+                   </div>
+               </div>
 
-            <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop">
-                <asp:Literal runat="server" Text="Delete" meta:resourcekey="LiteralResource3" /></a>
+            </div>
+                       
+
+            
             <br />
             <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width: 400px;" class="ui-corner-all">
                 <div data-role="header" data-theme="a" class="ui-corner-top">
@@ -125,7 +133,8 @@
                         <asp:Literal runat="server" Text="Cancel" meta:resourcekey="LiteralResource5" /></a>
                     <asp:LinkButton runat="server" ID="DeleteButton" data-role="button" data-inline="true" data-transition="flow" data-theme="b" data-ajax="false" meta:resourcekey="DeleteButtonResource1"><asp:literal runat="server" 
                         Text="Delete" meta:resourcekey="LiteralResource6" />
-                    </asp:LinkButton></div></div><asp:PlaceHolder runat="server" ID="maincontent"></asp:PlaceHolder>
+                    </asp:LinkButton></div></div>
+                <asp:PlaceHolder runat="server" ID="maincontent"></asp:PlaceHolder>
         </div>
     </asp:Panel>
 </asp:Content>

@@ -76,14 +76,10 @@
 
     <br />
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    Current Version: v.6<br />
+    Current Version: v.7<br />
     <a href="http://mobilemyth.net">MobileMyth Home Page</a><br />
     GNU General Public License.<br />
-    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="AfterFirstPage" Runat="Server">

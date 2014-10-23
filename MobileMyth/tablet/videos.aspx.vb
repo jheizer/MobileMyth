@@ -17,10 +17,9 @@
 '    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
-Imports MythVideo
 
 Partial Class tablet_videos
     Inherits System.Web.UI.Page
@@ -37,13 +36,13 @@ Partial Class tablet_videos
                 Folder = Request.QueryString("f")
             End If
 
-            Dim Videos As MythVideo.VideoMetadataInfoList
-            Videos = WSCache.Video.GetVideoList(True, 0, 10000)  'Change the service xml to xs:string for AddDate
+            Dim Videos As List(Of iMythVideo.VideoMetadataInfo)
+            Videos = Common.MBE.VideoAPI.GetVideoList(True, 0, 10000)  'Change the service xml to xs:string for AddDate
             
             Dim Folders As New List(Of String)
             Dim Fold As String
             Dim temp As String
-            For Each V As VideoMetadataInfo In Videos.VideoMetadataInfos
+            For Each V As iMythVideo.VideoMetadataInfo In Videos
                 Fold = V.FileName
                 temp = ""
                 If Fold.Contains("/") Then
@@ -66,15 +65,15 @@ Partial Class tablet_videos
 
             Folders.Sort()
 
-            Dim Sorted As List(Of VideoMetadataInfo)
+            Dim Sorted As List(Of iMythVideo.VideoMetadataInfo)
 
             If String.IsNullOrEmpty(Folder) Then
-                Sorted = (From v In Videos.VideoMetadataInfos
+                Sorted = (From v In Videos
                           Where Not v.FileName.Contains("/")
                           Order By v.Title
                           Select v).ToList
             Else
-                Sorted = (From v In Videos.VideoMetadataInfos
+                Sorted = (From v In Videos
                           Where v.FileName.Contains(Folder & "/") AndAlso v.FileName.IndexOf(Folder & "/") = v.FileName.LastIndexOf("/") - Folder.Length
                           Order By v.Title, v.Season, v.Episode
                           Select v).ToList
@@ -82,12 +81,12 @@ Partial Class tablet_videos
 
 
             For i As Integer = 0 To Folders.Count - 1
-                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & Folders(i), "../images/119.png")
+                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & Folders(i), "../images/blackfolder.png")
                 maincontent.Controls.Add(Li)
             Next
 
             Dim title As String = ""
-            Dim Vid As VideoMetadataInfo
+            Dim Vid As iMythVideo.VideoMetadataInfo
             For i As Integer = 0 To Sorted.Count - 1
                 Vid = Sorted(i)
                 title = Vid.Title

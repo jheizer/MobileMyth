@@ -74,35 +74,43 @@ Partial Class proxy
     End Sub
 
     Private Sub Process2(ByVal Url As String, ByVal Context As HttpContext, ByVal Response As HttpResponse)
-        'Streaming but doesn't seem to help
-        Dim Req As Net.HttpWebRequest = Net.HttpWebRequest.Create(Url)
-        Req.Method = Context.Request.RequestType
-        Req.ContentType = Context.Request.ContentType
-        Req.Proxy = Net.GlobalProxySelection.GetEmptyWebProxy()
+        Try
+            'Streaming but doesn't seem to help
+            Dim Req As Net.HttpWebRequest = Net.HttpWebRequest.Create(Url)
+            Req.Method = Context.Request.RequestType
+            Req.ContentType = Context.Request.ContentType
+            Req.Proxy = Net.GlobalProxySelection.GetEmptyWebProxy()
 
-        Dim Resp As Net.HttpWebResponse = Req.GetResponse
-        Dim RespStream As IO.Stream = Resp.GetResponseStream
+            Dim Resp As Net.HttpWebResponse = Req.GetResponse
+            Dim RespStream As IO.Stream = Resp.GetResponseStream
 
-        Context.Response.ContentType = Resp.ContentType
-        Context.Response.BufferOutput = False
-        Context.Response.Buffer = False
+            Context.Response.ContentType = Resp.ContentType
+            Context.Response.BufferOutput = False
+            Context.Response.Buffer = False
 
-        If Resp.StatusCode.ToString.ToLower = "ok" Then
+            If Resp.StatusCode.ToString.ToLower = "ok" Then
 
-            Dim Pos As Integer = 0
-            Dim Buf(4095) As Byte
-            Dim Read As Integer = RespStream.Read(Buf, 0, Buf.Length)
+                Dim Pos As Integer = 0
+                Dim Buf(4095) As Byte
+                Dim Read As Integer = RespStream.Read(Buf, 0, Buf.Length)
 
-            While Read > 0
-                Response.OutputStream.Write(Buf, 0, Read)
-                Response.Flush()
-                Pos += Read
-                Read = RespStream.Read(Buf, 0, Buf.Length)
-            End While
-        Else
-            Logger.Error(Resp.StatusCode & "  " & Resp.StatusDescription & ": " & Url)
-        End If
+                While Read > 0
+                    Response.OutputStream.Write(Buf, 0, Read)
+                    Response.Flush()
+                    Pos += Read
+                    Read = RespStream.Read(Buf, 0, Buf.Length)
+                End While
+            Else
+                Logger.Error(Resp.StatusCode & "  " & Resp.StatusDescription & ": " & Url)
+            End If
 
+        Catch ex As HttpException
+            If ex.ErrorCode <> -2147023667 Then 'client disconnected, ignore
+                Logger.Error(Url, ex)
+            End If
+        Catch e As Exception
+            Logger.Error(Url, e)
+        End Try
     End Sub
 
     Private Sub Process3(ByVal Url As String, ByVal Context As HttpContext, ByVal Response As HttpResponse)
@@ -146,6 +154,7 @@ Partial Class proxy
         Dim AcceptableCalls() As String = New String() {"/Content/GetPreviewImage", _
                                                         "/Content/GetRecordingArtwork", _
                                                         "/Content/GetVideoArtwork", _
+                                                        "/Content/GetImage", _
                                                         "/StorageGroup/Stream", _
                                                         "/Guide/GetChannelIcon", _
                                                         "/StorageGroup/3rdParty/JW_Player"}

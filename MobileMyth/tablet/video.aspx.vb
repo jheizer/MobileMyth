@@ -14,25 +14,23 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
-Imports MythDVR
-Imports MythVideo
 
 Partial Class tablet_video
     Inherits System.Web.UI.Page
 
-    Private vid As VideoMetadataInfo
+    Private vid As iMythVideo.VideoMetadataInfo
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Dim Id As String = Request.QueryString("id")
 
         If Not Id Is Nothing Then
 
-            vid = WSCache.Video.GetVideo(Id)
+            vid = Common.MBE.VideoAPI.GetVideo(Id)
 
             'If we have a number lets try to display a banner
             If Not String.IsNullOrEmpty(vid.Inetref) Then
@@ -54,10 +52,10 @@ Partial Class tablet_video
             VideoSubTitle.Text = vid.SubTitle & TotalMinutes
             VideoDescription.Text = vid.Description
 
-            'Display stream info(0) if transcoding has already been started
-            Dim Streams As LiveStreamInfoList = WSCache.GetFilteredStreamList(vid.FileName)
+            'Display stream info that already exist
+            Dim Streams As List(Of iMythContent.LiveStreamInfo) = Common.MBE.ContentAPI.GetFilteredStreamList(vid.FileName)
             
-            For Each Str As LiveStreamInfo In Streams.LiveStreamInfos
+            For Each Str As iMythContent.LiveStreamInfo In Streams
                 TranscodePanel.Visible = True
                 Dim Pro As New ProgressBar("Transcoding Progress (" & Resolutions.ResolutionByHeight(Str.Height).Name & "): " & Str.PercentComplete & "%", Str.PercentComplete)
                 TranscodePanel.Controls.Add(Pro)

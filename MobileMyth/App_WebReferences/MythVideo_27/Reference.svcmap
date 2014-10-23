@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ebf32dd4-40b7-4a1e-b7d4-d9f96faf01df" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.197:6544/Video/wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="feffbd48-e01c-4905-9a4b-50fda33c7a1f" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArrayOfArtworkItem&amp;name=ArtworkItem" />
+    <MetadataFile FileName="VideoServices.wsdl" MetadataType="Wsdl" ID="79167c1b-943e-4949-b4e1-3a48f79c60c2" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/wsdl" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="1f95c839-cb73-4e6b-82a4-866628ee9e09" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=BlurayInfo" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="8f69b317-007d-483b-b062-9d0482fb44aa" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=VideoLookup" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="d64acb02-3fbc-4852-9c73-1d687d65661a" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArrayOfVideoMetadataInfo&amp;name=VideoMetadataInfo" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="b7766a06-0bcb-4f7c-9488-b69241037e0c" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="06b4ead3-917d-4af7-b799-ee73fd7c0fc3" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=VideoLookupList" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="26d065dd-e5d9-46f2-88e2-078efee0426b" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="xsd7.xsd" MetadataType="Schema" ID="03f512af-d0d8-45a5-bebf-e7e4efdb5582" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArtworkInfoList" />
+    <MetadataFile FileName="xsd8.xsd" MetadataType="Schema" ID="ed161a4b-9708-454e-a6a3-422a95f62f1a" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArrayOfString" />
+    <MetadataFile FileName="xsd9.xsd" MetadataType="Schema" ID="f9a45eec-557a-46c4-ac90-08b0361f4c83" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArrayOfVideoLookup&amp;name=VideoLookup" />
+    <MetadataFile FileName="xsd10.xsd" MetadataType="Schema" ID="992e50df-6f23-499a-a9ef-0df9e5348559" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=VideoMetadataInfo" />
+    <MetadataFile FileName="xsd11.xsd" MetadataType="Schema" ID="210227b4-eac4-4825-ace0-0cbbbb8c1b91" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=ArtworkItem" />
+    <MetadataFile FileName="xsd12.xsd" MetadataType="Schema" ID="130fd2a7-ee6e-48ff-a747-3c7272d424c8" SourceId="1" SourceUrl="http://10.0.0.197:6544/Video/xsd?type=VideoMetadataInfoList" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

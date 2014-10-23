@@ -7,9 +7,12 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHolder" Runat="Server">
-    <asp:PlaceHolder runat="server" ID="maincontent"></asp:PlaceHolder>
+    
+    
+    <div data-role="content">   
+        <asp:PlaceHolder runat="server" ID="maincontent"></asp:PlaceHolder>
+    </div>
+
 </asp:Content>
 
-<asp:Content ID="Content4" ContentPlaceHolderID="FooterHolder" Runat="Server">
-</asp:Content>
 

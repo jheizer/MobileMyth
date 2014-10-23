@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Partial Class admin_general
@@ -46,8 +46,8 @@ Partial Class admin_general
         End If
 
         Common.LoadDateFormat()
-
-        If Not WSCache.ReInitServiceReferences() Then
+        Common.LoadMBE()
+        If Common.MBE.TestConnection Then
             Logger.Error("Error Connecting to the Backend")
         End If
     End Sub

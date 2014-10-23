@@ -2,7 +2,7 @@
 
 Imports System
 Imports System.Web
-Imports MythContent
+
 Imports System.Globalization
 
 Public Class transcode : Implements IHttpHandler
@@ -19,10 +19,10 @@ Public Class transcode : Implements IHttpHandler
             Dim Path As String = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "transcode.xml")
             Dim Data As XElement = XElement.Load(Path)
                 
-            Dim Recordings As MythDVR.ProgramList = WSCache.GetRecordedList
-            Dim Videos As MythVideo.VideoMetadataInfoList = WSCache.Video.GetVideoList(True, 0, 10000)
+            Dim Recordings As MythDVR.ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, False)
+            Dim Videos As List(Of iMythVideo.VideoMetadataInfo) = Common.MBE.VideoAPI.GetVideoList(True, 0, 10000)
             
-            Dim Streams As LiveStreamInfoList
+            Dim Streams As List(Of iMythContent.LiveStreamInfo)
             Dim nd As XElement
             
             For Each nd In (From s In Data.Descendants("rule") Select s).ToList
@@ -31,9 +31,9 @@ Public Class transcode : Implements IHttpHandler
             
                 'recordings
                 For Each rec As MythDVR.Program In Recordings.Programs.ToList.FindAll(Function(r) r.Title.ToLower.Contains(nd.Attribute("title").Value.ToLower) AndAlso r.Recording.StartTs.Value > StartDate)
-                    Streams = WSCache.GetFilteredStreamList(rec.FileName)
+                    Streams = Common.MBE.ContentAPI.GetFilteredStreamList(rec.FileName)
 
-                    If Streams.LiveStreamInfos.Count = 0 Then
+                    If Streams.Count = 0 Then
                         If test Then
                             context.Response.Write("Test: Creating stream for: " & rec.Title & "  " & rec.SubTitle & "<br>")
                         Else
@@ -41,14 +41,14 @@ Public Class transcode : Implements IHttpHandler
                             
                             Dim VidSet As VideoResolution = Resolutions.Resolution(nd.Attribute("resolution").Value)
                         
-                            Dim Str As LiveStreamInfo = WSCache.Content.AddRecordingLiveStream(rec.Channel.ChanId, rec.Recording.StartTs, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
+                            Dim Str As iMythContent.LiveStreamInfo = Common.MBE.ContentAPI.AddRecordingLiveStream(rec.Channel.ChanId, rec.Recording.StartTs, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
                         
                             'now we wait
                             While Str.PercentComplete < 100
                                 Threading.Thread.Sleep(60000)
                                 
-                                Streams = WSCache.GetFilteredStreamList(rec.FileName)
-                                Str = Streams.LiveStreamInfos(0)
+                                Streams = Common.MBE.ContentAPI.GetFilteredStreamList(rec.FileName)
+                                Str = Streams(0)
                             End While
                             
                         End If
@@ -57,12 +57,12 @@ Public Class transcode : Implements IHttpHandler
                 Next
                 
                 
-                Dim Vid As MythVideo.VideoMetadataInfo
+                Dim Vid As iMythVideo.VideoMetadataInfo
                 
-                For Each Vid In Videos.VideoMetadataInfos.ToList.FindAll(Function(v) v.FileName.ToLower.Contains(nd.Attribute("title").Value.ToLower) AndAlso v.AddDate > StartDate)
-                    Streams = WSCache.GetFilteredStreamList(Vid.FileName)
+                For Each Vid In Videos.ToList.FindAll(Function(v) v.FileName.ToLower.Contains(nd.Attribute("title").Value.ToLower) AndAlso v.AddDate > StartDate)
+                    Streams = Common.MBE.ContentAPI.GetFilteredStreamList(Vid.FileName)
 
-                    If Streams.LiveStreamInfos.Count = 0 Then
+                    If Streams.Count = 0 Then
                         If test Then
                             context.Response.Write("Test: Creating stream for: " & Vid.FileName & "<br>")
                         Else
@@ -70,15 +70,15 @@ Public Class transcode : Implements IHttpHandler
                             
                             Dim VidSet As VideoResolution = Resolutions.Resolution(nd.Attribute("resolution").Value)
                         
-                            Dim Str As LiveStreamInfo = WSCache.Content.AddVideoLiveStream(Vid.Id, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
+                            Dim Str As iMythContent.LiveStreamInfo = Common.MBE.ContentAPI.AddVideoLiveStream(Vid.Id, 0, 0, VidSet.Height, VidSet.VRate, VidSet.ARate, 48000)
 
                         
                             'now we wait
                             While Str.PercentComplete < 100
                                 Threading.Thread.Sleep(60000)
                                 
-                                Streams = WSCache.GetFilteredStreamList(Vid.FileName)
-                                Str = Streams.LiveStreamInfos(0)
+                                Streams = Common.MBE.ContentAPI.GetFilteredStreamList(Vid.FileName)
+                                Str = Streams(0)
                             End While
                             
                         End If

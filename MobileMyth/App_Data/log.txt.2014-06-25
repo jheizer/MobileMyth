@@ -1,0 +1,307 @@
+2014-06-25 21:23:59,719 [1] INFO  ASP.global_asax Site Started
+2014-06-25 21:23:59,767 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2014-06-25 21:33:29,839 [1] INFO  ASP.global_asax Site Started
+2014-06-25 21:33:29,881 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2014-06-25 21:33:30,938 [8] INFO  SiteSettings Loading settings file
+2014-06-25 21:33:32,429 [9] INFO  MythBackendBase Reinitalizing webservice references.
+2014-06-25 21:33:33,168 [9] INFO  MythBackendBase Reinitalizing webservice references.
+2014-06-25 21:33:34,559 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1538&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,589 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1532&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,614 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1531&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,638 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1530&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,668 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1529&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,692 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1528&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,721 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1527&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,755 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1526&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,798 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1525&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,822 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1524&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,847 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1523&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,872 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1522&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,896 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1521&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,925 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1520&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,960 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1519&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:34,984 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1518&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:35,011 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1517&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:35,035 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1537&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:35,064 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1515&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:35,090 [12] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1514&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:35,544 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1516&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:35,597 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1533&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:36,055 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1534&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:36,104 [12] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1536&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:36,599 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1535&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-06-25 21:33:44,004 [9] INFO  Frontends Loading Frontends file
+2014-06-25 21:34:18,860 [9] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:34:45,392 [6] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:38:09,494 [6] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:38:40,699 [31] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:39:07,515 [26] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:39:34,155 [5] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:40:00,951 [28] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:40:27,666 [25] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:40:54,435 [22] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:41:21,118 [23] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:41:47,812 [22] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:42:14,476 [23] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:42:41,197 [28] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:43:07,786 [13] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:43:34,669 [29] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:44:01,393 [13] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:44:28,121 [23] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:44:54,606 [27] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:45:21,543 [23] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:45:48,226 [48] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:46:20,771 [20] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:48:01,265 [28] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:51:00,947 [27] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:51:05,917 [43] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:51:10,966 [13] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:51:33,444 [49] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38
+2014-06-25 21:51:50,295 [43] ERROR tablet_remotelaunch Error Launching remote playback
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.0.0.111:6547
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at tablet_remotelaunch.loader_Tick(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\remotelaunch.aspx.vb:line 38

@@ -14,10 +14,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythContent
+
 Imports MythService
 Imports MythDVR
 
@@ -27,7 +27,7 @@ Partial Class upcoming
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Master.PageTitle = "Upcoming Recordings"
 
-        Dim Recordings As ProgramList = WSCache.DVR.GetUpcomingList(0, 500, False)
+        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 500, False)
 
         Dim List As New HtmlList
         maincontent.Controls.Add(List)

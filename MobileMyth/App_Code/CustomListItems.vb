@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports Microsoft.VisualBasic
@@ -24,13 +24,37 @@ Public Class RecordingListItem
     Inherits HtmlListItem
 
     Public Sub New(ByVal rec As Program)
-        Dim lit As New LiteralControl
-        lit.Text = "<h3>" & rec.Title & "</h3><p><strong>" & rec.SubTitle & "</strong></p><p>" & _
-            rec.Description & "</p><p class=""ui-li-aside""><strong>" & rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt") & "</strong></p>"
 
         Dim Link As New HyperLink
         Link.NavigateUrl = "recording.aspx?chan=" & rec.Channel.ChanId & "&time=" & rec.Recording.StartTs.Value.Ticks
         Link.Attributes.Add("data-ajax", "false")
+
+        'Add the thumbnail preview image
+        If Not SiteSettings.FrontendSettingBool("NoImages") Then
+            Dim img As New Image
+            img.ImageUrl = "../images/loader.gif"
+            img.Attributes.Add("data-src", Common.ProxyURL("/Content/GetPreviewImage?ChanId=" & rec.Channel.ChanId & "&StartTime=" & _
+                            rec.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") & _
+                            "&Height=80"))
+            Link.Controls.Add(img)
+        End If
+
+
+        Dim lit As New LiteralControl
+        Dim data As New Text.StringBuilder
+
+        data.Append("<h3>")
+        data.Append(rec.Title)
+        data.Append("</h3><p><strong>")
+        data.Append(rec.SubTitle)
+        data.Append("</strong></p><p>")
+        data.Append(rec.Description)
+        data.Append("</p><p class=""ui-li-aside""><strong>")
+        data.Append(rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt"))
+        data.Append("</strong></p>")
+
+        lit.Text = data.ToString
+
         Link.Controls.Add(lit)
 
         Me.Controls.Add(Link)
@@ -41,10 +65,30 @@ Public Class UpcomingListItem
     Inherits HtmlListItem
 
     Public Sub New(ByVal Rec As Program)
-        Dim time As String = Rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt") & " - " & Rec.Recording.EndTs.Value.ToLocalTime.ToString("h:mm tt")
+        Me.New(Rec, True)
+    End Sub
+
+    Public Sub New(ByVal Rec As Program, ShowDescription As Boolean)
+        Dim Builder As New Text.StringBuilder
+
+        Builder.Append("<h3>")
+        Builder.Append(Rec.Title)
+        Builder.Append("</h3><p>")
+        Builder.Append(Rec.SubTitle)
+        Builder.Append("</p>")
+        If ShowDescription Then
+            Builder.Append("<p>")
+            Builder.Append(Rec.Description)
+            Builder.Append("</p>")
+        End If
+        Builder.Append("<p class=""ui-li-aside"">")
+        Builder.Append(Rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt"))
+        Builder.Append(" - ")
+        Builder.Append(Rec.Recording.EndTs.Value.ToLocalTime.ToString("h:mm tt"))
+        Builder.Append("</p>")
+
         Dim lit As New LiteralControl
-        lit.Text = "<h3>" & Rec.Title & "</h3><p><strong>" & Rec.SubTitle & "</strong></p><p>" & Rec.Description & _
-                   "</p><p class=""ui-li-aside""><strong>" & Time & "</strong></p>"
+        lit.Text = Builder.ToString
 
         Dim Epoch As TimeSpan = (Rec.Recording.StartTs.Value - New DateTime(1970, 1, 1))
 
@@ -83,29 +127,34 @@ Public Class ShowListItem
     End Sub
 End Class
 
-Public Class VideoPanel
+Public Class TiledPanel
     Inherits Panel
 
     Public Sub New(ByVal index As Integer, ByVal Title As String, ByVal URL As String, ByVal CoverUrl As String)
         Me.CssClass = GetCss(index)
 
         Dim InnerPan As New Panel
-        InnerPan.CssClass = "ui-bar"
+        InnerPan.Style.Add("text-align", "center")
+        InnerPan.Style.Add("position", "relative")
         Me.Controls.Add(InnerPan)
 
         Dim Link As New HyperLink
         Link.NavigateUrl = URL
 
         Dim Img As New Image
-        Img.ImageUrl = CoverUrl
+        Img.ImageUrl = "../images/loader.gif"
+        Img.Attributes.Add("data-src", CoverUrl)
         Img.AlternateText = Title
         Img.Style.Add("max-width", "100%")
         Img.Style.Add("height", "225px")
         Link.Controls.Add(Img)
 
-        Dim lit As New LiteralControl
-        lit.Text = "<br><h3>" & Title & "</h3>"
-        Link.Controls.Add(lit)
+        If Not String.IsNullOrEmpty(Title) Then
+            Dim lit As New Label
+            lit.Text = Title
+            lit.CssClass = "titlelabel"
+            Link.Controls.Add(lit)
+        End If
 
         InnerPan.Controls.Add(Link)
     End Sub
@@ -128,3 +177,25 @@ Public Class VideoPanel
     End Function
 End Class
 
+
+'In case these need to be changed later
+Public Class VideoPanel
+    Inherits TiledPanel
+
+    Public Sub New(ByVal index As Integer, ByVal Title As String, ByVal URL As String, ByVal CoverUrl As String)
+        MyBase.New(index, Title, URL, CoverUrl)
+    End Sub
+
+End Class
+
+Public Class GalleryPanel
+    Inherits TiledPanel
+
+    Public Sub New(ByVal index As Integer, ByVal URL As String, ByVal CoverUrl As String)
+        MyBase.New(index, "", URL, CoverUrl)
+    End Sub
+
+    Public Sub New(ByVal index As Integer, ByVal Title As String, ByVal URL As String, ByVal CoverUrl As String)
+        MyBase.New(index, Title, URL, CoverUrl)
+    End Sub
+End Class

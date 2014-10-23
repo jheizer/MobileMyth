@@ -71,7 +71,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHolder" Runat="Server">
     <asp:Panel runat="server" ID="FanArtImage" 
-        style="background-color: rgba(250, 250, 250, 0.85)" 
+        style="background-color: rgba(250, 250, 250, 0.2)" 
         meta:resourcekey="FanArtImageResource1">
         <div>
             <div class="ui-grid-a">

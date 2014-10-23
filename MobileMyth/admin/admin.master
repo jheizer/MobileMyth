@@ -5,13 +5,31 @@
 <html>
 <head id="Head1" runat="server">
     <title></title>
-    <link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="../css/themes/jquery.mobile.structure-1.2.1.min.css" />
+    <link rel="stylesheet" href="../css/themes/dark/dark.css" />
+
     <script src="../scripts/jquery.js" type="text/javascript"></script>
      <script type="text/javascript">
-         $(document).bind("mobileinit", function () { $.mobile.ajaxFormsEnabled = false; $.mobile.ajaxEnabled = false; });
+         $(document).bind("mobileinit", function () { $.mobile.ajaxEnabled = false; });
     </script>
-    <script src="../scripts/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.mobile-1.2.1.min.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.unveil.min.js" type="text/javascript"></script>
+    
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("img").unveil();
+         });
+
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/logo-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/logo-72.png" />
+    <link rel="apple-touch-icon" href="/images/logo-57.png" />
+    <link rel="apple-touch-startup-image" href="/images/logo-128.png">
 
         <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -20,28 +38,32 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-    <div data-role="page">
+     <div data-role="page" data-theme="a">
 
         <div data-role="header">
-            <a href="../default.aspx" data-icon="home"><asp:literal runat="server" 
-                Text="Home" meta:resourcekey="LiteralResource1" /></a>  
-            <h3><asp:Label runat="server" ID="HeaderPageTitle" meta:resourcekey="HeaderPageTitleResource1">Mobile MythTV - Admin</asp:Label></h3>
-            <a href="default.aspx" data-icon="gear"><asp:literal runat="server" 
-                Text="Settings" meta:resourcekey="LiteralResource2" /></a>  
+            <a href="../tablet/default.aspx" data-icon="home" data-ajax="false"><asp:literal runat="server" Text="Home" /></a>  
+            <h3><asp:Label runat="server" ID="HeaderPageTitle"><asp:literal runat="server" Text="Mobile MythTV" /></asp:Label></h3>
+            <a href="#statuspopup" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" data-icon="info" class="ui-btn-right" style="margin-right: 100px;">
+                <asp:literal ID="Literal2" runat="server" Text="Info" />
+            </a>  
+
+            <div data-role="popup" id="statuspopup" data-theme="a">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="a">
+					<li><a href="../tablet/status.aspx">Backend Status</a></li>
+					<li><a href="../tablet/upcoming.aspx">Upcoming Recordings</a></li>
+				</ul>
+			</div>
+            <a href="../admin/default.aspx" data-icon="gear" class="ui-btn-right"><asp:literal runat="server" Text="Settings" /></a>  
         </div> 
 
-        <asp:Panel runat="server" ID="ContentPanel" data-role="content" 
-            meta:resourcekey="ContentPanelResource1">
-            <asp:Panel runat="server" ID="ErrorsPanel" Visible="False" 
-                meta:resourcekey="ErrorsPanelResource1">
-                <asp:Label runat="server" ID="Errors" style="color:Red; font-weight: bold;" 
-                    meta:resourcekey="ErrorsResource1"></asp:Label> 
+        <asp:Panel runat="server" ID="ContentPanel" data-role="content" data-theme="a" style="background:url('../images/pw_maze_black.png');">
+            <asp:Panel runat="server" ID="ErrorsPanel" Visible="False" meta:resourcekey="ErrorsPanelResource1">
+                <asp:Label runat="server" ID="Errors" style="color:Red; font-weight: bold;" meta:resourcekey="ErrorsResource1"></asp:Label> 
             </asp:Panel>
             <asp:ContentPlaceHolder id="ContentHolder" runat="server"></asp:ContentPlaceHolder>
-        </asp:Panel> 
+        </asp:Panel>
 
-            <asp:Panel runat="server" id="footerpan" data-role="footer" 
-            data-position="fixed" meta:resourcekey="footerpanResource1">
+       <asp:Panel runat="server" id="footerpan" data-role="footer" data-position="fixed" meta:resourcekey="footerpanResource1">
 		    <div data-role="navbar">
 			    <ul>
 				    <li><a href="default.aspx" data-icon="star"><asp:literal runat="server" 

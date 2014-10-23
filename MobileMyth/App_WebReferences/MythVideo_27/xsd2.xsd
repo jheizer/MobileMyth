@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Video/xsd?type=ArrayOfArtworkItem&amp;name=ArtworkItem" />
+  <xs:include schemaLocation="http://10.0.0.197:6544/Video/xsd?type=ArrayOfString" />
+  <xs:complexType name="VideoLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" name="SubTitle" type="xs:string" />
+      <xs:element minOccurs="0" name="Season" type="xs:int" />
+      <xs:element minOccurs="0" name="Episode" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+      <xs:element minOccurs="0" name="Tagline" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" name="Certification" type="xs:string" />
+      <xs:element minOccurs="0" name="Inetref" type="xs:string" />
+      <xs:element minOccurs="0" name="Collectionref" type="xs:string" />
+      <xs:element minOccurs="0" name="HomePage" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRating" type="xs:float" />
+      <xs:element minOccurs="0" name="Length" type="xs:int" />
+      <xs:element minOccurs="0" name="Language" type="xs:string" />
+      <xs:element minOccurs="0" name="Countries" type="tns:ArrayOfString" />
+      <xs:element minOccurs="0" name="Popularity" type="xs:int" />
+      <xs:element minOccurs="0" name="Budget" type="xs:int" />
+      <xs:element minOccurs="0" name="Revenue" type="xs:int" />
+      <xs:element minOccurs="0" name="IMDB" type="xs:string" />
+      <xs:element minOccurs="0" name="TMSRef" type="xs:string" />
+      <xs:element minOccurs="0" name="Artwork" type="tns:ArrayOfArtworkItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VideoLookup" nillable="true" type="tns:VideoLookup" />
+</xs:schema>

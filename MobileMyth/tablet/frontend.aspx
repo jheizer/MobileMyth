@@ -19,7 +19,7 @@
             $.ajax({ url: "../fecontrol.ashx?fe=" + fe + "&cmd=GetStatus&p=",
                 type: 'GET',
                 success: function (data) {
-                    $("#status").text(data);
+                    $("#status").html(data.toString().replace(/:/g, ": ").replace(/"/g, '').replace(/,/g, '<br>').replace(/{/g, '').replace(/}/g, ''));
                 }
             });
 

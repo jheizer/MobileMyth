@@ -2,10 +2,10 @@
 <definitions xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ContentServices" targetNamespace="http://mythtv.org" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xs:schema targetNamespace="http://MythTV.org/Imports">
-      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=ArrayOfString" namespace="http://mythtv.org" />
-      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=ArtworkInfoList" namespace="http://mythtv.org" />
-      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfo" namespace="http://mythtv.org" />
-      <xs:import schemaLocation="http://10.0.0.197:6544/Content/xsd?type=LiveStreamInfoList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.236:6544/Content/xsd?type=ArrayOfString" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.236:6544/Content/xsd?type=ArtworkInfoList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.236:6544/Content/xsd?type=LiveStreamInfo" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.236:6544/Content/xsd?type=LiveStreamInfoList" namespace="http://mythtv.org" />
     </xs:schema>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://mythtv.org">
       <xs:element name="AddLiveStream">
@@ -807,7 +807,7 @@
   <service name="ContentServices">
     <documentation>Interface Version 1.32 - </documentation>
     <port name="BasicHttpBinding_Content" binding="tns:BasicHttpBinding_Content">
-      <soap:address location="http://10.0.0.197:6544/Content" />
+      <soap:address location="http://10.0.0.236:6544/Content" />
     </port>
   </service>
 </definitions>

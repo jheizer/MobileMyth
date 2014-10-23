@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="VideoServices" targetNamespace="http://mythtv.org" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://MythTV.org/Imports">
+      <xs:import schemaLocation="http://10.0.0.197:6544/Video/xsd?type=BlurayInfo" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Video/xsd?type=VideoLookupList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Video/xsd?type=VideoMetadataInfo" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Video/xsd?type=VideoMetadataInfoList" namespace="http://mythtv.org" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://mythtv.org">
+      <xs:element name="AddVideo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVideoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AddVideoResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBluray">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Path" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBlurayResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetBlurayResult" nillable="true" type="tns:BlurayInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetVideoResult" nillable="true" type="tns:VideoMetadataInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoByFileName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoByFileNameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetVideoByFileNameResult" nillable="true" type="tns:VideoMetadataInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Descending" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetVideoListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetVideoListResult" nillable="true" type="tns:VideoMetadataInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LookupVideo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Subtitle" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Inetref" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Season" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Episode" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="GrabberType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="AllowGeneric" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LookupVideoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="LookupVideoResult" nillable="true" type="tns:VideoLookupList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveVideoFromDB">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveVideoFromDBResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RemoveVideoFromDBResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="Video_AddVideo_InputMessage">
+    <part name="parameters" element="tns:AddVideo" />
+  </message>
+  <message name="Video_AddVideo_OutputMessage">
+    <part name="parameters" element="tns:AddVideoResponse" />
+  </message>
+  <message name="Video_GetBluray_InputMessage">
+    <part name="parameters" element="tns:GetBluray" />
+  </message>
+  <message name="Video_GetBluray_OutputMessage">
+    <part name="parameters" element="tns:GetBlurayResponse" />
+  </message>
+  <message name="Video_GetVideo_InputMessage">
+    <part name="parameters" element="tns:GetVideo" />
+  </message>
+  <message name="Video_GetVideo_OutputMessage">
+    <part name="parameters" element="tns:GetVideoResponse" />
+  </message>
+  <message name="Video_GetVideoByFileName_InputMessage">
+    <part name="parameters" element="tns:GetVideoByFileName" />
+  </message>
+  <message name="Video_GetVideoByFileName_OutputMessage">
+    <part name="parameters" element="tns:GetVideoByFileNameResponse" />
+  </message>
+  <message name="Video_GetVideoList_InputMessage">
+    <part name="parameters" element="tns:GetVideoList" />
+  </message>
+  <message name="Video_GetVideoList_OutputMessage">
+    <part name="parameters" element="tns:GetVideoListResponse" />
+  </message>
+  <message name="Video_LookupVideo_InputMessage">
+    <part name="parameters" element="tns:LookupVideo" />
+  </message>
+  <message name="Video_LookupVideo_OutputMessage">
+    <part name="parameters" element="tns:LookupVideoResponse" />
+  </message>
+  <message name="Video_RemoveVideoFromDB_InputMessage">
+    <part name="parameters" element="tns:RemoveVideoFromDB" />
+  </message>
+  <message name="Video_RemoveVideoFromDB_OutputMessage">
+    <part name="parameters" element="tns:RemoveVideoFromDBResponse" />
+  </message>
+  <portType name="Video">
+    <operation name="AddVideo">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/AddVideo" message="tns:Video_AddVideo_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/AddVideoResponse" message="tns:Video_AddVideo_OutputMessage" />
+    </operation>
+    <operation name="GetBluray">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/GetBluray" message="tns:Video_GetBluray_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/GetBlurayResponse" message="tns:Video_GetBluray_OutputMessage" />
+    </operation>
+    <operation name="GetVideo">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/GetVideo" message="tns:Video_GetVideo_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/GetVideoResponse" message="tns:Video_GetVideo_OutputMessage" />
+    </operation>
+    <operation name="GetVideoByFileName">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/GetVideoByFileName" message="tns:Video_GetVideoByFileName_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/GetVideoByFileNameResponse" message="tns:Video_GetVideoByFileName_OutputMessage" />
+    </operation>
+    <operation name="GetVideoList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/GetVideoList" message="tns:Video_GetVideoList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/GetVideoListResponse" message="tns:Video_GetVideoList_OutputMessage" />
+    </operation>
+    <operation name="LookupVideo">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/LookupVideo" message="tns:Video_LookupVideo_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/LookupVideoResponse" message="tns:Video_LookupVideo_OutputMessage" />
+    </operation>
+    <operation name="RemoveVideoFromDB">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Video/RemoveVideoFromDB" message="tns:Video_RemoveVideoFromDB_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Video/RemoveVideoFromDBResponse" message="tns:Video_RemoveVideoFromDB_OutputMessage" />
+    </operation>
+  </portType>
+  <binding name="BasicHttpBinding_Video" type="tns:Video">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddVideo">
+      <soap:operation soapAction="http://mythtv.org/Video/AddVideo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetBluray">
+      <soap:operation soapAction="http://mythtv.org/Video/GetBluray" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVideo">
+      <soap:operation soapAction="http://mythtv.org/Video/GetVideo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVideoByFileName">
+      <soap:operation soapAction="http://mythtv.org/Video/GetVideoByFileName" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVideoList">
+      <soap:operation soapAction="http://mythtv.org/Video/GetVideoList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LookupVideo">
+      <soap:operation soapAction="http://mythtv.org/Video/LookupVideo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveVideoFromDB">
+      <soap:operation soapAction="http://mythtv.org/Video/RemoveVideoFromDB" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="VideoServices">
+    <documentation>Interface Version 1.2 - </documentation>
+    <port name="BasicHttpBinding_Video" binding="tns:BasicHttpBinding_Video">
+      <soap:address location="http://10.0.0.197:6544/Video" />
+    </port>
+  </service>
+</definitions>
