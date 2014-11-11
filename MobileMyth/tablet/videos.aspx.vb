@@ -14,7 +14,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 
@@ -33,7 +33,7 @@ Partial Class tablet_videos
             Dim Folder As String = ""
 
             If Not Request.QueryString("f") Is Nothing Then
-                Folder = Request.QueryString("f")
+                Folder = Request.QueryString("f").TrimStart("/")
             End If
 
             Dim Videos As List(Of iMythVideo.VideoMetadataInfo)
@@ -81,7 +81,7 @@ Partial Class tablet_videos
 
 
             For i As Integer = 0 To Folders.Count - 1
-                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & Folders(i), "../images/blackfolder.png")
+                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & Folder & "/" & Folders(i), "../images/blackfolder.png")
                 maincontent.Controls.Add(Li)
             Next
 
@@ -100,25 +100,6 @@ Partial Class tablet_videos
         Catch ex As Exception
             Logger.Error(ex.ToString)
         End Try
-
-        'This was needed before I changes teh service references to treat the dates for videos as strings
-        'Dim index As Integer = 0
-        'Dim RealCount As Integer = 0
-        'Dim Count As Integer = 1
-
-        'While index < Count
-        '    Try
-        '        Videos = WSCache.Video.GetVideoList(True, index, 1)
-        '        Dim Li As New VideoPanel(GetCss(RealCount), Videos.VideoMetadataInfos(0).Title, "videos.aspx?id=" & Videos.VideoMetadataInfos(0).Id, "http://10.0.0.197:6544/Content/GetVideoArtwork?Id=" & Videos.VideoMetadataInfos(0).Id & "&Type=coverart&Height=225")
-        '        maincontent.Controls.Add(Li)
-
-        '        Count = Videos.TotalAvailable - 1
-        '        RealCount += 1
-        '    Catch ex As Exception
-        '    End Try
-        '    index += 1
-
-        'End While
 
     End Sub
 

@@ -40,10 +40,17 @@ Partial Class _default
             RecentRecordingsPanel.Visible = True
 
             Dim Recordings As ProgramList = Nothing
-            Recordings = Common.MBE.DvrAPI.GetRecordedList(True, 0, 50, False)
+            Recordings = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100, False)
 
             'Don't show deleted or livetv
-            For Each Prog As Program In Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV")
+            Dim Recent() As Program = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV")
+            Dim Max As Integer = Recent.Count
+            If Max > 25 Then
+                Max = 25
+            End If
+
+            For i As Integer = 0 To Max
+                Dim Prog As Program = Recent(i)
                 Dim Slide As New Panel
                 Slide.CssClass = "slide"
 

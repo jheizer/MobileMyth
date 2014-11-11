@@ -28,7 +28,7 @@ Public Class Frontends
         Try
             Logger.Info("Loading Frontends file")
 
-            Dim Path As String = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "frontends.xml")
+            Dim Path As String = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "settings", "frontends.xml")
             Dim Data As XElement = XElement.Load(Path)
 
             Dim FE As MythFrontend

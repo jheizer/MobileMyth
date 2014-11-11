@@ -40,7 +40,8 @@ Partial Class tablet_remotelaunch
                     Response.Redirect("frontend.aspx?fe=" & FE.Address, False)
 
                 Case Is = FrontendType.ChromeCast
-
+                    Dim cc As New ChromeCast
+                    cc.PlayVideo("10.0.0.233", "http://10.0.0.197:6544/StorageGroup/Streaming/3251_20140828235900.mpg.1280x720_1900kV_192kA.m3u8")
 
 
             End Select

@@ -22,20 +22,24 @@ Public Class SiteSettings
 
     Private Shared Path As String = ""
     Private Shared Data As XElement
+    Private Shared LockObj As New Hashtable
 
     Shared Sub New()
         Try
             Logger.Info("Loading settings file")
 
-            Path = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "settings.xml")
+            Path = IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "settings", "settings.xml")
 
-            If Not IO.File.Exists(Path) Then
-                Dim NwFile As New IO.StreamWriter(Path)
-                NwFile.Write("<settings><Frontends></Frontends></settings>")
-                NwFile.Close()
-            End If
+            SyncLock (LockObj)
+                If Not IO.File.Exists(Path) Then
+                    Dim NwFile As New IO.StreamWriter(Path)
+                    NwFile.Write("<settings><Frontends></Frontends></settings>")
+                    NwFile.Close()
+                End If
 
-            Data = XElement.Load(Path)
+                Data = XElement.Load(Path)
+            End SyncLock
+
         Catch ex As Exception
             Logger.Error("Error loading settings file" & ControlChars.NewLine & ex.ToString)
         End Try
@@ -46,7 +50,7 @@ Public Class SiteSettings
             Dim Ret As String = HttpContext.Current.Cache("Setting:" & Name)
 
             If Ret Is Nothing Then
-                SyncLock (Data)
+                SyncLock (LockObj)
                     Try
                         Ret = (From s In Data.Descendants(Name)
                                Select s).First().Value
@@ -66,14 +70,12 @@ Public Class SiteSettings
         Set(ByVal value As String)
             Dim St As XElement = (From s In Data.Descendants(Name)
                                       Select s).FirstOrDefault
-            SyncLock (Data)
-                If St Is Nothing Then
-                    St = New XElement(Name)
-                    Data.Add(St)
-                End If
-                St.Value = value
-                Data.Save(Path)
-            End SyncLock
+            If St Is Nothing Then
+                St = New XElement(Name)
+                Data.Add(St)
+            End If
+            St.Value = value
+            Data.Save(Path)
         End Set
     End Property
 
@@ -150,7 +152,7 @@ Public Class SiteSettings
 
             If Ret Is Nothing Then
 
-                SyncLock (Data)
+                SyncLock (LockObj)
                     Try
                         Dim Nd As XElement = (From s In Data.Descendants("Frontend")
                                                   Where s.Attribute("name") = FE
@@ -182,7 +184,7 @@ Public Class SiteSettings
                                           Where s.Attribute("name") = FE
                                           Select s).FirstOrDefault()
 
-            SyncLock (Data)
+            SyncLock (LockObj)
                 If Nd Is Nothing Then
                     Nd = New XElement("Frontend")
                     Nd.SetAttributeValue("name", FE)

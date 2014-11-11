@@ -157,7 +157,8 @@ Partial Class proxy
                                                         "/Content/GetImage", _
                                                         "/StorageGroup/Stream", _
                                                         "/Guide/GetChannelIcon", _
-                                                        "/StorageGroup/3rdParty/JW_Player"}
+                                                        "/StorageGroup/3rdParty/JW_Player", _
+                                                        "/Content/GetFile"}
 
         For Each Method As String In AcceptableCalls
             If Url.StartsWith(Method) Then

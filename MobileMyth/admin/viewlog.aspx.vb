@@ -8,7 +8,7 @@ Partial Class admin_viewlog
         Dim Lit As New Literal
         Dim Text As New Text.StringBuilder
         Try
-            For Each Ln As String In IO.File.ReadAllLines(IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "log.txt"))
+            For Each Ln As String In IO.File.ReadAllLines(IO.Path.Combine(HttpContext.Current.Server.MapPath("~"), "App_Data", "logs", "mobilemyth.log"))
                 Text.Append(Ln.Replace(ControlChars.Tab, "&nbsp;&nbsp;&nbsp;").Replace("   ", "&nbsp;&nbsp;&nbsp;"))
                 Text.Append("<br/>")
             Next

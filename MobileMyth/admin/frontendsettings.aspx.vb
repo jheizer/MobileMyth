@@ -21,7 +21,7 @@ Partial Class admin_frontendsettings
     Inherits System.Web.UI.Page
 
     Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(admin_frontendsettings))
-    'http://10.0.0.197:6544/3rdParty/jwplayer.qsp
+
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         uitype.SelectedValue = SiteSettings.FrontendSetting("UIType")
 
@@ -53,7 +53,7 @@ Partial Class admin_frontendsettings
             SiteSettings.FrontendSettingBool("UseAnyStream") = UseAnyStream.Checked
             SiteSettings.FrontendSettingBool("ProxyVideo") = ProxyVideo.Checked
 
-            If SiteSettings.FrontendSetting("UIType") = "tablet" Then
+            If SiteSettings.FrontendSetting("UIType") = "tablet" OrElse SiteSettings.FrontendSetting("UIType") = "desktop" Then
                 SiteSettings.FrontendSettingBool("ShowRecentRecordings") = RecentRecordings.Checked
                 SiteSettings.FrontendSettingBool("ShowRecentVideos") = Recentvideos.Checked
                 SiteSettings.FrontendSettingBool("ShowConflicts") = Conflicts.Checked
@@ -72,7 +72,7 @@ Partial Class admin_frontendsettings
     End Sub
 
     Private Sub ShowTabletSettings()
-        If SiteSettings.FrontendSetting("UIType") = "tablet" Then
+        If SiteSettings.FrontendSetting("UIType") = "tablet" OrElse SiteSettings.FrontendSetting("UIType") = "desktop" Then
             TabletSettings.Visible = True
 
             RecentRecordings.Checked = SiteSettings.FrontendSettingBool("ShowRecentRecordings", True)

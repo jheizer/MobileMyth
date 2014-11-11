@@ -76,7 +76,7 @@
 
     <br />
     <br />
-    Current Version: v.7<br />
+    Current Version: v.7.1<br />
     <a href="http://mobilemyth.net">MobileMyth Home Page</a><br />
     GNU General Public License.<br />
     Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com

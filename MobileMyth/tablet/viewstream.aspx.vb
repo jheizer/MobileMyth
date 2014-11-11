@@ -30,8 +30,8 @@ Partial Class viewstream
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Dim Url As String = Request.QueryString("url")
 
-        If SiteSettings.FrontendSettingBool("ProxyVideo") OrElse SiteSettings.FrontendSetting("UIType") = "desktop" Then
-            Url = ".." & Url
+        If SiteSettings.FrontendSettingBool("ProxyVideo") Then
+            Url = Common.ProxyURL(Url)
         Else
             Url = Common.GetServiceUrl & Url
         End If

@@ -33,7 +33,7 @@ Partial Class tablet_gallery
             Dim Folder As String = ""
 
             If Not Request.QueryString("f") Is Nothing Then
-                Folder = Request.QueryString("f")
+                Folder = Request.QueryString("f").TrimStart("/")
             End If
 
             Dim Images As List(Of String)
@@ -54,7 +54,7 @@ Partial Class tablet_gallery
 
             'Add the folders
             For i As Integer = FolderStartIndex To Folders.Count - 1 + FolderStartIndex
-                Dim Li As New GalleryPanel(i, Folders(i - FolderStartIndex), "gallery.aspx?f=" & Folders(i - FolderStartIndex), "../images/blackfolder.png")
+                Dim Li As New GalleryPanel(i, Folders(i - FolderStartIndex), "gallery.aspx?f=" & Folder & "/" & Folders(i - FolderStartIndex), "../images/blackfolder.png")
                 maincontent.Controls.Add(Li)
             Next
 

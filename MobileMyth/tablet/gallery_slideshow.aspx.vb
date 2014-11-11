@@ -33,7 +33,7 @@ Partial Class tablet_gallery_slideshow
             Dim Folder As String = ""
 
             If Not Request.QueryString("f") Is Nothing Then
-                Folder = Request.QueryString("f")
+                Folder = Request.QueryString("f").TrimStart("/")
             End If
 
             Dim Images As List(Of String)

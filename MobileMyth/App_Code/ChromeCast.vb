@@ -27,7 +27,7 @@ Imports System.IO
 Imports System.Web.Script.Serialization
 
 Public Class ChromeCast
-    Private AppName As String = "96be16b6-cf7e-4f6e-8ebd-593a0a9fdb5d"
+    Private AppName As String = "CC1AD845"
 
     Public Function PlayVideo(ChromeCastIP As String, Url As String) As String
         If AppRunning(ChromeCastIP) Then
