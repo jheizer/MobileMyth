@@ -1,0 +1,11 @@
+Source: mobilemyth
+Section: unknown
+Priority: optional
+Maintainer: Jon Heizer <jheizer@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: mobilemyth
+Architecture: all
+Depends: apache2, mono-runtime, libmono-microsoft-visualbasic10.0-cil, mono-apache-server4, libapache2-mod-mono
+Description: Web based Mythtv Client for Mobile Devices

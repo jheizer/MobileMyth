@@ -1,0 +1,4 @@
+src/etc/mobilemyth/ etc
+src/usr/share/mobilemyth/ usr/share
+src/var/log/mobilemyth/ var/log
+

@@ -1,0 +1,8 @@
+sudo apt-get -y remove mobilemyth
+sudo rm -R /etc/mobilemyth
+rm debian/mobilemyth/ -R
+dpkg-buildpackage  -uc -us
+sudo dpkg -i  ../mobilemyth_0.7.1-1_all.deb 
+ls /etc/mobilemyth/
+ls -lah /usr/share/mobilemyth/web/App_Data
+

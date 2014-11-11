@@ -1,0 +1,7 @@
+#!/bin/sh
+a2dissite mobilemyth.conf
+
+rm /etc/apache2/sites-available/mobilemyth.conf
+rm /usr/share/mobilemyth/web/App_Data/logs -R
+rm /usr/share/mobilemyth/web/App_Data/settings -R
+rm /var/log/mobilemyth -R

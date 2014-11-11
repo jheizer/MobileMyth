@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ ! -f /etc/mobilemyth/apache.conf ]; then
+  cp /usr/share/mobilemyth/apache.conf /etc/mobilemyth/
+fi
+
+ln -s /etc/mobilemyth/apache.conf /etc/apache2/sites-available/mobilemyth.conf
+ln -s /var/log/mobilemyth /usr/share/mobilemyth/web/App_Data/logs
+ln -s /etc/mobilemyth /usr/share/mobilemyth/web/App_Data/settings 
+
+chown www-data:www-data /etc/mobilemyth -R
+chown www-data:www-data /var/log/mobilemyth -R
+chown www-data:www-data /usr/share/mobilemyth/web/App_Data -R
+
+a2ensite mobilemyth.conf
+service apache2 restart

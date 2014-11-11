@@ -1,0 +1,5 @@
+mobilemyth (0.7.1-1) unstable; urgency=low
+
+  * Initial release with package management
+
+ -- Jon Heizer <jheizer@gmail.com>  Wed, 30 Oct 2014 13:24:23 -0500
