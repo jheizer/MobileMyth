@@ -33,7 +33,7 @@ Partial Class tablet_videos
             Dim Folder As String = ""
 
             If Not Request.QueryString("f") Is Nothing Then
-                Folder = Request.QueryString("f").TrimStart("/")
+                Folder = HttpUtility.UrlDecode(Request.QueryString("f").TrimStart("/"))
             End If
 
             Dim Videos As List(Of iMythVideo.VideoMetadataInfo)
@@ -81,7 +81,7 @@ Partial Class tablet_videos
 
 
             For i As Integer = 0 To Folders.Count - 1
-                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & Folder & "/" & Folders(i), "../images/blackfolder.png")
+                Dim Li As New VideoPanel(i, Folders(i), "videos.aspx?f=" & HttpUtility.UrlEncode(Folder & "/" & Folders(i)), "../images/blackfolder.png")
                 maincontent.Controls.Add(Li)
             Next
 

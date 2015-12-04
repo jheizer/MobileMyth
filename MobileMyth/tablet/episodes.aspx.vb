@@ -31,7 +31,7 @@ Partial Class recordings
         Dim Programs As List(Of Program) = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV").ToList
 
         If Not Request.QueryString("title") Is Nothing Then 'If we are only suppose to show a single Title filter that now
-            Title = Request.QueryString("title")
+            Title = HttpUtility.UrlDecode(Request.QueryString("title"))
             Programs = Programs.FindAll(Function(p) p.Title = Title)
         End If
 
@@ -77,7 +77,7 @@ Partial Class recordings
 
             Dim Lnk As New HyperLink
             If Not String.IsNullOrEmpty(Title) Then
-                Lnk.NavigateUrl = "episodes.aspx?title=" & Title & "&pg=" & StartPg + 1
+                Lnk.NavigateUrl = "episodes.aspx?title=" & HttpUtility.UrlEncode(Title) & "&pg=" & StartPg + 1
             Else
                 Lnk.NavigateUrl = "episodes.aspx?pg=" & StartPg + 1
             End If

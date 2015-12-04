@@ -42,7 +42,7 @@ Partial Class shows
         List.Controls.Add(li)
 
         For Each Rec In Titles
-            li = New ShowListItem(Rec.Title, Rec.Count, "episodes.aspx?title=" & Rec.Title, Rec.Inetref, 0)
+            li = New ShowListItem(Rec.Title, Rec.Count, "episodes.aspx?title=" & HttpUtility.UrlEncode(Rec.Title), Rec.Inetref, 0)
             List.Controls.Add(li)
         Next
 

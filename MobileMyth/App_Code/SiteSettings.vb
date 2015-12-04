@@ -68,14 +68,16 @@ Public Class SiteSettings
 
         End Get
         Set(ByVal value As String)
-            Dim St As XElement = (From s In Data.Descendants(Name)
-                                      Select s).FirstOrDefault
-            If St Is Nothing Then
-                St = New XElement(Name)
-                Data.Add(St)
-            End If
-            St.Value = value
-            Data.Save(Path)
+            SyncLock (LockObj)
+                Dim St As XElement = (From s In Data.Descendants(Name)
+                                          Select s).FirstOrDefault
+                If St Is Nothing Then
+                    St = New XElement(Name)
+                    Data.Add(St)
+                End If
+                St.Value = value
+                Data.Save(Path)
+            End SyncLock
         End Set
     End Property
 

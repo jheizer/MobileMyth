@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <Frontends>
+    <Frontend name="::1">
+      <UIType>desktop</UIType>
+      <Resolution>NoTranscode</Resolution>
+      <UseAnyStream>False</UseAnyStream>
+      <ProxyVideo>True</ProxyVideo>
+      <ShowRecentRecordings>True</ShowRecentRecordings>
+      <ShowRecentVideos>True</ShowRecentVideos>
+      <ShowConflicts>False</ShowConflicts>
+      <ShowDiskSpace>True</ShowDiskSpace>
+      <ShowEncoders>True</ShowEncoders>
+      <ShowUpcoming>False</ShowUpcoming>
+      <NoImages>False</NoImages>
+    </Frontend>
+  </Frontends>
+  <MythServiceAPIAddress>10.0.0.197</MythServiceAPIAddress>
+  <MythServiceAPIPort>6544</MythServiceAPIPort>
+  <MythWebUrl>http://10.0.0.197/mythweb/</MythWebUrl>
+  <DateFormat>MM/DD/YYYY</DateFormat>
+  <DeviceList>True</DeviceList>
+</settings>
