@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Cutting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mark" type="xs:int" />
+      <xs:element minOccurs="0" name="Offset" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cutting" nillable="true" type="tns:Cutting" />
+</xs:schema>

@@ -14,12 +14,11 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014,2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 
 Imports MythService
-Imports MythDVR
 Imports System.Xml
 
 Partial Class _default
@@ -39,18 +38,18 @@ Partial Class _default
         If SiteSettings.FrontendSettingBool("ShowRecentRecordings") Then
             RecentRecordingsPanel.Visible = True
 
-            Dim Recordings As ProgramList = Nothing
+            Dim Recordings As iMythDvr.ProgramList = Nothing
             Recordings = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100, False)
 
             'Don't show deleted or livetv
-            Dim Recent() As Program = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV")
+            Dim Recent() As iMythDvr.Program = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV")
             Dim Max As Integer = Recent.Count
             If Max > 25 Then
                 Max = 25
             End If
 
             For i As Integer = 0 To Max
-                Dim Prog As Program = Recent(i)
+                Dim Prog As iMythDvr.Program = Recent(i)
                 Dim Slide As New Panel
                 Slide.CssClass = "slide"
 
@@ -120,7 +119,7 @@ Partial Class _default
         If SiteSettings.FrontendSettingBool("ShowConflicts") Then
             ConflictsPanel.Visible = True
 
-            Dim Cons As ProgramList = Common.MBE.DvrAPI.GetConflictList(0, 500)
+            Dim Cons As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetConflictList(0, 500)
             Dim Li As New HtmlListItem
 
             'If none, say so
@@ -131,7 +130,7 @@ Partial Class _default
                 Li.InnerText = "No Conflicts"
                 Conflicts.Controls.Add(Li)
             Else
-                For Each Con As Program In Cons.Programs
+                For Each Con As iMythDvr.Program In Cons.Programs
                     Li = New HtmlListItem
                     Li.InnerText = Con.Title
                     If Not String.IsNullOrEmpty(Con.SubTitle) Then
@@ -146,11 +145,11 @@ Partial Class _default
     Private Sub DisplayEncoders()
         If SiteSettings.FrontendSettingBool("ShowEncoders") Then
             EncodersPanel.Visible = True
-            Dim Encods As EncoderList = Common.MBE.DvrAPI.GetEncoderList
+            Dim Encods As iMythDvr.EncoderList = Common.MBE.DvrAPI.GetEncoderList
             Dim Li As New HtmlListItem
 
             If Not Encods Is Nothing Then
-                For Each Enc As Encoder In Encods.Encoders
+                For Each Enc As iMythDvr.Encoder In Encods.Encoders
                     Li = New HtmlListItem
                     If Enc.State = 7 Then
                         Li.InnerText = Enc.Id & " is recording " & Enc.Recording.Title & " till " & Enc.Recording.Recording.EndTs.Value.ToLocalTime.ToString("hh:mm tt")
@@ -197,9 +196,9 @@ Partial Class _default
     Private Sub DisplayUpcoming()
         If SiteSettings.FrontendSettingBool("ShowUpcoming") Then
             UpcomingPanel.Visible = True
-            Dim UpcomingList As ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 10, False)
+            Dim UpcomingList As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 10, False)
 
-            For Each Up As Program In UpcomingList.Programs
+            For Each Up As iMythDvr.Program In UpcomingList.Programs
                 Dim Li As New HtmlListItem
                 Li.InnerText = Up.StartTime.Value.ToLocalTime.ToString("hh:mm tt") & " - " & Up.Title
                 Upcoming.Controls.Add(Li)

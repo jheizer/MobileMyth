@@ -75,14 +75,15 @@ Public MustInherit Class MythBackendBase
         Dim WC As New Net.WebClient
         Dim html As String
 
+
+        html = WC.DownloadString(Common.GetServiceUrl & "/Dvr/wsdl?raw=1")
+        If html.Contains("Interface Version 6.4") Then
+            Return MythTvVersion.v29
+        End If
+
         html = WC.DownloadString(Common.GetServiceUrl & "/Dvr/wsdl?raw=1")
         If html.Contains("Interface Version 1.9") Then
             Return MythTvVersion.v27
-        End If
-
-        html = WC.DownloadString(Common.GetServiceUrl & "/Content/wsdl?raw=1")
-        If html.Contains("Interface Version 1.34") Then
-            Return MythTvVersion.v28
         End If
 
         Return MythTvVersion.v26

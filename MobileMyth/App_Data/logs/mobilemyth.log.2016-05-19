@@ -1,0 +1,416 @@
+2016-05-19 21:25:53,000 [1] INFO  ASP.global_asax Site Started
+2016-05-19 21:25:53,070 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2016-05-19 21:25:54,102 [5] INFO  SiteSettings Loading settings file
+2016-05-19 21:25:56,625 [6] INFO  MythBackendBase Reinitalizing webservice references.
+2016-05-19 21:25:57,726 [6] INFO  MythBackendBase Reinitalizing webservice references.
+2016-05-19 21:25:58,407 [6] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.Dispatcher.NetDispatcherFaultException: The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter http://mythtv.org:GetRecordedListResult. The InnerException message was 'There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'.'.  Please see InnerException for more details. ---> System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'. ---> System.Xml.XmlException: The value 'false' cannot be parsed as the type 'Int32'. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)
+   --- End of inner exception stack trace ---
+   at System.Xml.XmlConverter.ToInt32(String value)
+   at System.Xml.XmlConverter.ToInt32(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Xml.ValueHandle.ToInt()
+   at System.Xml.XmlBaseReader.ReadContentAsInt()
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsInt()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsInt()
+   at ReadChannelInfoFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadArrayOfProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramListFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeReply(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDVR.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count)
+   at MythDVR.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count) in c:\Users\jon\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.ju3zlc7i.3.cs:line 2731
+   at MythDvr25.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_25\MythDvr25.vb:line 69
+2016-05-19 21:26:17,569 [6] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 46
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 29
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-05-19 21:48:30,583 [24] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.Dispatcher.NetDispatcherFaultException: The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter http://mythtv.org:GetRecordedListResult. The InnerException message was 'There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'.'.  Please see InnerException for more details. ---> System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'. ---> System.Xml.XmlException: The value 'false' cannot be parsed as the type 'Int32'. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)
+   --- End of inner exception stack trace ---
+   at System.Xml.XmlConverter.ToInt32(String value)
+   at System.Xml.XmlConverter.ToInt32(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Xml.ValueHandle.ToInt()
+   at System.Xml.XmlBaseReader.ReadContentAsInt()
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsInt()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsInt()
+   at ReadChannelInfoFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadArrayOfProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramListFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeReply(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDVR.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count)
+   at MythDVR.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count) in c:\Users\jon\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.ju3zlc7i.3.cs:line 2731
+   at MythDvr25.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_25\MythDvr25.vb:line 69
+2016-05-19 21:48:33,822 [24] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 46
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 29
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-05-19 21:49:35,102 [22] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.Dispatcher.NetDispatcherFaultException: The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter http://mythtv.org:GetRecordedListResult. The InnerException message was 'There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'.'.  Please see InnerException for more details. ---> System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'. ---> System.Xml.XmlException: The value 'false' cannot be parsed as the type 'Int32'. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)
+   --- End of inner exception stack trace ---
+   at System.Xml.XmlConverter.ToInt32(String value)
+   at System.Xml.XmlConverter.ToInt32(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Xml.ValueHandle.ToInt()
+   at System.Xml.XmlBaseReader.ReadContentAsInt()
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsInt()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsInt()
+   at ReadChannelInfoFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadArrayOfProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramListFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeReply(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDVR.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count)
+   at MythDVR.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count) in c:\Users\jon\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.ju3zlc7i.3.cs:line 2731
+   at MythDvr25.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_25\MythDvr25.vb:line 69
+2016-05-19 21:49:38,196 [22] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 46
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 29
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-05-19 21:49:49,053 [7] INFO  MythBackendBase Reinitalizing webservice references.
+2016-05-19 21:49:55,359 [7] ERROR admin_general Error Connecting to the Backend
+2016-05-19 21:49:58,758 [7] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.Dispatcher.NetDispatcherFaultException: The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter http://mythtv.org:GetRecordedListResult. The InnerException message was 'There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'.'.  Please see InnerException for more details. ---> System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'. ---> System.Xml.XmlException: The value 'false' cannot be parsed as the type 'Int32'. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)
+   --- End of inner exception stack trace ---
+   at System.Xml.XmlConverter.ToInt32(String value)
+   at System.Xml.XmlConverter.ToInt32(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Xml.ValueHandle.ToInt()
+   at System.Xml.XmlBaseReader.ReadContentAsInt()
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsInt()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsInt()
+   at ReadChannelInfoFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadArrayOfProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramListFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeReply(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDVR.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count)
+   at MythDVR.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count) in c:\Users\jon\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.ju3zlc7i.3.cs:line 2731
+   at MythDvr25.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_25\MythDvr25.vb:line 69
+2016-05-19 21:50:32,978 [7] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.Dispatcher.NetDispatcherFaultException: The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter http://mythtv.org:GetRecordedListResult. The InnerException message was 'There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'.'.  Please see InnerException for more details. ---> System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'. ---> System.Xml.XmlException: The value 'false' cannot be parsed as the type 'Int32'. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)
+   --- End of inner exception stack trace ---
+   at System.Xml.XmlConverter.ToInt32(String value)
+   at System.Xml.XmlConverter.ToInt32(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Xml.ValueHandle.ToInt()
+   at System.Xml.XmlBaseReader.ReadContentAsInt()
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsInt()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsInt()
+   at ReadChannelInfoFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadArrayOfProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramListFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeReply(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDVR.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count)
+   at MythDVR.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count) in c:\Users\jon\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.ju3zlc7i.3.cs:line 2731
+   at MythDvr25.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_25\MythDvr25.vb:line 69
+2016-05-19 21:50:33,028 [7] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 46
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 29
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-05-19 22:09:50,021 [20] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.Dispatcher.NetDispatcherFaultException: The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter http://mythtv.org:GetRecordedListResult. The InnerException message was 'There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'.'.  Please see InnerException for more details. ---> System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type MythDVR.ProgramList. The value 'false' cannot be parsed as the type 'Int32'. ---> System.Xml.XmlException: The value 'false' cannot be parsed as the type 'Int32'. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)
+   --- End of inner exception stack trace ---
+   at System.Xml.XmlConverter.ToInt32(String value)
+   at System.Xml.XmlConverter.ToInt32(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Xml.ValueHandle.ToInt()
+   at System.Xml.XmlBaseReader.ReadContentAsInt()
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsInt()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsInt()
+   at ReadChannelInfoFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadArrayOfProgramFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Int32 id, RuntimeTypeHandle declaredTypeHandle, String name, String ns)
+   at ReadProgramListFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeReply(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDVR.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count)
+   at MythDVR.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count) in c:\Users\jon\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.ju3zlc7i.3.cs:line 2731
+   at MythDvr25.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_25\MythDvr25.vb:line 69
+2016-05-19 22:10:30,702 [20] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 46
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 29
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

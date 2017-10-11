@@ -14,12 +14,11 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013,2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 
 Imports MythService
-Imports MythDVR
 
 Partial Class recordings
     Inherits System.Web.UI.Page
@@ -27,8 +26,8 @@ Partial Class recordings
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
 
         Dim Title As String = "Episodes"
-        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
-        Dim Programs As List(Of Program) = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV").ToList
+        Dim Recordings As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
+        Dim Programs As List(Of iMythDvr.Program) = Array.FindAll(Recordings.Programs, Function(p) p.Recording.StorageGroup <> "Deleted" AndAlso p.Recording.StorageGroup <> "LiveTV").ToList
 
         If Not Request.QueryString("title") Is Nothing Then 'If we are only suppose to show a single Title filter that now
             Title = HttpUtility.UrlDecode(Request.QueryString("title"))
@@ -50,7 +49,7 @@ Partial Class recordings
         Dim StartDate As String = DateTime.MaxValue.ToLongDateString
 
         Dim Index As Integer = StartPg * 50
-        Dim Rec As Program = Nothing
+        Dim Rec As iMythDvr.Program = Nothing
 
         'Add the next 50 recordings
         While Index < StartPg * 50 + 50 AndAlso Index < Programs.Count

@@ -35,7 +35,8 @@ Public Class Common
                 MBE = New MythBackend25
             Case Is = MythTvVersion.v27
                 MBE = New MythBackend27
-
+            Case Is = MythTvVersion.v29
+                MBE = New MythBackend29
         End Select
     End Sub
 
@@ -80,15 +81,21 @@ Public Class Common
         Dim Nw As New ToType
 
         For Each prop As Reflection.PropertyInfo In GetType(FromType).GetProperties
-            If Not prop.PropertyType.ToString.EndsWith("List") Then 'Skip sub collections
-                Dim propgetter As Reflection.MethodInfo = prop.GetGetMethod
-                Dim toprop As System.Reflection.PropertyInfo = GetType(ToType).GetProperty(prop.Name)
-                If Not toprop Is Nothing Then ' Make sure the destination class has the type
-                    Dim propsetter As Reflection.MethodInfo = toprop.GetSetMethod
-                    Dim value As Object = propgetter.Invoke(FromObj, Nothing)
-                    propsetter.Invoke(Nw, New Object() {value})
+            Try
+                If prop.PropertyType.FullName.StartsWith("System") Then 'Skip sub collections and myth types
+                    Dim propgetter As Reflection.MethodInfo = prop.GetGetMethod
+                    Dim toprop As System.Reflection.PropertyInfo = GetType(ToType).GetProperty(prop.Name)
+                    If Not toprop Is Nothing Then ' Make sure the destination class has the type
+                        Dim propsetter As Reflection.MethodInfo = toprop.GetSetMethod
+                        Dim value As Object = propgetter.Invoke(FromObj, Nothing)
+                        propsetter.Invoke(Nw, New Object() {value})
+                    End If
+                Else
+                    Dim j As Integer = 0
                 End If
-            End If
+            Catch ex As Exception
+                Dim i As Integer = 0
+            End Try
         Next
 
         Return Nw
@@ -100,6 +107,7 @@ Public Enum MythTvVersion As Byte
     v26 = 1
     v27 = 2
     v28 = 3
+    v29 = 4
 End Enum
 
 

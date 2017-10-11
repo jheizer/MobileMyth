@@ -1,0 +1,14 @@
+2014-10-29 20:21:37,478 [17] INFO  ASP.global_asax Site Started
+2014-10-29 20:21:37,545 [17] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2014-10-29 20:21:44,936 [9] INFO  SiteSettings Loading settings file
+2014-10-29 20:21:45,025 [10] INFO  MythBackendBase Reinitalizing webservice references.
+2014-10-29 20:21:45,739 [10] INFO  MythBackendBase Reinitalizing webservice references.
+2014-10-29 20:22:00,046 [18] INFO  Resolutions Loading resolutions file

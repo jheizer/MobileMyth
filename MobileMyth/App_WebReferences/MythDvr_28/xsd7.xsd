@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfInput&amp;name=Input" />
+  <xs:include schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=Program" />
+  <xs:complexType name="Encoder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="HostName" type="xs:string" />
+      <xs:element minOccurs="0" name="Local" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Connected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="State" type="xs:int" />
+      <xs:element minOccurs="0" name="SleepStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="LowOnFreeSpace" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Inputs" type="tns:ArrayOfInput" />
+      <xs:element minOccurs="0" name="Recording" nillable="true" type="tns:Program" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Encoder" nillable="true" type="tns:Encoder" />
+</xs:schema>

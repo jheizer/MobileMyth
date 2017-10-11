@@ -14,18 +14,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013, 2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythContent
 Imports MythService
-Imports MythDVR
 
 Partial Class upcoming
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 500, False)
+        Dim Recordings As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 500, False)
 
         Dim List As New HtmlList
         maincontent.Controls.Add(List)
@@ -33,7 +32,7 @@ Partial Class upcoming
 
         Dim StartDate As String = DateTime.MaxValue.ToLongDateString
 
-        For Each Rec As Program In Recordings.Programs
+        For Each Rec As iMythDvr.Program In Recordings.Programs
             If Rec.StartTime.Value.ToLongDateString <> StartDate Then
                 Dim Divider As New HtmlListItem
                 Divider.Attributes.Add("data-role", "list-divider")

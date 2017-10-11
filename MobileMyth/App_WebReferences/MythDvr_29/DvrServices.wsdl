@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="DvrServices" targetNamespace="http://mythtv.org" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://MythTV.org/Imports">
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfString" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=CutList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=EncoderList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=InputList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=Program" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=ProgramList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=RecRule" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleFilterList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleList" namespace="http://mythtv.org" />
+      <xs:import schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=TitleInfoList" namespace="http://mythtv.org" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://mythtv.org">
+      <xs:element name="AddDontRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="NeverRecord" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddDontRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AddDontRecordScheduleResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Subtitle" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="SeriesId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ProgramId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Station" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="FindDay" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="FindTime" nillable="true" type="xs:time" />
+            <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Inactive" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="Season" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Episode" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Inetref" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="SearchType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecPriority" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="PreferredInput" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="StartOffset" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="EndOffset" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="DupMethod" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="DupIn" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="RecProfile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="PlayGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="AutoExpire" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="MaxEpisodes" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="MaxNewest" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoCommflag" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoTranscode" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoMetaLookup" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob1" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob2" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob3" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob4" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="Transcoder" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AddRecordScheduleResult" nillable="true" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRecording">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="ForceDelete" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AllowRerecord" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRecordingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DeleteRecordingResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisableRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisableRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DisableRecordScheduleResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupInToDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupIn" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupInToDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupInToDescriptionResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupInToString">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupIn" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupInToStringResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupInToStringResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupMethodToDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupMethod" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupMethodToDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupMethodToDescriptionResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupMethodToString">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupMethod" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DupMethodToStringResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DupMethodToStringResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EnableRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EnableRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="EnableRecordScheduleResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetConflictList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetConflictListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetConflictListResult" nillable="true" type="tns:ProgramList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEncoderList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEncoderListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetEncoderListResult" nillable="true" type="tns:EncoderList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetExpiringList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetExpiringListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetExpiringListResult" nillable="true" type="tns:ProgramList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInputList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInputListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetInputListResult" nillable="true" type="tns:InputList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOldRecordedList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Descending" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="SeriesId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Sort" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOldRecordedListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetOldRecordedListResult" nillable="true" type="tns:ProgramList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayGroupList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayGroupListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetPlayGroupListResult" nillable="true" type="tns:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecGroupList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecGroupListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecGroupListResult" nillable="true" type="tns:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecRuleFilterList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecRuleFilterListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecRuleFilterListResult" nillable="true" type="tns:RecRuleFilterList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecStorageGroupList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecStorageGroupListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecStorageGroupListResult" nillable="true" type="tns:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Template" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="MakeOverride" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordScheduleResult" nillable="true" type="tns:RecRule" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordScheduleList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Sort" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Descending" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordScheduleListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordScheduleListResult" nillable="true" type="tns:RecRuleList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordedResult" nillable="true" type="tns:Program" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedCommBreak">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="OffsetType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedCommBreakResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordedCommBreakResult" nillable="true" type="tns:CutList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedCutList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="OffsetType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedCutListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordedCutListResult" nillable="true" type="tns:CutList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Descending" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="TitleRegEx" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordedListResult" nillable="true" type="tns:ProgramList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedSeek">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="OffsetType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecordedSeekResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetRecordedSeekResult" nillable="true" type="tns:CutList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSavedBookmark">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="OffsetType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSavedBookmarkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetSavedBookmarkResult" nillable="true" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTitleInfoList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTitleInfoListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetTitleInfoListResult" nillable="true" type="tns:TitleInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTitleList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecGroup" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTitleListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetTitleListResult" nillable="true" type="tns:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUpcomingList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StartIndex" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Count" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ShowAll" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="RecStatus" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUpcomingListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetUpcomingListResult" nillable="true" type="tns:ProgramList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReactivateRecording">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReactivateRecordingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ReactivateRecordingResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecStatusToDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecStatus" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="RecType" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecStatusToDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecStatusToDescriptionResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecStatusToString">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecStatus" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecStatusToStringResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecStatusToStringResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecTypeToDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecTypeToDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecTypeToDescriptionResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecTypeToString">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecTypeToStringResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecTypeToStringResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecordedIdForPathname">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Pathname" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecordedIdForPathnameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedIdForPathnameResult" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RemoveRecordScheduleResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveRecorded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="ForceDelete" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AllowRerecord" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveRecordedResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RemoveRecordedResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RescheduleRecordings">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RescheduleRecordingsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RescheduleRecordingsResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetSavedBookmark">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="OffsetType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Offset" nillable="true" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetSavedBookmarkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SetSavedBookmarkResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopRecording">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopRecordingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="StopRecordingResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnDeleteRecording">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnDeleteRecordingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UnDeleteRecordingResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateRecordSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Subtitle" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="SeriesId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ProgramId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="Station" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="FindDay" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="FindTime" nillable="true" type="xs:time" />
+            <xs:element minOccurs="0" name="Inactive" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="Season" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Episode" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Inetref" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="SearchType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecPriority" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="PreferredInput" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="StartOffset" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="EndOffset" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="DupMethod" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="DupIn" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="RecProfile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="RecGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="StorageGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="PlayGroup" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="AutoExpire" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="MaxEpisodes" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="MaxNewest" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoCommflag" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoTranscode" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoMetaLookup" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob1" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob2" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob3" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="AutoUserJob4" nillable="true" type="xs:boolean" />
+            <xs:element minOccurs="0" name="Transcoder" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateRecordScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UpdateRecordScheduleResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateRecordedWatchedStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecordedId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="ChanId" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="Watched" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateRecordedWatchedStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UpdateRecordedWatchedStatusResult" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="Dvr_AddDontRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:AddDontRecordSchedule" />
+  </message>
+  <message name="Dvr_AddDontRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:AddDontRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_AddRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:AddRecordSchedule" />
+  </message>
+  <message name="Dvr_AddRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:AddRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_DeleteRecording_InputMessage">
+    <part name="parameters" element="tns:DeleteRecording" />
+  </message>
+  <message name="Dvr_DeleteRecording_OutputMessage">
+    <part name="parameters" element="tns:DeleteRecordingResponse" />
+  </message>
+  <message name="Dvr_DisableRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:DisableRecordSchedule" />
+  </message>
+  <message name="Dvr_DisableRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:DisableRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_DupInToDescription_InputMessage">
+    <part name="parameters" element="tns:DupInToDescription" />
+  </message>
+  <message name="Dvr_DupInToDescription_OutputMessage">
+    <part name="parameters" element="tns:DupInToDescriptionResponse" />
+  </message>
+  <message name="Dvr_DupInToString_InputMessage">
+    <part name="parameters" element="tns:DupInToString" />
+  </message>
+  <message name="Dvr_DupInToString_OutputMessage">
+    <part name="parameters" element="tns:DupInToStringResponse" />
+  </message>
+  <message name="Dvr_DupMethodToDescription_InputMessage">
+    <part name="parameters" element="tns:DupMethodToDescription" />
+  </message>
+  <message name="Dvr_DupMethodToDescription_OutputMessage">
+    <part name="parameters" element="tns:DupMethodToDescriptionResponse" />
+  </message>
+  <message name="Dvr_DupMethodToString_InputMessage">
+    <part name="parameters" element="tns:DupMethodToString" />
+  </message>
+  <message name="Dvr_DupMethodToString_OutputMessage">
+    <part name="parameters" element="tns:DupMethodToStringResponse" />
+  </message>
+  <message name="Dvr_EnableRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:EnableRecordSchedule" />
+  </message>
+  <message name="Dvr_EnableRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:EnableRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_GetConflictList_InputMessage">
+    <part name="parameters" element="tns:GetConflictList" />
+  </message>
+  <message name="Dvr_GetConflictList_OutputMessage">
+    <part name="parameters" element="tns:GetConflictListResponse" />
+  </message>
+  <message name="Dvr_GetEncoderList_InputMessage">
+    <part name="parameters" element="tns:GetEncoderList" />
+  </message>
+  <message name="Dvr_GetEncoderList_OutputMessage">
+    <part name="parameters" element="tns:GetEncoderListResponse" />
+  </message>
+  <message name="Dvr_GetExpiringList_InputMessage">
+    <part name="parameters" element="tns:GetExpiringList" />
+  </message>
+  <message name="Dvr_GetExpiringList_OutputMessage">
+    <part name="parameters" element="tns:GetExpiringListResponse" />
+  </message>
+  <message name="Dvr_GetInputList_InputMessage">
+    <part name="parameters" element="tns:GetInputList" />
+  </message>
+  <message name="Dvr_GetInputList_OutputMessage">
+    <part name="parameters" element="tns:GetInputListResponse" />
+  </message>
+  <message name="Dvr_GetOldRecordedList_InputMessage">
+    <part name="parameters" element="tns:GetOldRecordedList" />
+  </message>
+  <message name="Dvr_GetOldRecordedList_OutputMessage">
+    <part name="parameters" element="tns:GetOldRecordedListResponse" />
+  </message>
+  <message name="Dvr_GetPlayGroupList_InputMessage">
+    <part name="parameters" element="tns:GetPlayGroupList" />
+  </message>
+  <message name="Dvr_GetPlayGroupList_OutputMessage">
+    <part name="parameters" element="tns:GetPlayGroupListResponse" />
+  </message>
+  <message name="Dvr_GetRecGroupList_InputMessage">
+    <part name="parameters" element="tns:GetRecGroupList" />
+  </message>
+  <message name="Dvr_GetRecGroupList_OutputMessage">
+    <part name="parameters" element="tns:GetRecGroupListResponse" />
+  </message>
+  <message name="Dvr_GetRecRuleFilterList_InputMessage">
+    <part name="parameters" element="tns:GetRecRuleFilterList" />
+  </message>
+  <message name="Dvr_GetRecRuleFilterList_OutputMessage">
+    <part name="parameters" element="tns:GetRecRuleFilterListResponse" />
+  </message>
+  <message name="Dvr_GetRecStorageGroupList_InputMessage">
+    <part name="parameters" element="tns:GetRecStorageGroupList" />
+  </message>
+  <message name="Dvr_GetRecStorageGroupList_OutputMessage">
+    <part name="parameters" element="tns:GetRecStorageGroupListResponse" />
+  </message>
+  <message name="Dvr_GetRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:GetRecordSchedule" />
+  </message>
+  <message name="Dvr_GetRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:GetRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_GetRecordScheduleList_InputMessage">
+    <part name="parameters" element="tns:GetRecordScheduleList" />
+  </message>
+  <message name="Dvr_GetRecordScheduleList_OutputMessage">
+    <part name="parameters" element="tns:GetRecordScheduleListResponse" />
+  </message>
+  <message name="Dvr_GetRecorded_InputMessage">
+    <part name="parameters" element="tns:GetRecorded" />
+  </message>
+  <message name="Dvr_GetRecorded_OutputMessage">
+    <part name="parameters" element="tns:GetRecordedResponse" />
+  </message>
+  <message name="Dvr_GetRecordedCommBreak_InputMessage">
+    <part name="parameters" element="tns:GetRecordedCommBreak" />
+  </message>
+  <message name="Dvr_GetRecordedCommBreak_OutputMessage">
+    <part name="parameters" element="tns:GetRecordedCommBreakResponse" />
+  </message>
+  <message name="Dvr_GetRecordedCutList_InputMessage">
+    <part name="parameters" element="tns:GetRecordedCutList" />
+  </message>
+  <message name="Dvr_GetRecordedCutList_OutputMessage">
+    <part name="parameters" element="tns:GetRecordedCutListResponse" />
+  </message>
+  <message name="Dvr_GetRecordedList_InputMessage">
+    <part name="parameters" element="tns:GetRecordedList" />
+  </message>
+  <message name="Dvr_GetRecordedList_OutputMessage">
+    <part name="parameters" element="tns:GetRecordedListResponse" />
+  </message>
+  <message name="Dvr_GetRecordedSeek_InputMessage">
+    <part name="parameters" element="tns:GetRecordedSeek" />
+  </message>
+  <message name="Dvr_GetRecordedSeek_OutputMessage">
+    <part name="parameters" element="tns:GetRecordedSeekResponse" />
+  </message>
+  <message name="Dvr_GetSavedBookmark_InputMessage">
+    <part name="parameters" element="tns:GetSavedBookmark" />
+  </message>
+  <message name="Dvr_GetSavedBookmark_OutputMessage">
+    <part name="parameters" element="tns:GetSavedBookmarkResponse" />
+  </message>
+  <message name="Dvr_GetTitleInfoList_InputMessage">
+    <part name="parameters" element="tns:GetTitleInfoList" />
+  </message>
+  <message name="Dvr_GetTitleInfoList_OutputMessage">
+    <part name="parameters" element="tns:GetTitleInfoListResponse" />
+  </message>
+  <message name="Dvr_GetTitleList_InputMessage">
+    <part name="parameters" element="tns:GetTitleList" />
+  </message>
+  <message name="Dvr_GetTitleList_OutputMessage">
+    <part name="parameters" element="tns:GetTitleListResponse" />
+  </message>
+  <message name="Dvr_GetUpcomingList_InputMessage">
+    <part name="parameters" element="tns:GetUpcomingList" />
+  </message>
+  <message name="Dvr_GetUpcomingList_OutputMessage">
+    <part name="parameters" element="tns:GetUpcomingListResponse" />
+  </message>
+  <message name="Dvr_ReactivateRecording_InputMessage">
+    <part name="parameters" element="tns:ReactivateRecording" />
+  </message>
+  <message name="Dvr_ReactivateRecording_OutputMessage">
+    <part name="parameters" element="tns:ReactivateRecordingResponse" />
+  </message>
+  <message name="Dvr_RecStatusToDescription_InputMessage">
+    <part name="parameters" element="tns:RecStatusToDescription" />
+  </message>
+  <message name="Dvr_RecStatusToDescription_OutputMessage">
+    <part name="parameters" element="tns:RecStatusToDescriptionResponse" />
+  </message>
+  <message name="Dvr_RecStatusToString_InputMessage">
+    <part name="parameters" element="tns:RecStatusToString" />
+  </message>
+  <message name="Dvr_RecStatusToString_OutputMessage">
+    <part name="parameters" element="tns:RecStatusToStringResponse" />
+  </message>
+  <message name="Dvr_RecTypeToDescription_InputMessage">
+    <part name="parameters" element="tns:RecTypeToDescription" />
+  </message>
+  <message name="Dvr_RecTypeToDescription_OutputMessage">
+    <part name="parameters" element="tns:RecTypeToDescriptionResponse" />
+  </message>
+  <message name="Dvr_RecTypeToString_InputMessage">
+    <part name="parameters" element="tns:RecTypeToString" />
+  </message>
+  <message name="Dvr_RecTypeToString_OutputMessage">
+    <part name="parameters" element="tns:RecTypeToStringResponse" />
+  </message>
+  <message name="Dvr_RecordedIdForPathname_InputMessage">
+    <part name="parameters" element="tns:RecordedIdForPathname" />
+  </message>
+  <message name="Dvr_RecordedIdForPathname_OutputMessage">
+    <part name="parameters" element="tns:RecordedIdForPathnameResponse" />
+  </message>
+  <message name="Dvr_RemoveRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:RemoveRecordSchedule" />
+  </message>
+  <message name="Dvr_RemoveRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:RemoveRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_RemoveRecorded_InputMessage">
+    <part name="parameters" element="tns:RemoveRecorded" />
+  </message>
+  <message name="Dvr_RemoveRecorded_OutputMessage">
+    <part name="parameters" element="tns:RemoveRecordedResponse" />
+  </message>
+  <message name="Dvr_RescheduleRecordings_InputMessage">
+    <part name="parameters" element="tns:RescheduleRecordings" />
+  </message>
+  <message name="Dvr_RescheduleRecordings_OutputMessage">
+    <part name="parameters" element="tns:RescheduleRecordingsResponse" />
+  </message>
+  <message name="Dvr_SetSavedBookmark_InputMessage">
+    <part name="parameters" element="tns:SetSavedBookmark" />
+  </message>
+  <message name="Dvr_SetSavedBookmark_OutputMessage">
+    <part name="parameters" element="tns:SetSavedBookmarkResponse" />
+  </message>
+  <message name="Dvr_StopRecording_InputMessage">
+    <part name="parameters" element="tns:StopRecording" />
+  </message>
+  <message name="Dvr_StopRecording_OutputMessage">
+    <part name="parameters" element="tns:StopRecordingResponse" />
+  </message>
+  <message name="Dvr_UnDeleteRecording_InputMessage">
+    <part name="parameters" element="tns:UnDeleteRecording" />
+  </message>
+  <message name="Dvr_UnDeleteRecording_OutputMessage">
+    <part name="parameters" element="tns:UnDeleteRecordingResponse" />
+  </message>
+  <message name="Dvr_UpdateRecordSchedule_InputMessage">
+    <part name="parameters" element="tns:UpdateRecordSchedule" />
+  </message>
+  <message name="Dvr_UpdateRecordSchedule_OutputMessage">
+    <part name="parameters" element="tns:UpdateRecordScheduleResponse" />
+  </message>
+  <message name="Dvr_UpdateRecordedWatchedStatus_InputMessage">
+    <part name="parameters" element="tns:UpdateRecordedWatchedStatus" />
+  </message>
+  <message name="Dvr_UpdateRecordedWatchedStatus_OutputMessage">
+    <part name="parameters" element="tns:UpdateRecordedWatchedStatusResponse" />
+  </message>
+  <portType name="Dvr">
+    <operation name="AddDontRecordSchedule">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/AddDontRecordSchedule" message="tns:Dvr_AddDontRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/AddDontRecordScheduleResponse" message="tns:Dvr_AddDontRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="AddRecordSchedule">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/AddRecordSchedule" message="tns:Dvr_AddRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/AddRecordScheduleResponse" message="tns:Dvr_AddRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="DeleteRecording">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/DeleteRecording" message="tns:Dvr_DeleteRecording_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/DeleteRecordingResponse" message="tns:Dvr_DeleteRecording_OutputMessage" />
+    </operation>
+    <operation name="DisableRecordSchedule">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/DisableRecordSchedule" message="tns:Dvr_DisableRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/DisableRecordScheduleResponse" message="tns:Dvr_DisableRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="DupInToDescription">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/DupInToDescription" message="tns:Dvr_DupInToDescription_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/DupInToDescriptionResponse" message="tns:Dvr_DupInToDescription_OutputMessage" />
+    </operation>
+    <operation name="DupInToString">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/DupInToString" message="tns:Dvr_DupInToString_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/DupInToStringResponse" message="tns:Dvr_DupInToString_OutputMessage" />
+    </operation>
+    <operation name="DupMethodToDescription">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/DupMethodToDescription" message="tns:Dvr_DupMethodToDescription_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/DupMethodToDescriptionResponse" message="tns:Dvr_DupMethodToDescription_OutputMessage" />
+    </operation>
+    <operation name="DupMethodToString">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/DupMethodToString" message="tns:Dvr_DupMethodToString_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/DupMethodToStringResponse" message="tns:Dvr_DupMethodToString_OutputMessage" />
+    </operation>
+    <operation name="EnableRecordSchedule">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/EnableRecordSchedule" message="tns:Dvr_EnableRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/EnableRecordScheduleResponse" message="tns:Dvr_EnableRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="GetConflictList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetConflictList" message="tns:Dvr_GetConflictList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetConflictListResponse" message="tns:Dvr_GetConflictList_OutputMessage" />
+    </operation>
+    <operation name="GetEncoderList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetEncoderList" message="tns:Dvr_GetEncoderList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetEncoderListResponse" message="tns:Dvr_GetEncoderList_OutputMessage" />
+    </operation>
+    <operation name="GetExpiringList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetExpiringList" message="tns:Dvr_GetExpiringList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetExpiringListResponse" message="tns:Dvr_GetExpiringList_OutputMessage" />
+    </operation>
+    <operation name="GetInputList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetInputList" message="tns:Dvr_GetInputList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetInputListResponse" message="tns:Dvr_GetInputList_OutputMessage" />
+    </operation>
+    <operation name="GetOldRecordedList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetOldRecordedList" message="tns:Dvr_GetOldRecordedList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetOldRecordedListResponse" message="tns:Dvr_GetOldRecordedList_OutputMessage" />
+    </operation>
+    <operation name="GetPlayGroupList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetPlayGroupList" message="tns:Dvr_GetPlayGroupList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetPlayGroupListResponse" message="tns:Dvr_GetPlayGroupList_OutputMessage" />
+    </operation>
+    <operation name="GetRecGroupList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecGroupList" message="tns:Dvr_GetRecGroupList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecGroupListResponse" message="tns:Dvr_GetRecGroupList_OutputMessage" />
+    </operation>
+    <operation name="GetRecRuleFilterList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecRuleFilterList" message="tns:Dvr_GetRecRuleFilterList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecRuleFilterListResponse" message="tns:Dvr_GetRecRuleFilterList_OutputMessage" />
+    </operation>
+    <operation name="GetRecStorageGroupList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecStorageGroupList" message="tns:Dvr_GetRecStorageGroupList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecStorageGroupListResponse" message="tns:Dvr_GetRecStorageGroupList_OutputMessage" />
+    </operation>
+    <operation name="GetRecordSchedule">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecordSchedule" message="tns:Dvr_GetRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordScheduleResponse" message="tns:Dvr_GetRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="GetRecordScheduleList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecordScheduleList" message="tns:Dvr_GetRecordScheduleList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordScheduleListResponse" message="tns:Dvr_GetRecordScheduleList_OutputMessage" />
+    </operation>
+    <operation name="GetRecorded">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecorded" message="tns:Dvr_GetRecorded_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordedResponse" message="tns:Dvr_GetRecorded_OutputMessage" />
+    </operation>
+    <operation name="GetRecordedCommBreak">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecordedCommBreak" message="tns:Dvr_GetRecordedCommBreak_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordedCommBreakResponse" message="tns:Dvr_GetRecordedCommBreak_OutputMessage" />
+    </operation>
+    <operation name="GetRecordedCutList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecordedCutList" message="tns:Dvr_GetRecordedCutList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordedCutListResponse" message="tns:Dvr_GetRecordedCutList_OutputMessage" />
+    </operation>
+    <operation name="GetRecordedList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecordedList" message="tns:Dvr_GetRecordedList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordedListResponse" message="tns:Dvr_GetRecordedList_OutputMessage" />
+    </operation>
+    <operation name="GetRecordedSeek">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetRecordedSeek" message="tns:Dvr_GetRecordedSeek_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetRecordedSeekResponse" message="tns:Dvr_GetRecordedSeek_OutputMessage" />
+    </operation>
+    <operation name="GetSavedBookmark">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetSavedBookmark" message="tns:Dvr_GetSavedBookmark_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetSavedBookmarkResponse" message="tns:Dvr_GetSavedBookmark_OutputMessage" />
+    </operation>
+    <operation name="GetTitleInfoList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetTitleInfoList" message="tns:Dvr_GetTitleInfoList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetTitleInfoListResponse" message="tns:Dvr_GetTitleInfoList_OutputMessage" />
+    </operation>
+    <operation name="GetTitleList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetTitleList" message="tns:Dvr_GetTitleList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetTitleListResponse" message="tns:Dvr_GetTitleList_OutputMessage" />
+    </operation>
+    <operation name="GetUpcomingList">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/GetUpcomingList" message="tns:Dvr_GetUpcomingList_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/GetUpcomingListResponse" message="tns:Dvr_GetUpcomingList_OutputMessage" />
+    </operation>
+    <operation name="ReactivateRecording">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/ReactivateRecording" message="tns:Dvr_ReactivateRecording_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/ReactivateRecordingResponse" message="tns:Dvr_ReactivateRecording_OutputMessage" />
+    </operation>
+    <operation name="RecStatusToDescription">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RecStatusToDescription" message="tns:Dvr_RecStatusToDescription_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RecStatusToDescriptionResponse" message="tns:Dvr_RecStatusToDescription_OutputMessage" />
+    </operation>
+    <operation name="RecStatusToString">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RecStatusToString" message="tns:Dvr_RecStatusToString_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RecStatusToStringResponse" message="tns:Dvr_RecStatusToString_OutputMessage" />
+    </operation>
+    <operation name="RecTypeToDescription">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RecTypeToDescription" message="tns:Dvr_RecTypeToDescription_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RecTypeToDescriptionResponse" message="tns:Dvr_RecTypeToDescription_OutputMessage" />
+    </operation>
+    <operation name="RecTypeToString">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RecTypeToString" message="tns:Dvr_RecTypeToString_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RecTypeToStringResponse" message="tns:Dvr_RecTypeToString_OutputMessage" />
+    </operation>
+    <operation name="RecordedIdForPathname">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RecordedIdForPathname" message="tns:Dvr_RecordedIdForPathname_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RecordedIdForPathnameResponse" message="tns:Dvr_RecordedIdForPathname_OutputMessage" />
+    </operation>
+    <operation name="RemoveRecordSchedule">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RemoveRecordSchedule" message="tns:Dvr_RemoveRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RemoveRecordScheduleResponse" message="tns:Dvr_RemoveRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="RemoveRecorded">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RemoveRecorded" message="tns:Dvr_RemoveRecorded_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RemoveRecordedResponse" message="tns:Dvr_RemoveRecorded_OutputMessage" />
+    </operation>
+    <operation name="RescheduleRecordings">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/RescheduleRecordings" message="tns:Dvr_RescheduleRecordings_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/RescheduleRecordingsResponse" message="tns:Dvr_RescheduleRecordings_OutputMessage" />
+    </operation>
+    <operation name="SetSavedBookmark">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/SetSavedBookmark" message="tns:Dvr_SetSavedBookmark_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/SetSavedBookmarkResponse" message="tns:Dvr_SetSavedBookmark_OutputMessage" />
+    </operation>
+    <operation name="StopRecording">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/StopRecording" message="tns:Dvr_StopRecording_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/StopRecordingResponse" message="tns:Dvr_StopRecording_OutputMessage" />
+    </operation>
+    <operation name="UnDeleteRecording">
+      <documentation>GET </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/UnDeleteRecording" message="tns:Dvr_UnDeleteRecording_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/UnDeleteRecordingResponse" message="tns:Dvr_UnDeleteRecording_OutputMessage" />
+    </operation>
+    <operation name="UpdateRecordSchedule">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/UpdateRecordSchedule" message="tns:Dvr_UpdateRecordSchedule_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/UpdateRecordScheduleResponse" message="tns:Dvr_UpdateRecordSchedule_OutputMessage" />
+    </operation>
+    <operation name="UpdateRecordedWatchedStatus">
+      <documentation>POST </documentation>
+      <input wsaw:Action="http://mythtv.org/Dvr/UpdateRecordedWatchedStatus" message="tns:Dvr_UpdateRecordedWatchedStatus_InputMessage" />
+      <output wsaw:Action="http://mythtv.org/Dvr/UpdateRecordedWatchedStatusResponse" message="tns:Dvr_UpdateRecordedWatchedStatus_OutputMessage" />
+    </operation>
+  </portType>
+  <binding name="BasicHttpBinding_Dvr" type="tns:Dvr">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddDontRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/AddDontRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/AddRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteRecording">
+      <soap:operation soapAction="http://mythtv.org/Dvr/DeleteRecording" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DisableRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/DisableRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DupInToDescription">
+      <soap:operation soapAction="http://mythtv.org/Dvr/DupInToDescription" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DupInToString">
+      <soap:operation soapAction="http://mythtv.org/Dvr/DupInToString" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DupMethodToDescription">
+      <soap:operation soapAction="http://mythtv.org/Dvr/DupMethodToDescription" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DupMethodToString">
+      <soap:operation soapAction="http://mythtv.org/Dvr/DupMethodToString" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnableRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/EnableRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetConflictList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetConflictList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetEncoderList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetEncoderList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetExpiringList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetExpiringList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInputList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetInputList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetOldRecordedList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetOldRecordedList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetPlayGroupList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetPlayGroupList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecGroupList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecGroupList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecRuleFilterList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecRuleFilterList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecStorageGroupList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecStorageGroupList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordScheduleList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecordScheduleList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecorded">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecorded" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordedCommBreak">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecordedCommBreak" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordedCutList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecordedCutList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordedList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecordedList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRecordedSeek">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetRecordedSeek" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetSavedBookmark">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetSavedBookmark" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTitleInfoList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetTitleInfoList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTitleList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetTitleList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetUpcomingList">
+      <soap:operation soapAction="http://mythtv.org/Dvr/GetUpcomingList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReactivateRecording">
+      <soap:operation soapAction="http://mythtv.org/Dvr/ReactivateRecording" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecStatusToDescription">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RecStatusToDescription" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecStatusToString">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RecStatusToString" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecTypeToDescription">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RecTypeToDescription" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecTypeToString">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RecTypeToString" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecordedIdForPathname">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RecordedIdForPathname" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RemoveRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveRecorded">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RemoveRecorded" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RescheduleRecordings">
+      <soap:operation soapAction="http://mythtv.org/Dvr/RescheduleRecordings" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetSavedBookmark">
+      <soap:operation soapAction="http://mythtv.org/Dvr/SetSavedBookmark" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="StopRecording">
+      <soap:operation soapAction="http://mythtv.org/Dvr/StopRecording" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UnDeleteRecording">
+      <soap:operation soapAction="http://mythtv.org/Dvr/UnDeleteRecording" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateRecordSchedule">
+      <soap:operation soapAction="http://mythtv.org/Dvr/UpdateRecordSchedule" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateRecordedWatchedStatus">
+      <soap:operation soapAction="http://mythtv.org/Dvr/UpdateRecordedWatchedStatus" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DvrServices">
+    <documentation>Interface Version 6.4 - </documentation>
+    <port name="BasicHttpBinding_Dvr" binding="tns:BasicHttpBinding_Dvr">
+      <soap:address location="http://10.0.0.197:6544/Dvr" />
+    </port>
+  </service>
+</definitions>

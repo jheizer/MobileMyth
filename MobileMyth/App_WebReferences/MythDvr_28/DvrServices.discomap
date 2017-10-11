@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfString" filename="xsd.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleList" filename="xsd0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ProgramList" filename="xsd1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=TitleInfoList" filename="xsd2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=CutList" filename="xsd3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=InputList" filename="xsd4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=EncoderList" filename="xsd5.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.0.0.197:6544/Dvr/wsdl?raw=1" filename="DvrServices.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleFilterList" filename="xsd6.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=Encoder" filename="xsd7.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=Input" filename="xsd8.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArtworkInfo" filename="xsd9.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=RecRule" filename="xsd10.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfInput&amp;name=Input" filename="xsd11.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=CastMemberList" filename="xsd12.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArtworkInfoList" filename="xsd13.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfCutting&amp;name=Cutting" filename="xsd14.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfRecRuleFilter&amp;name=RecRuleFilter" filename="xsd15.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" filename="xsd16.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleFilter" filename="xsd17.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfCastMember&amp;name=CastMember" filename="xsd18.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfProgram&amp;name=Program" filename="xsd19.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfEncoder&amp;name=Encoder" filename="xsd20.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfRecRule&amp;name=RecRule" filename="xsd21.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=CastMember" filename="xsd22.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=TitleInfo" filename="xsd23.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=Program" filename="xsd24.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=Cutting" filename="xsd25.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfTitleInfo&amp;name=TitleInfo" filename="xsd26.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=ChannelInfo" filename="xsd27.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.0.0.197:6544/Dvr/xsd?type=RecordingInfo" filename="xsd28.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

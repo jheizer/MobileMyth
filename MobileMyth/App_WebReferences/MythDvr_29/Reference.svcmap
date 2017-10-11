@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8b8275d-2967-429c-a57d-c702232f1ec0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.197:6544/Dvr/wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xsd.xsd" MetadataType="Schema" ID="817249ad-56a4-4633-b0de-18d10b667878" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecRule" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="543fa970-9b40-4aca-af85-3ba1e332d7c6" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleFilter" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="a2aba5b9-b237-4c93-9c0e-e5c0c522d3d8" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfRecRuleFilter&amp;name=RecRuleFilter" />
+    <MetadataFile FileName="xsd3.xsd" MetadataType="Schema" ID="182e3853-8330-49a8-a3e2-43912dc465c5" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=CastMemberList" />
+    <MetadataFile FileName="xsd4.xsd" MetadataType="Schema" ID="926e0085-6905-4543-9646-acdc0c68a921" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfArtworkInfo&amp;name=ArtworkInfo" />
+    <MetadataFile FileName="xsd5.xsd" MetadataType="Schema" ID="a0ba4871-1adb-43db-8193-19d2386fb228" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecordingInfo" />
+    <MetadataFile FileName="xsd6.xsd" MetadataType="Schema" ID="13284333-4b3d-491f-abb4-f82547601705" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArtworkInfoList" />
+    <MetadataFile FileName="xsd7.xsd" MetadataType="Schema" ID="c455c4c2-d152-46f1-8da8-6528d975ce47" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfString" />
+    <MetadataFile FileName="xsd8.xsd" MetadataType="Schema" ID="35115cc5-d775-48be-8050-006cc89472be" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfRecRule&amp;name=RecRule" />
+    <MetadataFile FileName="xsd9.xsd" MetadataType="Schema" ID="af24c990-571b-434e-bd20-dc7ae8727c07" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=Input" />
+    <MetadataFile FileName="xsd10.xsd" MetadataType="Schema" ID="23c397c0-5986-4d92-83c4-a3788a1021b7" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=Program" />
+    <MetadataFile FileName="xsd11.xsd" MetadataType="Schema" ID="cd5f42b9-3a26-438f-8789-2d9d3119179d" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleList" />
+    <MetadataFile FileName="xsd12.xsd" MetadataType="Schema" ID="ad37e810-3af6-49d6-9f42-e73fe1b873d7" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfEncoder&amp;name=Encoder" />
+    <MetadataFile FileName="xsd13.xsd" MetadataType="Schema" ID="fb2aeb99-9245-4e2f-b7e4-315d25f58dfa" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfInput&amp;name=Input" />
+    <MetadataFile FileName="xsd14.xsd" MetadataType="Schema" ID="41e2ef27-8e63-456f-99bb-459f009251d7" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfTitleInfo&amp;name=TitleInfo" />
+    <MetadataFile FileName="xsd15.xsd" MetadataType="Schema" ID="8ae02eb4-f9b4-408b-9f0d-2e4dd17c578e" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ProgramList" />
+    <MetadataFile FileName="xsd16.xsd" MetadataType="Schema" ID="f4506f93-930a-4e2f-ad62-5c3a20a2eedf" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfProgram&amp;name=Program" />
+    <MetadataFile FileName="xsd17.xsd" MetadataType="Schema" ID="58714ede-81d2-4538-982e-233a9cdd1fa1" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfCastMember&amp;name=CastMember" />
+    <MetadataFile FileName="xsd18.xsd" MetadataType="Schema" ID="ec2cf833-d5d0-43ae-9897-3a68ab00b3f7" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?enum=RecStatus.Type" />
+    <MetadataFile FileName="xsd19.xsd" MetadataType="Schema" ID="1e2a67a6-05d2-459c-a30a-57fc67cd584b" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=Encoder" />
+    <MetadataFile FileName="xsd20.xsd" MetadataType="Schema" ID="7c5b6a1f-4a6a-4135-a6af-cfff54743a79" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=TitleInfoList" />
+    <MetadataFile FileName="xsd21.xsd" MetadataType="Schema" ID="7f7008e1-2570-4a53-8824-7483e8220d46" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArtworkInfo" />
+    <MetadataFile FileName="xsd22.xsd" MetadataType="Schema" ID="4870a7f6-3138-4a4a-9096-0eef695c46a0" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ChannelInfo" />
+    <MetadataFile FileName="xsd23.xsd" MetadataType="Schema" ID="5876f5e8-8f2f-4f19-b13a-c384a9ec00e1" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfCutting&amp;name=Cutting" />
+    <MetadataFile FileName="DvrServices.wsdl" MetadataType="Wsdl" ID="2f539c67-1d24-4d83-939e-cbb7283bfa13" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/wsdl" />
+    <MetadataFile FileName="xsd24.xsd" MetadataType="Schema" ID="5c9224ff-0305-457c-8588-560aa81ac7af" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=CutList" />
+    <MetadataFile FileName="xsd25.xsd" MetadataType="Schema" ID="012254b5-79a0-4034-8100-5c94859c971c" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=InputList" />
+    <MetadataFile FileName="xsd26.xsd" MetadataType="Schema" ID="1e556ffb-2923-47b4-ac80-34ff4b5afe10" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=EncoderList" />
+    <MetadataFile FileName="xsd27.xsd" MetadataType="Schema" ID="f07bd4f6-eb67-4e0f-95db-ca2babac79c5" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=TitleInfo" />
+    <MetadataFile FileName="xsd28.xsd" MetadataType="Schema" ID="b36591da-aa64-4fcd-84cc-6e0906db8534" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=Cutting" />
+    <MetadataFile FileName="xsd29.xsd" MetadataType="Schema" ID="86b18baa-115e-48e1-813b-e29893f8782e" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=CastMember" />
+    <MetadataFile FileName="xsd30.xsd" MetadataType="Schema" ID="2cfda632-451b-4619-8aba-0ad39678f1e2" SourceId="1" SourceUrl="http://10.0.0.197:6544/Dvr/xsd?type=RecRuleFilterList" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

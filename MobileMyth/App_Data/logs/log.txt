@@ -1,0 +1,93 @@
+2014-10-29 20:20:08,249 [1] INFO  ASP.global_asax Site Started
+2014-10-29 20:20:08,305 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2014-10-29 20:20:08,398 [8] INFO  SiteSettings Loading settings file
+2014-10-29 20:20:09,982 [9] INFO  MythBackendBase Reinitalizing webservice references.
+2014-10-29 20:20:10,845 [9] INFO  MythBackendBase Reinitalizing webservice references.
+2014-10-29 20:20:12,634 [15] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1546&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,670 [15] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1545&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,703 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1544&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,733 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1543&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,763 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1542&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,799 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1541&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,839 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1540&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,873 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1539&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,928 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1537&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,956 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1536&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:12,997 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1535&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,035 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1534&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,065 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1533&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,105 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1532&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,146 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1531&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,177 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1530&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,204 [9] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1529&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:13,235 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1528&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:22,679 [15] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1549&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2014-10-29 20:20:23,681 [15] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1548&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84

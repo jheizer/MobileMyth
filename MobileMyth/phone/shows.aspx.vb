@@ -14,18 +14,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013, 2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 
 Imports MythService
-Imports MythDVR
 
 Partial Class shows
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
+        Dim Recordings As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
 
         Dim Lst = From n In Recordings.Programs _
                  Group n By n.Title Into Count() _

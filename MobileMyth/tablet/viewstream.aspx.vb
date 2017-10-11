@@ -14,10 +14,9 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014,2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
-Imports MythDVR
 
 
 Partial Class viewstream
@@ -25,7 +24,7 @@ Partial Class viewstream
 
     Private Shared Logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(viewstream))
 
-    Private Rec As Program
+    Private Rec As iMythDvr.Program
 
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Dim Url As String = Request.QueryString("url")

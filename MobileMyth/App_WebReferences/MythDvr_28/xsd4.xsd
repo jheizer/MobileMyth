@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mythtv.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mythtv.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://10.0.0.197:6544/Dvr/xsd?type=ArrayOfInput&amp;name=Input" />
+  <xs:complexType name="InputList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Inputs" type="tns:ArrayOfInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InputList" nillable="true" type="tns:InputList" />
+</xs:schema>

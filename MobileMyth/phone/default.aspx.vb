@@ -14,11 +14,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012,-2014 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2014, 2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports MythService
-Imports MythDVR
 Imports System.Xml
 
 Partial Class _default
@@ -185,10 +184,10 @@ Partial Class _default
     'End Sub
 
     Private Sub DisplayUpcoming()
-        Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 10, False)
+        Dim Recordings As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetUpcomingList(0, 10, False)
         '        Dim StartDate As String = DateTime.MaxValue.ToLongDateString
 
-        For Each Rec As Program In Recordings.Programs
+        For Each Rec As iMythDvr.Program In Recordings.Programs
             'If Rec.StartTime.Value.ToLongDateString <> StartDate Then
             '    Dim Divider As New HtmlListItem
             '    Divider.Attributes.Add("data-role", "list-divider")
@@ -200,7 +199,7 @@ Partial Class _default
             'Dim LI As New UpcomingListItem(Rec, False)
 
             Dim LI As New HtmlListItem
-            LI.InnerHtml = "<strong>" & Rec.Title & " - " & Rec.StartTime.Value.ToLocalTime.ToShortDateString & " " & Rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt") & _
+            LI.InnerHtml = "<strong>" & Rec.Title & " - " & Rec.StartTime.Value.ToLocalTime.ToShortDateString & " " & Rec.Recording.StartTs.Value.ToLocalTime.ToString("h:mm tt") &
                            "</strong><p>" & Rec.SubTitle & "</p>"
             upcomingdetails.Controls.Add(LI)
         Next

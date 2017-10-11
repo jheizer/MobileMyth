@@ -14,12 +14,11 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012, 2013 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012, 2013, 2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 
 Imports MythService
-Imports MythDVR
 
 Partial Class recording
     Inherits System.Web.UI.Page
@@ -29,8 +28,8 @@ Partial Class recording
 
         If Not Id Is Nothing Then
 
-            Dim Recordings As ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
-            Dim rec As Program = Recordings.Programs.ToList.Find(Function(r) r.ProgramId = Id)
+            Dim Recordings As iMythDvr.ProgramList = Common.MBE.DvrAPI.GetRecordedList(True, 0, 100000, True)
+            Dim rec As iMythDvr.Program = Recordings.Programs.ToList.Find(Function(r) r.ProgramId = Id)
 
             'If we have a number lets try to display a banner
             If Not String.IsNullOrEmpty(rec.Inetref) Then

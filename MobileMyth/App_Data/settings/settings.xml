@@ -5,7 +5,7 @@
       <UIType>desktop</UIType>
       <Resolution>NoTranscode</Resolution>
       <UseAnyStream>False</UseAnyStream>
-      <ProxyVideo>True</ProxyVideo>
+      <ProxyVideo>False</ProxyVideo>
       <ShowRecentRecordings>True</ShowRecentRecordings>
       <ShowRecentVideos>True</ShowRecentVideos>
       <ShowConflicts>False</ShowConflicts>

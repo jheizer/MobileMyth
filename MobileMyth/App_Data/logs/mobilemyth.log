@@ -1,0 +1,1781 @@
+2017-10-10 22:09:02,123 [1] INFO  ASP.global_asax Site Started
+2017-10-10 22:09:02,185 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:09:19,997 [6] INFO  SiteSettings Loading settings file
+2017-10-10 22:09:22,400 [5] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:09:23,780 [5] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:09:28,423 [5] ERROR ASP.global_asax System.InvalidOperationException: Could not find endpoint element with name 'BasicHttpBinding_Dvr' and contract 'MythDvr_29.Dvr' in the ServiceModel client configuration section. This might be because no configuration file was found for your application, or because no endpoint element matching this name could be found in the client element.
+   at System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   at System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   at System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   at System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   at System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   at System.ServiceModel.ConfigurationEndpointTrait`1.CreateSimplexFactory()
+   at System.ServiceModel.ConfigurationEndpointTrait`1.CreateChannelFactory()
+   at System.ServiceModel.ClientBase`1.CreateChannelFactoryRef(EndpointTrait`1 endpointTrait)
+   at System.ServiceModel.ClientBase`1.InitializeChannelFactoryRef()
+   at System.ServiceModel.ClientBase`1..ctor(String endpointConfigurationName, String remoteAddress)
+   at MythDvr_29.DvrClient..ctor(String endpointConfigurationName, String remoteAddress) in c:\Users\jheizer\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.lpc_tq2j.3.cs:line 3681
+   at MythDvr29.Init(String Address, String Port) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 30
+   at MythBackend29..ctor() in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythBackend29.vb:line 35
+   at Common.LoadMBE() in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 39
+   at Common..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 29
+2017-10-10 22:10:40,234 [1] INFO  ASP.global_asax Site Started
+2017-10-10 22:10:40,293 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:10:40,991 [5] INFO  SiteSettings Loading settings file
+2017-10-10 22:10:43,223 [6] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:10:43,975 [6] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:10:44,679 [6] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.CommunicationException: The maximum message size quota for incoming messages (65536) has been exceeded. To increase the quota, use the MaxReceivedMessageSize property on the appropriate binding element. ---> System.ServiceModel.QuotaExceededException: The maximum message size quota for incoming messages (65536) has been exceeded. To increase the quota, use the MaxReceivedMessageSize property on the appropriate binding element.
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.MessageEncoder.BufferMessageStream(Stream stream, BufferManager bufferManager, Int32 maxBufferSize)
+   at System.ServiceModel.Channels.MessageEncoder.ReadMessage(Stream stream, BufferManager bufferManager, Int32 maxBufferSize, String contentType)
+   at System.ServiceModel.Channels.HttpInput.ReadChunkedBufferedMessage(Stream inputStream)
+   at System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(HttpRequestMessage httpRequestMessage, Exception& requestException)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDvr_29.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count, String TitleRegEx, String RecGroup, String StorageGroup)
+   at MythDvr_29.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count, String TitleRegEx, String RecGroup, String StorageGroup) in c:\Users\jheizer\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.bp7nb1c8.6.cs:line 3827
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:11:55,011 [6] ERROR MythDvr25 Error loading recorded list
+System.ServiceModel.CommunicationException: The maximum message size quota for incoming messages (65536) has been exceeded. To increase the quota, use the MaxReceivedMessageSize property on the appropriate binding element. ---> System.ServiceModel.QuotaExceededException: The maximum message size quota for incoming messages (65536) has been exceeded. To increase the quota, use the MaxReceivedMessageSize property on the appropriate binding element.
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.MessageEncoder.BufferMessageStream(Stream stream, BufferManager bufferManager, Int32 maxBufferSize)
+   at System.ServiceModel.Channels.MessageEncoder.ReadMessage(Stream stream, BufferManager bufferManager, Int32 maxBufferSize, String contentType)
+   at System.ServiceModel.Channels.HttpInput.ReadChunkedBufferedMessage(Stream inputStream)
+   at System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(HttpRequestMessage httpRequestMessage, Exception& requestException)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at MythDvr_29.Dvr.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count, String TitleRegEx, String RecGroup, String StorageGroup)
+   at MythDvr_29.DvrClient.GetRecordedList(Nullable`1 Descending, Nullable`1 StartIndex, Nullable`1 Count, String TitleRegEx, String RecGroup, String StorageGroup) in c:\Users\jheizer\AppData\Local\Temp\Temporary ASP.NET Files\vs\00b53e46\5e36bef1\App_WebReferences.bp7nb1c8.6.cs:line 3827
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:11:55,031 [6] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:12:33,913 [17] INFO  ASP.global_asax Site Started
+2017-10-10 22:12:34,015 [17] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:12:34,127 [5] INFO  SiteSettings Loading settings file
+2017-10-10 22:12:35,013 [6] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:12:35,846 [6] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:12:36,626 [6] ERROR MythDvr25 Error loading recorded list
+System.ArgumentException: Object of type 'MythDvr_29.ChannelInfo' cannot be converted to type 'iMythDvr+ChannelInfo'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Common.ConvertTypes[FromType,ToType](FromType FromObj) in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 90
+   at MythDvr29.ConvertProgList(ProgramList WSProgList) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 124
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:12:40,422 [6] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:14:28,369 [6] ERROR MythDvr25 Error loading recorded list
+System.ArgumentException: Object of type 'MythDvr_29.ChannelInfo' cannot be converted to type 'iMythDvr+ChannelInfo'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Common.ConvertTypes[FromType,ToType](FromType FromObj) in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 90
+   at MythDvr29.ConvertProgList(ProgramList WSProgList) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 124
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:15:26,718 [6] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:15:42,645 [6] ERROR MythDvr25 Error loading recorded list
+System.ArgumentException: Object of type 'MythDvr_29.ChannelInfo' cannot be converted to type 'iMythDvr+ChannelInfo'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Common.ConvertTypes[FromType,ToType](FromType FromObj) in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 90
+   at MythDvr29.ConvertProgList(ProgramList WSProgList) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 124
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:17:34,034 [6] ERROR MythDvr25 Error loading recorded list
+System.ArgumentException: Object of type 'MythDvr_29.ChannelInfo' cannot be converted to type 'iMythDvr+ChannelInfo'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Common.ConvertTypes[FromType,ToType](FromType FromObj) in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 90
+   at MythDvr29.ConvertProgList(ProgramList WSProgList) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 124
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:17:34,060 [6] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:17:45,958 [6] ERROR MythDvr25 Error loading recorded list
+System.ArgumentException: Object of type 'MythDvr_29.ChannelInfo' cannot be converted to type 'iMythDvr+ChannelInfo'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Common.ConvertTypes[FromType,ToType](FromType FromObj) in C:\Code\MobileMyth\MobileMyth\App_Code\Common.vb:line 90
+   at MythDvr29.ConvertProgList(ProgramList WSProgList) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 124
+   at MythDvr29.GetRecordedList(Boolean Descending, Int32 StartIndex, Int32 Count, Boolean Cache) in C:\Code\MobileMyth\MobileMyth\App_Code\MythService_29\MythDvr29.vb:line 77
+2017-10-10 22:17:45,973 [6] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:25:15,612 [33] INFO  ASP.global_asax Site Started
+2017-10-10 22:25:15,662 [33] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:25:16,382 [25] INFO  SiteSettings Loading settings file
+2017-10-10 22:25:19,227 [24] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:25:19,970 [24] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:25:40,006 [24] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default._Lambda$__3(Program p) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at System.Array.FindAll[T](T[] array, Predicate`1 match)
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:26:19,584 [24] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default._Lambda$__3(Program p) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at System.Array.FindAll[T](T[] array, Predicate`1 match)
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:27:19,614 [25] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default._Lambda$__3(Program p) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at System.Array.FindAll[T](T[] array, Predicate`1 match)
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 45
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:40:11,096 [1] INFO  ASP.global_asax Site Started
+2017-10-10 22:40:11,145 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:40:11,861 [18] INFO  SiteSettings Loading settings file
+2017-10-10 22:40:14,882 [16] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:40:15,653 [16] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:40:31,475 [16] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayEncoders() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 155
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 31
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:40:53,270 [18] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayEncoders() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 155
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 31
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:43:37,480 [1] INFO  ASP.global_asax Site Started
+2017-10-10 22:43:37,530 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:43:38,192 [18] INFO  SiteSettings Loading settings file
+2017-10-10 22:43:41,040 [19] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:43:41,784 [19] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:43:54,522 [19] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayEncoders() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 155
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 31
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:44:23,836 [18] ERROR ASP.global_asax System.NullReferenceException: Object reference not set to an instance of an object.
+   at _default.DisplayEncoders() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 155
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 31
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 22:46:14,044 [1] INFO  ASP.global_asax Site Started
+2017-10-10 22:46:14,093 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:46:14,770 [19] INFO  SiteSettings Loading settings file
+2017-10-10 22:46:17,795 [26] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:46:18,542 [26] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:46:29,127 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:29,233 [19] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:29,334 [26] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:29,420 [19] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:29,510 [26] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:29,691 [19] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:29,898 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:30,226 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:30,310 [19] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:35,228 [29] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:35,734 [16] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:46:36,226 [26] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:10,813 [31] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:10,916 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,000 [20] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,096 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,194 [31] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,291 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,491 [21] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,631 [26] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:11,724 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:12,490 [14] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:12,988 [21] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:53:13,498 [20] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:39,832 [1] INFO  ASP.global_asax Site Started
+2017-10-10 22:56:39,886 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 22:56:40,560 [32] INFO  SiteSettings Loading settings file
+2017-10-10 22:56:42,843 [30] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:56:43,591 [30] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 22:56:50,886 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,004 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,085 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,202 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,323 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,457 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,579 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,745 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:51,861 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:52,633 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:53,616 [36] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:56:54,633 [34] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:07,891 [37] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:08,071 [37] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:08,223 [39] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:08,460 [34] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:08,704 [36] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:08,790 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:08,938 [36] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:09,065 [39] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:09,196 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:09,277 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:09,436 [36] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:09,803 [27] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:10,324 [34] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:10,428 [34] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:10,617 [39] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:11,045 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:11,130 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:11,232 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:11,684 [37] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:12,014 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:12,418 [36] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:12,613 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:12,731 [37] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:12,899 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:13,382 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:13,898 [37] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:14,944 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 22:59:15,442 [39] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:03:07,316 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:03:07,367 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:03:08,165 [32] INFO  SiteSettings Loading settings file
+2017-10-10 23:03:10,489 [39] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:03:11,213 [39] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:05:50,812 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:05:50,861 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:05:51,587 [32] INFO  SiteSettings Loading settings file
+2017-10-10 23:05:53,889 [39] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:05:54,620 [39] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:06:22,882 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:22,985 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,069 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,153 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,293 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,439 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,579 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,801 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:23,911 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:25,062 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:25,578 [36] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:26,068 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:35,356 [35] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:35,459 [6] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:35,549 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:35,634 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:35,758 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:35,929 [6] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:36,111 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:36,186 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:37,522 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:38,028 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:38,525 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:39,027 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:54,678 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:54,777 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:54,856 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:54,944 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:55,041 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:55,284 [39] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:55,467 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:55,551 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:56,329 [8] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:56,829 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:57,845 [37] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:06:58,858 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:07:45,051 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:07:45,101 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:07:45,816 [8] INFO  SiteSettings Loading settings file
+2017-10-10 23:07:48,097 [36] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:07:48,826 [36] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:08:48,750 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:08:48,798 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:08:49,486 [8] INFO  SiteSettings Loading settings file
+2017-10-10 23:08:51,872 [36] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:08:52,617 [36] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:10:02,102 [36] ERROR ASP.global_asax System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 57
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 23:12:41,672 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:12:41,722 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:12:42,477 [8] INFO  SiteSettings Loading settings file
+2017-10-10 23:12:44,939 [7] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:12:45,656 [7] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:13:10,587 [7] ERROR ASP.global_asax System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at _default.DisplayRecentSlider() in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 57
+   at _default.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\default.aspx.vb:line 28
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.Page.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-10-10 23:13:52,795 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:13:52,846 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:13:53,608 [8] INFO  SiteSettings Loading settings file
+2017-10-10 23:13:57,115 [7] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:13:57,873 [7] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:14:30,960 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:31,073 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:31,159 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:31,248 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:31,450 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:31,673 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:32,254 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:32,382 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:32,481 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:33,259 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:35,250 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:35,770 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:43,865 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,015 [27] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,121 [27] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,210 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,322 [27] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,575 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,738 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:44,818 [7] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:45,107 [5] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:46,620 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:47,133 [27] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:14:48,117 [5] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:41,666 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:41,862 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,072 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,323 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,518 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,598 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,731 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,816 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,908 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:42,986 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:43,099 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:43,257 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:43,614 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:43,833 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:44,111 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:44,334 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:44,453 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:44,577 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:44,668 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:44,879 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:45,039 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:45,140 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:45,324 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:45,422 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:45,779 [27] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:45,915 [7] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:46,091 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:15:46,211 [10] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:00,976 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:01,121 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:01,341 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:01,688 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:01,946 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,066 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,174 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,283 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,393 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,469 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,556 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,681 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:02,956 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,145 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,369 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,455 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,538 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,627 [12] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,791 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:03,936 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:04,021 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:04,189 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:04,291 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:04,454 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:04,620 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:04,786 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:05,249 [35] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:17:06,755 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:16,149 [26] INFO  ASP.global_asax Site Started
+2017-10-10 23:18:16,202 [26] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:18:16,880 [28] INFO  SiteSettings Loading settings file
+2017-10-10 23:18:19,161 [32] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:18:19,914 [32] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:18:21,063 [22] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,167 [22] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,250 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,334 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,425 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,530 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,703 [35] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,804 [5] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:21,911 [35] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:22,251 [22] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:23,240 [35] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:24,749 [35] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:32,258 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:32,376 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:32,461 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:32,601 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:32,757 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:32,947 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,041 [35] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,125 [30] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,203 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,293 [30] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,396 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,495 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,686 [35] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,783 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:33,894 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,037 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,138 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,231 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,319 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,489 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,609 [35] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,718 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,890 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:34,982 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:35,136 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:35,235 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:35,342 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:36,935 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:42,837 [35] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:42,952 [35] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,096 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,232 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,502 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,597 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,711 [30] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,831 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:43,934 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,024 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,121 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,265 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,469 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,604 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,890 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:44,979 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,122 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,213 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,338 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,443 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,523 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,648 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,733 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:45,924 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:46,032 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:46,145 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:46,505 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:18:46,998 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:09,287 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:09,369 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:09,496 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:09,634 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:09,768 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:09,966 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,058 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,152 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,237 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,314 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,407 [16] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,548 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,717 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,820 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:10,988 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,071 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,157 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,252 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,431 [5] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,541 [24] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,620 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,721 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,829 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:11,986 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:12,089 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:12,198 [8] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:12,520 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:13,029 [19] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:19:31,858 [35] ERROR recording Error loading recording
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at recording.ShowRecordingDetails() in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 75
+   at recording.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 43
+2017-10-10 23:19:37,341 [32] ERROR recording Error loading recording
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at recording.ShowRecordingDetails() in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 75
+   at recording.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 43
+2017-10-10 23:20:14,977 [35] ERROR recording Error loading recording
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at recording.ShowRecordingDetails() in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 75
+   at recording.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 43
+2017-10-10 23:21:20,603 [32] ERROR recording Error loading recording
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at recording.ShowRecordingDetails() in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 75
+   at recording.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 43
+2017-10-10 23:22:17,330 [28] ERROR recording Error loading recording
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at recording.ShowRecordingDetails() in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 75
+   at recording.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 43
+2017-10-10 23:22:28,258 [10] ERROR recording Error loading recording
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at recording.ShowRecordingDetails() in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 75
+   at recording.Page_Init(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\tablet\recording.aspx.vb:line 43
+2017-10-10 23:24:01,455 [1] INFO  ASP.global_asax Site Started
+2017-10-10 23:24:01,511 [1] ERROR ASP.global_asax System.TypeInitializationException: The type initializer for 'FrontendScanner' threw an exception. ---> System.Exception: No Zeroconf providers could be found or initialized. Necessary daemon may not be running.
+   at Mono.Zeroconf.Providers.ProviderFactory.GetProviders()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_DefaultProvider()
+   at Mono.Zeroconf.Providers.ProviderFactory.get_SelectedProvider()
+   at Mono.Zeroconf.ServiceBrowser..ctor()
+   at FrontendScanner..cctor() in C:\Code\MobileMyth\MobileMyth\App_Code\FrontendScanner.vb:line 8
+   --- End of inner exception stack trace ---
+   at FrontendScanner.StartFindFrontends()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in C:\Code\MobileMyth\MobileMyth\global.asax:line 15
+2017-10-10 23:24:02,264 [28] INFO  SiteSettings Loading settings file
+2017-10-10 23:24:04,590 [32] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:24:05,348 [32] INFO  MythBackendBase Reinitalizing webservice references.
+2017-10-10 23:24:06,610 [10] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:06,698 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:06,791 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:06,872 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:06,960 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:07,068 [18] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:07,210 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:07,464 [12] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:07,568 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:08,762 [12] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:09,769 [18] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:10,269 [32] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:19,510 [18] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_285605&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:19,650 [18] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_289630&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:19,747 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_313885&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:19,927 [18] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_311876&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,157 [30] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_261181&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,264 [30] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_284328&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,357 [10] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_67675&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,475 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_274431&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,588 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_271910&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,689 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_74897&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,785 [18] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_17408&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:20,938 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80725&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,187 [30] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_377462&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,431 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_248504&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,529 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_331446&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,616 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_438970&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,730 [28] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=tmdb3.py_390989&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,880 [27] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295759&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:21,983 [27] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_80379&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,065 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_266189&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,180 [10] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_286987&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,284 [22] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_281622&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,376 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_269533&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,553 [27] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_71663&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,650 [10] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_270261&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:22,754 [10] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_75657&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:23,223 [32] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_290853&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:24,694 [10] ERROR proxy http://10.0.0.197:6544/Content/GetRecordingArtwork?Inetref=ttvdb.py_295604&Type=banner&Height=82&Season=0
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:24:37,690 [27] INFO  Frontends Loading Frontends file
+2017-10-10 23:24:41,353 [28] INFO  Resolutions Loading resolutions file
+2017-10-10 23:24:41,844 [10] ERROR proxy http://10.0.0.197:6544/StorageGroup/3rdParty/JW_Player/jwplayer.js
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:10,270 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1582&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:10,391 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1580&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:10,510 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1572&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:10,652 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1571&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:10,836 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1569&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:10,929 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1567&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:11,086 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1560&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:11,168 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1559&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:12,434 [27] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1576&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:13,433 [28] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1573&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:13,942 [27] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1577&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:16,829 [30] ERROR proxy http://10.0.0.197:6544/Content/GetVideoArtwork?Id=1575&Type=coverart&Height=200
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:18,906 [22] ERROR proxy http://10.0.0.197:6544/StorageGroup/3rdParty/JW_Player/jwplayer.js
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at proxy.Process2(String Url, HttpContext Context, HttpResponse Response) in C:\Code\MobileMyth\MobileMyth\proxy.aspx.vb:line 84
+2017-10-10 23:25:46,951 [22] ERROR ASP.global_asax System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConverter.ToInt32(String value)

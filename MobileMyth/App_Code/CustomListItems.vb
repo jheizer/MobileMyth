@@ -14,16 +14,15 @@
 '    You should have received a copy of the GNU General Public License
 '    along with MobileMyth.  If not, see <http://www.gnu.org/licenses/>.
 
-'    Copyright 2012-2014 Jonathan Heizer jheizer@gmail.com
+'    Copyright 2012-2014,2017 Jonathan Heizer jheizer@gmail.com
 #End Region
 
 Imports Microsoft.VisualBasic
-Imports MythDVR
 
 Public Class RecordingListItem
     Inherits HtmlListItem
 
-    Public Sub New(ByVal rec As Program)
+    Public Sub New(ByVal rec As iMythDvr.Program)
 
         Dim Link As New HyperLink
         Link.NavigateUrl = "recording.aspx?chan=" & rec.Channel.ChanId & "&time=" & rec.Recording.StartTs.Value.Ticks
@@ -33,8 +32,8 @@ Public Class RecordingListItem
         If Not SiteSettings.FrontendSettingBool("NoImages") Then
             Dim img As New Image
             img.ImageUrl = "../images/loader.gif"
-            img.Attributes.Add("data-src", Common.ProxyURL("/Content/GetPreviewImage?ChanId=" & rec.Channel.ChanId & "&StartTime=" & _
-                            rec.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") & _
+            img.Attributes.Add("data-src", Common.ProxyURL("/Content/GetPreviewImage?ChanId=" & rec.Channel.ChanId & "&StartTime=" &
+                            rec.Recording.StartTs.Value.ToString("yyyy-MM-ddTHH:mm:ssZ") &
                             "&Height=80"))
             Link.Controls.Add(img)
         End If
@@ -64,11 +63,11 @@ End Class
 Public Class UpcomingListItem
     Inherits HtmlListItem
 
-    Public Sub New(ByVal Rec As Program)
+    Public Sub New(ByVal Rec As iMythDvr.Program)
         Me.New(Rec, True)
     End Sub
 
-    Public Sub New(ByVal Rec As Program, ShowDescription As Boolean)
+    Public Sub New(ByVal Rec As iMythDvr.Program, ShowDescription As Boolean)
         Dim Builder As New Text.StringBuilder
 
         Builder.Append("<h3>")
